@@ -3,5 +3,5 @@ def get_seasonal_veggies():
     return [
         {"name": "Kale", "color": "green"},
         {"name": "Spinach", "color": "green"},
-        {"name": "Radish", "color": "red"}
+        {"name": "Radish", "color": "red"},
     ]
