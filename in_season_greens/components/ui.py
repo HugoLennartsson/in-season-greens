@@ -44,7 +44,7 @@ def search_suggestion_button(state, suggestion) -> rx.Component:
             ),
             class_name=styles.ui.search_suggestion_inner,
         ),
-        on_click=state.apply_search_suggestion(suggestion["name_en"]),
+        on_mouse_down=state.apply_search_suggestion(suggestion["name_en"]),
         class_name=styles.ui.search_suggestion,
     )
 
