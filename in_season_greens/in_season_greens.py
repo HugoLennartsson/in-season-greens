@@ -1,28 +1,77 @@
 import reflex as rx
-from .data import get_seasonal_veggies
+
+from . import styles
+from .data import Product, get_catalog_label, get_products
+from .components.navigation import (
+    desktop_header,
+    drawer,
+    mobile_header,
+    mobile_sticky_filters,
+)
+from .components.overview import overview_section
+from .components.product_card import product_card
 
 
 class State(rx.State):
-    # This stores the list of veggies
-    veggies: list[dict] = get_seasonal_veggies()
+    products: list[Product] = get_products()
+    menu_open: bool = False
+
+    def open_menu(self):
+        self.menu_open = True
+
+    def close_menu(self):
+        self.menu_open = False
+
+    @rx.var
+    def catalog_label(self) -> str:
+        return get_catalog_label(len(self.products))
 
 
-def index() -> rx.Component:
-    return rx.center(
-        rx.vstack(
-            rx.heading("In-Season Greens", size="9"),
-            rx.text("Current local favorites:"),
-            rx.hstack(
-                rx.foreach(
-                    State.veggies,
-                    lambda v: rx.badge(v["name"], color_scheme="grass", size="3"),
+def catalog() -> rx.Component:
+    return rx.box(
+        rx.hstack(
+            rx.box(
+                rx.text(
+                    State.catalog_label,
+                    class_name=styles.catalog.count,
+                ),
+                rx.heading(
+                    "Product Catalog",
+                    class_name=styles.catalog.title,
                 ),
             ),
-            spacing="5",
+            class_name=styles.catalog.header,
         ),
-        padding_top="10%",
+        rx.grid(
+            rx.foreach(
+                State.products,
+                lambda product: product_card(product),
+            ),
+            class_name=styles.catalog.grid,
+        ),
+        class_name=styles.catalog.shell,
     )
 
 
-app = rx.App()
-app.add_page(index)
+def home_view() -> rx.Component:
+    return rx.box(
+        drawer(State),
+        desktop_header(State),
+        mobile_header(State),
+        overview_section(),
+        mobile_sticky_filters(),
+        catalog(),
+        class_name=styles.app.page,
+    )
+
+
+def index() -> rx.Component:
+    return home_view()
+
+
+app = rx.App(
+    stylesheets=[
+        "https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap",
+    ],
+)
+app.add_page(index, route="/")
