@@ -33,14 +33,51 @@ def filter_button(label: str, key: str) -> rx.Component:
     )
 
 
-def search_input() -> rx.Component:
+def search_suggestion_button(state, suggestion) -> rx.Component:
+    return rx.button(
+        rx.hstack(
+            app_icon("search", styles.ui.search_suggestion_icon, 2),
+            rx.box(
+                rx.text(suggestion["name_en"], class_name=styles.ui.search_suggestion_name),
+                rx.text(suggestion["category"], class_name=styles.ui.search_suggestion_category),
+                class_name=styles.ui.search_suggestion_copy,
+            ),
+            class_name=styles.ui.search_suggestion_inner,
+        ),
+        on_click=state.apply_search_suggestion(suggestion["name_en"]),
+        class_name=styles.ui.search_suggestion,
+    )
+
+
+def search_input(state) -> rx.Component:
     return rx.box(
         app_icon("search", styles.ui.search_icon, 2),
         rx.input(
-            value="",
-            read_only=True,
+            value=state.search_query,
+            on_change=state.set_search_query,
             placeholder="Search fruits & vegetables...",
             class_name=styles.ui.search_input,
+        ),
+        rx.cond(
+            state.has_search_query,
+            rx.button(
+                app_icon("x", styles.ui.search_clear_icon, 2),
+                on_click=state.clear_search,
+                aria_label="Clear search",
+                class_name=styles.ui.search_clear_button,
+            ),
+            rx.fragment(),
+        ),
+        rx.cond(
+            state.has_search_suggestions,
+            rx.box(
+                rx.foreach(
+                    state.search_suggestions,
+                    lambda suggestion: search_suggestion_button(state, suggestion),
+                ),
+                class_name=styles.ui.search_suggestions,
+            ),
+            rx.fragment(),
         ),
         class_name=styles.ui.search_shell,
     )
