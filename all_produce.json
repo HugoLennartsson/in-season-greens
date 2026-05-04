@@ -1,0 +1,372 @@
+[
+  {
+    "id": "annona",
+    "name_en": "Annona",
+    "category": "fruit"
+  },
+  {
+    "id": "apple",
+    "name_en": "Apple",
+    "category": "fruit"
+  },
+  {
+    "id": "apricot",
+    "name_en": "Apricot",
+    "category": "fruit"
+  },
+  {
+    "id": "avocado",
+    "name_en": "Avocado",
+    "category": "fruit"
+  },
+  {
+    "id": "banana",
+    "name_en": "Banana",
+    "category": "fruit"
+  },
+  {
+    "id": "blackberry",
+    "name_en": "Blackberry",
+    "category": "fruit"
+  },
+  {
+    "id": "blueberry",
+    "name_en": "Blueberry",
+    "category": "fruit"
+  },
+  {
+    "id": "ceylon_gooseberry",
+    "name_en": "Ceylon Gooseberry",
+    "category": "fruit"
+  },
+  {
+    "id": "cherry",
+    "name_en": "Cherry",
+    "category": "fruit"
+  },
+  {
+    "id": "cranberry",
+    "name_en": "Cranberry",
+    "category": "fruit"
+  },
+  {
+    "id": "dragonfruit",
+    "name_en": "Dragonfruit",
+    "category": "fruit"
+  },
+  {
+    "id": "durian",
+    "name_en": "Durian",
+    "category": "fruit"
+  },
+  {
+    "id": "feijoa",
+    "name_en": "Feijoa",
+    "category": "fruit"
+  },
+  {
+    "id": "fig",
+    "name_en": "Fig",
+    "category": "fruit"
+  },
+  {
+    "id": "gooseberry",
+    "name_en": "Gooseberry",
+    "category": "fruit"
+  },
+  {
+    "id": "grape",
+    "name_en": "Grape",
+    "category": "fruit"
+  },
+  {
+    "id": "greenapple",
+    "name_en": "GreenApple",
+    "category": "fruit"
+  },
+  {
+    "id": "guava",
+    "name_en": "Guava",
+    "category": "fruit"
+  },
+  {
+    "id": "hazelnut",
+    "name_en": "Hazelnut",
+    "category": "fruit"
+  },
+  {
+    "id": "horned_melon",
+    "name_en": "Horned Melon",
+    "category": "fruit"
+  },
+  {
+    "id": "jackfruit",
+    "name_en": "Jackfruit",
+    "category": "fruit"
+  },
+  {
+    "id": "japanese_persimmon",
+    "name_en": "Japanese Persimmon",
+    "category": "fruit"
+  },
+  {
+    "id": "kiwi",
+    "name_en": "Kiwi",
+    "category": "fruit"
+  },
+  {
+    "id": "kiwifruit",
+    "name_en": "Kiwifruit",
+    "category": "fruit"
+  },
+  {
+    "id": "lemon",
+    "name_en": "Lemon",
+    "category": "fruit"
+  },
+  {
+    "id": "lime",
+    "name_en": "Lime",
+    "category": "fruit"
+  },
+  {
+    "id": "lingonberry",
+    "name_en": "Lingonberry",
+    "category": "fruit"
+  },
+  {
+    "id": "lychee",
+    "name_en": "Lychee",
+    "category": "fruit"
+  },
+  {
+    "id": "mango",
+    "name_en": "Mango",
+    "category": "fruit"
+  },
+  {
+    "id": "mangosteen",
+    "name_en": "Mangosteen",
+    "category": "fruit"
+  },
+  {
+    "id": "melon",
+    "name_en": "Melon",
+    "category": "fruit"
+  },
+  {
+    "id": "morus",
+    "name_en": "Morus",
+    "category": "fruit"
+  },
+  {
+    "id": "orange",
+    "name_en": "Orange",
+    "category": "fruit"
+  },
+  {
+    "id": "papaya",
+    "name_en": "Papaya",
+    "category": "fruit"
+  },
+  {
+    "id": "passionfruit",
+    "name_en": "Passionfruit",
+    "category": "fruit"
+  },
+  {
+    "id": "peach",
+    "name_en": "Peach",
+    "category": "fruit"
+  },
+  {
+    "id": "pear",
+    "name_en": "Pear",
+    "category": "fruit"
+  },
+  {
+    "id": "persimmon",
+    "name_en": "Persimmon",
+    "category": "fruit"
+  },
+  {
+    "id": "pineapple",
+    "name_en": "Pineapple",
+    "category": "fruit"
+  },
+  {
+    "id": "pitahaya",
+    "name_en": "Pitahaya",
+    "category": "fruit"
+  },
+  {
+    "id": "plum",
+    "name_en": "Plum",
+    "category": "fruit"
+  },
+  {
+    "id": "pomegranate",
+    "name_en": "Pomegranate",
+    "category": "fruit"
+  },
+  {
+    "id": "pomelo",
+    "name_en": "Pomelo",
+    "category": "fruit"
+  },
+  {
+    "id": "pumpkin",
+    "name_en": "Pumpkin",
+    "category": "fruit"
+  },
+  {
+    "id": "raspberry",
+    "name_en": "Raspberry",
+    "category": "fruit"
+  },
+  {
+    "id": "strawberry",
+    "name_en": "Strawberry",
+    "category": "fruit"
+  },
+  {
+    "id": "tangerine",
+    "name_en": "Tangerine",
+    "category": "fruit"
+  },
+  {
+    "id": "tomato",
+    "name_en": "Tomato",
+    "category": "fruit"
+  },
+  {
+    "id": "watermelon",
+    "name_en": "Watermelon",
+    "category": "fruit"
+  },
+  {
+    "id": "artichoke",
+    "name_en": "Artichoke",
+    "category": "vegetable"
+  },
+  {
+    "id": "asparagus",
+    "name_en": "Asparagus",
+    "category": "vegetable"
+  },
+  {
+    "id": "aubergine",
+    "name_en": "Aubergine",
+    "category": "vegetable"
+  },
+  {
+    "id": "broccoli",
+    "name_en": "Broccoli",
+    "category": "vegetable"
+  },
+  {
+    "id": "brussels_sprout",
+    "name_en": "Brussels Sprout",
+    "category": "vegetable"
+  },
+  {
+    "id": "cabbage",
+    "name_en": "Cabbage",
+    "category": "vegetable"
+  },
+  {
+    "id": "carrot",
+    "name_en": "Carrot",
+    "category": "vegetable"
+  },
+  {
+    "id": "cauliflower",
+    "name_en": "Cauliflower",
+    "category": "vegetable"
+  },
+  {
+    "id": "celery",
+    "name_en": "Celery",
+    "category": "vegetable"
+  },
+  {
+    "id": "corn",
+    "name_en": "Corn",
+    "category": "vegetable"
+  },
+  {
+    "id": "cucumber",
+    "name_en": "Cucumber",
+    "category": "vegetable"
+  },
+  {
+    "id": "garlic",
+    "name_en": "Garlic",
+    "category": "vegetable"
+  },
+  {
+    "id": "ginger",
+    "name_en": "Ginger",
+    "category": "vegetable"
+  },
+  {
+    "id": "kale",
+    "name_en": "Kale",
+    "category": "vegetable"
+  },
+  {
+    "id": "leek",
+    "name_en": "Leek",
+    "category": "vegetable"
+  },
+  {
+    "id": "lettuce",
+    "name_en": "Lettuce",
+    "category": "vegetable"
+  },
+  {
+    "id": "mushroom",
+    "name_en": "Mushroom",
+    "category": "vegetable"
+  },
+  {
+    "id": "onion",
+    "name_en": "Onion",
+    "category": "vegetable"
+  },
+  {
+    "id": "parsnip",
+    "name_en": "Parsnip",
+    "category": "vegetable"
+  },
+  {
+    "id": "peas",
+    "name_en": "Peas",
+    "category": "vegetable"
+  },
+  {
+    "id": "potato",
+    "name_en": "Potato",
+    "category": "vegetable"
+  },
+  {
+    "id": "radish",
+    "name_en": "Radish",
+    "category": "vegetable"
+  },
+  {
+    "id": "spinach",
+    "name_en": "Spinach",
+    "category": "vegetable"
+  },
+  {
+    "id": "sweet_potato",
+    "name_en": "Sweet Potato",
+    "category": "vegetable"
+  },
+  {
+    "id": "zucchini",
+    "name_en": "Zucchini",
+    "category": "vegetable"
+  }
+]
