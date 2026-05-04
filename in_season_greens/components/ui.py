@@ -55,6 +55,9 @@ def search_input(state) -> rx.Component:
         rx.input(
             value=state.search_query,
             on_change=state.set_search_query,
+            on_focus=state.open_search_suggestions,
+            on_blur=state.close_search_suggestions,
+            on_key_down=state.handle_search_key,
             placeholder="Search fruits & vegetables...",
             class_name=styles.ui.search_input,
         ),
