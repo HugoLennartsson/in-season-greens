@@ -28,12 +28,29 @@ class ui:
         "text-xs font-black text-[#4f5b50] hover:bg-[#f7f9f5] md:px-3.5 md:text-[13px]"
     )
     search_icon = "absolute left-3 top-1/2 size-4 -translate-y-1/2 text-[#8a948a]"
+    search_clear_icon = "size-4 text-[#667166]"
+    search_clear_button = (
+        "absolute right-2 top-1/2 flex size-8 -translate-y-1/2 items-center "
+        "justify-center rounded-lg bg-transparent p-0 hover:bg-[#e7ede4]"
+    )
     search_input = (
         "h-10 w-full rounded-lg border border-[#d9e1d6] bg-[#f7f9f5] "
-        "pl-10 pr-3 font-bold text-[#1b211b] outline-none "
+        "pl-10 pr-11 font-bold text-[#1b211b] outline-none "
         "placeholder:text-[#8a948a] md:h-[46px] md:text-[15px]"
     )
-    search_shell = "relative min-w-0 flex-1"
+    search_shell = "relative z-30 min-w-0 flex-1"
+    search_suggestions = (
+        "absolute left-0 right-0 top-[calc(100%+6px)] z-50 overflow-hidden rounded-lg "
+        "border border-[#d9e1d6] bg-white shadow-[0_14px_34px_rgba(25,39,28,.18)]"
+    )
+    search_suggestion = (
+        "block w-full rounded-none border-0 bg-white px-0 py-0 text-left hover:bg-[#f3f7f1]"
+    )
+    search_suggestion_inner = "w-full items-center gap-2.5 border-b border-[#edf1ea] px-3 py-2 last:border-b-0"
+    search_suggestion_icon = "size-4 shrink-0 text-[#2db34a]"
+    search_suggestion_copy = "min-w-0 flex-1"
+    search_suggestion_name = "truncate text-[13px] font-black text-[#1b211b] md:text-[14px]"
+    search_suggestion_category = "text-[10px] font-extrabold uppercase tracking-wide text-[#7a867a]"
 
 
 class navigation:
