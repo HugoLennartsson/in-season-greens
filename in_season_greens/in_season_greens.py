@@ -45,6 +45,9 @@ class State(rx.State):
         if key == "Enter":
             self.search_suggestions_open = False
 
+    def submit_search(self):
+        self.search_suggestions_open = False
+
     def apply_search_suggestion(self, name: str):
         self.search_query = name
         self.search_suggestions_open = False

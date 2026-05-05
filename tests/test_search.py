@@ -53,3 +53,16 @@ def test_selecting_suggestion_closes_search_suggestions():
     assert state.search_query == "Apple"
     assert not state.search_suggestions_open
     assert not state.has_search_suggestions
+
+
+def test_search_submit_closes_search_suggestions():
+    state = State(_reflex_internal_init=True)
+
+    state.set_search_query("apple")
+    assert state.has_search_suggestions
+
+    state.submit_search()
+
+    assert state.search_query == "apple"
+    assert not state.search_suggestions_open
+    assert not state.has_search_suggestions

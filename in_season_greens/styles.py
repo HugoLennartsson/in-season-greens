@@ -27,15 +27,19 @@ class ui:
         "shrink-0 rounded-lg border border-[#dce3d9] bg-white px-3 py-2 "
         "text-xs font-black text-[#4f5b50] hover:bg-[#f7f9f5] md:px-3.5 md:text-[13px]"
     )
-    search_icon = "absolute left-3 top-1/2 size-4 -translate-y-1/2 text-[#8a948a]"
     search_clear_icon = "size-4 text-[#667166]"
     search_clear_button = (
-        "absolute right-2 top-1/2 flex size-8 -translate-y-1/2 items-center "
+        "absolute right-12 top-1/2 flex size-8 -translate-y-1/2 items-center "
         "justify-center rounded-lg bg-transparent p-0 hover:bg-[#e7ede4]"
+    )
+    search_submit_icon = "size-5 text-[#1a7a30]"
+    search_submit_button = (
+        "absolute right-0 top-0 flex h-10 w-11 items-center justify-center rounded-l-none rounded-r-lg "
+        "border-0 border-l border-[#d9e1d6] bg-[#f7f9f5] p-0 hover:bg-[#e7ede4] md:h-[46px] md:w-12"
     )
     search_input = (
         "h-10 w-full rounded-lg border border-[#d9e1d6] bg-[#f7f9f5] "
-        "pl-10 pr-11 font-bold text-[#1b211b] outline-none "
+        "pl-4 pr-24 font-bold text-[#1b211b] outline-none "
         "placeholder:text-[#8a948a] md:h-[46px] md:text-[15px]"
     )
     search_shell = "relative z-30 min-w-0 flex-1"
