@@ -22,6 +22,7 @@ from .components.product_card import product_card
 class State(rx.State):
     products: list[Product] = get_products()
     search_query: str = ""
+    search_suggestions_open: bool = False
     menu_open: bool = False
 
     def open_menu(self):
@@ -32,12 +33,25 @@ class State(rx.State):
 
     def set_search_query(self, query: str):
         self.search_query = query
+        self.search_suggestions_open = bool(query.strip())
+
+    def open_search_suggestions(self):
+        self.search_suggestions_open = bool(self.search_query.strip())
+
+    def close_search_suggestions(self):
+        self.search_suggestions_open = False
+
+    def handle_search_key(self, key: str):
+        if key == "Enter":
+            self.search_suggestions_open = False
 
     def apply_search_suggestion(self, name: str):
         self.search_query = name
+        self.search_suggestions_open = False
 
     def clear_search(self):
         self.search_query = ""
+        self.search_suggestions_open = False
 
     @rx.var
     def filtered_products(self) -> list[Product]:
@@ -53,7 +67,7 @@ class State(rx.State):
 
     @rx.var
     def has_search_suggestions(self) -> bool:
-        return bool(self.search_suggestions)
+        return self.search_suggestions_open and bool(self.search_suggestions)
 
     @rx.var
     def catalog_label(self) -> str:

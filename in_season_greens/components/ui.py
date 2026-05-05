@@ -34,7 +34,7 @@ def filter_button(label: str, key: str) -> rx.Component:
 
 
 def search_suggestion_button(state, suggestion) -> rx.Component:
-    return rx.button(
+    return rx.el.button(
         rx.hstack(
             app_icon("search", styles.ui.search_suggestion_icon, 2),
             rx.box(
@@ -44,7 +44,8 @@ def search_suggestion_button(state, suggestion) -> rx.Component:
             ),
             class_name=styles.ui.search_suggestion_inner,
         ),
-        on_click=state.apply_search_suggestion(suggestion["name_en"]),
+        type="button",
+        on_mouse_down=state.apply_search_suggestion(suggestion["name_en"]),
         class_name=styles.ui.search_suggestion,
     )
 
@@ -55,6 +56,9 @@ def search_input(state) -> rx.Component:
         rx.input(
             value=state.search_query,
             on_change=state.set_search_query,
+            on_focus=state.open_search_suggestions,
+            on_blur=state.close_search_suggestions,
+            on_key_down=state.handle_search_key,
             placeholder="Search fruits & vegetables...",
             class_name=styles.ui.search_input,
         ),
