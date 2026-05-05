@@ -40,8 +40,9 @@ class ui:
     )
     search_shell = "relative z-30 min-w-0 flex-1"
     search_suggestions = (
-        "absolute left-0 right-0 top-[calc(100%+6px)] z-50 overflow-hidden rounded-lg "
-        "border border-[#d9e1d6] bg-white shadow-[0_14px_34px_rgba(25,39,28,.18)]"
+        "absolute left-1 right-1 top-[calc(100%+8px)] z-50 max-h-[min(18rem,calc(100vh-8rem))] "
+        "overflow-y-auto overflow-x-hidden rounded-lg border border-[#d9e1d6] bg-white "
+        "shadow-[0_14px_34px_rgba(25,39,28,.18)]"
     )
     search_suggestion = (
         "block w-full rounded-none border-0 bg-white px-0 py-0 text-left hover:bg-[#f3f7f1]"
