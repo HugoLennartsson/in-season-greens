@@ -5,15 +5,16 @@ from typing import TypedDict
 
 
 class Product(TypedDict):
-    id: int
+    id: str
     name: str
-    emoji: str
+    category: str
     status: str
     months: list[int]
-    co2: float
+    co2: float | None
     origin: str
-    local: bool
+    local: bool | None
     nutrients: list[str]
+    image_src: str
 
 
 class OverviewSignal(TypedDict):
@@ -75,149 +76,31 @@ NAV_ITEMS: list[NavItem] = [
     {"icon": "info", "label": "About", "subtitle": "Sources and methodology"},
 ]
 
-
-PRODUCTS: list[Product] = [
-    {
-        "id": 1,
-        "name": "Strawberry",
-        "emoji": "🍓",
-        "status": "peak",
-        "months": [4, 5, 6, 7],
-        "co2": 0.4,
-        "origin": "Sweden",
-        "local": True,
-        "nutrients": ["Vitamin C", "Folate"],
-    },
-    {
-        "id": 2,
-        "name": "Tomato",
-        "emoji": "🍅",
-        "status": "peak",
-        "months": [5, 6, 7, 8],
-        "co2": 0.7,
-        "origin": "Sweden",
-        "local": True,
-        "nutrients": ["Vitamin C", "Lycopene"],
-    },
-    {
-        "id": 3,
-        "name": "Cucumber",
-        "emoji": "🥒",
-        "status": "season",
-        "months": [5, 6, 7],
-        "co2": 0.6,
-        "origin": "Sweden",
-        "local": True,
-        "nutrients": ["Hydration", "Vitamin K"],
-    },
-    {
-        "id": 4,
-        "name": "Pea",
-        "emoji": "🫛",
-        "status": "peak",
-        "months": [5, 6],
-        "co2": 0.1,
-        "origin": "Sweden",
-        "local": True,
-        "nutrients": ["Protein", "Vitamin B1"],
-    },
-    {
-        "id": 5,
-        "name": "Rhubarb",
-        "emoji": "🌿",
-        "status": "season",
-        "months": [4, 5, 6],
-        "co2": 0.2,
-        "origin": "Sweden",
-        "local": True,
-        "nutrients": ["Vitamin K", "Calcium"],
-    },
-    {
-        "id": 6,
-        "name": "Carrot",
-        "emoji": "🥕",
-        "status": "season",
-        "months": [5, 6, 7, 8, 9],
-        "co2": 0.2,
-        "origin": "Sweden",
-        "local": True,
-        "nutrients": ["Beta-carotene", "Vitamin A"],
-    },
-    {
-        "id": 7,
-        "name": "Lettuce",
-        "emoji": "🥬",
-        "status": "peak",
-        "months": [4, 5, 6, 7],
-        "co2": 0.3,
-        "origin": "Sweden",
-        "local": True,
-        "nutrients": ["Folate", "Vitamin K"],
-    },
-    {
-        "id": 8,
-        "name": "Blueberry",
-        "emoji": "🫐",
-        "status": "soon",
-        "months": [6, 7, 8],
-        "co2": 0.5,
-        "origin": "Sweden",
-        "local": True,
-        "nutrients": ["Antioxidants", "Vitamin C"],
-    },
-    {
-        "id": 9,
-        "name": "Banana",
-        "emoji": "🍌",
-        "status": "out",
-        "months": [],
-        "co2": 0.9,
-        "origin": "Ecuador",
-        "local": False,
-        "nutrients": ["Potassium", "Vitamin B6"],
-    },
-    {
-        "id": 10,
-        "name": "Avocado",
-        "emoji": "🥑",
-        "status": "out",
-        "months": [],
-        "co2": 2.5,
-        "origin": "Mexico",
-        "local": False,
-        "nutrients": ["Healthy Fats", "Vitamin E"],
-    },
-    {
-        "id": 11,
-        "name": "Mango",
-        "emoji": "🥭",
-        "status": "out",
-        "months": [],
-        "co2": 1.9,
-        "origin": "India",
-        "local": False,
-        "nutrients": ["Vitamin A", "Vitamin C"],
-    },
-    {
-        "id": 12,
-        "name": "Apple",
-        "emoji": "🍎",
-        "status": "out",
-        "months": [8, 9, 10, 11],
-        "co2": 0.4,
-        "origin": "Poland",
-        "local": False,
-        "nutrients": ["Fiber", "Vitamin C"],
-    },
-]
-
-
 def _load_all_produce() -> list[ProduceItem]:
     with _ALL_PRODUCE_PATH.open(encoding="utf-8") as produce_file:
         return json.load(produce_file)
 
 
 ALL_PRODUCE: list[ProduceItem] = _load_all_produce()
+
+
+def get_all_produce_ids() -> set[str]:
+    return {item["id"] for item in ALL_PRODUCE}
+
+
+def product_from_produce(item: ProduceItem) -> Product:
+    return {
+        "id": item["id"],
+        "name": item["name_en"],
+        "category": item["category"],
+        "status": "unknown",  # Legacy card field: all_produce.json has no season status.
+        "months": [],  # Legacy card field: all_produce.json has no month calendar.
+        "co2": None,  # Legacy card field: all_produce.json has no CO2 estimate.
+        "origin": "???",  # Legacy card field: all_produce.json has no origin/source country.
+        "local": None,  # Legacy card field: all_produce.json has no local availability flag.
+        "nutrients": ["???"],  # Legacy card field: all_produce.json has no nutrient data.
+        "image_src": f"/img/{item['id']}.jpg",
+    }
 
 
 def normalize_search_text(value: str) -> str:
@@ -277,7 +160,7 @@ def get_search_suggestions(query: str, limit: int = SEARCH_SUGGESTION_LIMIT) -> 
 
 
 def search_products(query: str, products: list[Product] | None = None) -> list[Product]:
-    products_to_search = products or PRODUCTS
+    products_to_search = products or get_products()
     if not normalize_search_text(query):
         return products_to_search
 
@@ -291,7 +174,7 @@ def search_products(query: str, products: list[Product] | None = None) -> list[P
 
 
 def get_products() -> list[Product]:
-    return PRODUCTS
+    return [product_from_produce(item) for item in ALL_PRODUCE]
 
 
 def get_all_produce() -> list[ProduceItem]:
@@ -299,7 +182,7 @@ def get_all_produce() -> list[ProduceItem]:
 
 
 def get_seasonal_veggies() -> list[Product]:
-    return PRODUCTS
+    return get_products()
 
 
 def get_nav_items() -> list[NavItem]:

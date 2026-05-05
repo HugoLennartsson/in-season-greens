@@ -133,7 +133,7 @@ class product_card:
         "flex flex-col overflow-hidden rounded-lg border border-[#e1e1dc] bg-white "
         "shadow-[0_8px_22px_rgba(35,45,35,.16)]"
     )
-    emoji = "text-[54px] leading-none"
+    image_asset = "h-full w-full object-cover"
     body = "border-t border-[#eeeeea] px-2.5 pb-2.5 pt-2"
     title = "mb-1 text-[17px] font-black leading-tight text-[#141414]"
     months = "mb-1.5 flex-wrap gap-1"
@@ -161,10 +161,10 @@ class product_card:
     def image(status) -> rx.Component:
         return rx.match(
             status,
-            ("peak", "relative m-2 flex h-[120px] items-center justify-center overflow-hidden rounded-lg bg-[#3dcc56]"),
-            ("season", "relative m-2 flex h-[120px] items-center justify-center overflow-hidden rounded-lg bg-[#7dd89a]"),
-            ("soon", "relative m-2 flex h-[120px] items-center justify-center overflow-hidden rounded-lg bg-[#f0bc50]"),
-            ("relative m-2 flex h-[120px] items-center justify-center overflow-hidden rounded-lg bg-[#d0cdc8]"),
+            ("peak", "relative m-2 aspect-square overflow-hidden rounded-lg bg-[#3dcc56]"),
+            ("season", "relative m-2 aspect-square overflow-hidden rounded-lg bg-[#7dd89a]"),
+            ("soon", "relative m-2 aspect-square overflow-hidden rounded-lg bg-[#f0bc50]"),
+            ("relative m-2 aspect-square overflow-hidden rounded-lg bg-[#d0cdc8]"),
         )
 
     @staticmethod
