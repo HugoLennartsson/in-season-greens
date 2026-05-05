@@ -1,16 +1,18 @@
+import json
+from pathlib import Path
 from typing import TypedDict
 
 
 class Product(TypedDict):
-    id: int
+    id: str
     name: str
-    emoji: str
     status: str
     months: list[int]
     co2: float
     origin: str
     local: bool
     nutrients: list[str]
+    image_src: str
 
 
 class OverviewSignal(TypedDict):
@@ -63,149 +65,165 @@ NAV_ITEMS: list[NavItem] = [
     {"icon": "info", "label": "About", "subtitle": "Sources and methodology"},
 ]
 
+ROOT_DIR = Path(__file__).resolve().parents[1]
+ALL_PRODUCE_FILE = ROOT_DIR / "all_produce.json"
 
-PRODUCTS: list[Product] = [
+
+OVERVIEW_PRODUCTS: list[Product] = [
     {
-        "id": 1,
+        "id": "strawberry",
         "name": "Strawberry",
-        "emoji": "🍓",
         "status": "peak",
         "months": [4, 5, 6, 7],
         "co2": 0.4,
         "origin": "Sweden",
         "local": True,
         "nutrients": ["Vitamin C", "Folate"],
+        "image_src": "",
     },
     {
-        "id": 2,
+        "id": "tomato",
         "name": "Tomato",
-        "emoji": "🍅",
         "status": "peak",
         "months": [5, 6, 7, 8],
         "co2": 0.7,
         "origin": "Sweden",
         "local": True,
         "nutrients": ["Vitamin C", "Lycopene"],
+        "image_src": "",
     },
     {
-        "id": 3,
+        "id": "cucumber",
         "name": "Cucumber",
-        "emoji": "🥒",
         "status": "season",
         "months": [5, 6, 7],
         "co2": 0.6,
         "origin": "Sweden",
         "local": True,
         "nutrients": ["Hydration", "Vitamin K"],
+        "image_src": "",
     },
     {
-        "id": 4,
+        "id": "peas",
         "name": "Pea",
-        "emoji": "🫛",
         "status": "peak",
         "months": [5, 6],
         "co2": 0.1,
         "origin": "Sweden",
         "local": True,
         "nutrients": ["Protein", "Vitamin B1"],
+        "image_src": "",
     },
     {
-        "id": 5,
+        "id": "rhubarb",
         "name": "Rhubarb",
-        "emoji": "🌿",
         "status": "season",
         "months": [4, 5, 6],
         "co2": 0.2,
         "origin": "Sweden",
         "local": True,
         "nutrients": ["Vitamin K", "Calcium"],
+        "image_src": "",
     },
     {
-        "id": 6,
+        "id": "carrot",
         "name": "Carrot",
-        "emoji": "🥕",
         "status": "season",
         "months": [5, 6, 7, 8, 9],
         "co2": 0.2,
         "origin": "Sweden",
         "local": True,
         "nutrients": ["Beta-carotene", "Vitamin A"],
+        "image_src": "",
     },
     {
-        "id": 7,
+        "id": "lettuce",
         "name": "Lettuce",
-        "emoji": "🥬",
         "status": "peak",
         "months": [4, 5, 6, 7],
         "co2": 0.3,
         "origin": "Sweden",
         "local": True,
         "nutrients": ["Folate", "Vitamin K"],
+        "image_src": "",
     },
     {
-        "id": 8,
+        "id": "blueberry",
         "name": "Blueberry",
-        "emoji": "🫐",
         "status": "soon",
         "months": [6, 7, 8],
         "co2": 0.5,
         "origin": "Sweden",
         "local": True,
         "nutrients": ["Antioxidants", "Vitamin C"],
+        "image_src": "",
     },
     {
-        "id": 9,
+        "id": "banana",
         "name": "Banana",
-        "emoji": "🍌",
         "status": "out",
         "months": [],
         "co2": 0.9,
         "origin": "Ecuador",
         "local": False,
         "nutrients": ["Potassium", "Vitamin B6"],
+        "image_src": "",
     },
     {
-        "id": 10,
+        "id": "avocado",
         "name": "Avocado",
-        "emoji": "🥑",
         "status": "out",
         "months": [],
         "co2": 2.5,
         "origin": "Mexico",
         "local": False,
         "nutrients": ["Healthy Fats", "Vitamin E"],
+        "image_src": "",
     },
     {
-        "id": 11,
+        "id": "mango",
         "name": "Mango",
-        "emoji": "🥭",
         "status": "out",
         "months": [],
         "co2": 1.9,
         "origin": "India",
         "local": False,
         "nutrients": ["Vitamin A", "Vitamin C"],
+        "image_src": "",
     },
     {
-        "id": 12,
+        "id": "apple",
         "name": "Apple",
-        "emoji": "🍎",
         "status": "out",
         "months": [8, 9, 10, 11],
         "co2": 0.4,
         "origin": "Poland",
         "local": False,
         "nutrients": ["Fiber", "Vitamin C"],
+        "image_src": "",
     },
 ]
 
 
+def get_all_produce_ids() -> set[str]:
+    with ALL_PRODUCE_FILE.open() as produce_file:
+        return {item["id"] for item in json.load(produce_file)}
+
+
 def get_products() -> list[Product]:
-    return PRODUCTS
+    produce_ids = get_all_produce_ids()
+    return [
+        {
+            **product,
+            "image_src": f"/img/{product['id']}.jpg",
+        }
+        for product in OVERVIEW_PRODUCTS
+        if product["id"] in produce_ids
+    ]
 
 
 def get_seasonal_veggies() -> list[Product]:
-    return PRODUCTS
+    return get_products()
 
 
 def get_nav_items() -> list[NavItem]:

@@ -115,7 +115,7 @@ class product_card:
         "flex flex-col overflow-hidden rounded-lg border border-[#e1e1dc] bg-white "
         "shadow-[0_8px_22px_rgba(35,45,35,.16)]"
     )
-    emoji = "text-[54px] leading-none"
+    image_asset = "h-full w-full object-cover"
     body = "border-t border-[#eeeeea] px-2.5 pb-2.5 pt-2"
     title = "mb-1 text-[17px] font-black leading-tight text-[#141414]"
     months = "mb-1.5 flex-wrap gap-1"

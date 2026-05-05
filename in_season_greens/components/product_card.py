@@ -74,7 +74,11 @@ def product_card(product) -> rx.Component:
     is_in = (product["status"] == "peak") | (product["status"] == "season")
     return rx.box(
         rx.box(
-            rx.text(product["emoji"], class_name=styles.product_card.emoji),
+            rx.image(
+                src=product["image_src"],
+                alt=product["name"],
+                class_name=styles.product_card.image_asset,
+            ),
             rx.box(status_label(product["status"]), class_name=styles.product_card.badge(product["status"])),
             class_name=styles.product_card.image(product["status"]),
         ),
