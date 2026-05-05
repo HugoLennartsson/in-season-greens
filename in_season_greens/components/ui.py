@@ -52,7 +52,6 @@ def search_suggestion_button(state, suggestion) -> rx.Component:
 
 def search_input(state) -> rx.Component:
     return rx.box(
-        app_icon("search", styles.ui.search_icon, 2),
         rx.input(
             value=state.search_query,
             on_change=state.set_search_query,
@@ -71,6 +70,12 @@ def search_input(state) -> rx.Component:
                 class_name=styles.ui.search_clear_button,
             ),
             rx.fragment(),
+        ),
+        rx.button(
+            app_icon("search", styles.ui.search_submit_icon, 2),
+            on_mouse_down=state.submit_search,
+            aria_label="Search",
+            class_name=styles.ui.search_submit_button,
         ),
         rx.cond(
             state.has_search_suggestions,
