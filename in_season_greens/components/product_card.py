@@ -11,15 +11,20 @@ def status_label(status) -> rx.Component:
         ("peak", "PEAK SEASON"),
         ("season", "IN SEASON"),
         ("soon", "COMING SOON"),
+        ("unknown", "UNKNOWN"),
         ("OUT OF SEASON"),
     )
 
 
 def carbon_label(co2) -> rx.Component:
     return rx.cond(
-        co2 <= 0.7,
-        "Low Carbon Footprint",
-        rx.cond(co2 <= 1.5, "Medium Carbon Footprint", "Huge Carbon Footprint"),
+        co2 == None,
+        "Unknown Carbon Footprint",
+        rx.cond(
+            co2 <= 0.7,
+            "Low Carbon Footprint",
+            rx.cond(co2 <= 1.5, "Medium Carbon Footprint", "Huge Carbon Footprint"),
+        ),
     )
 
 
@@ -48,23 +53,30 @@ def season_months(product, compact: bool = False) -> rx.Component:
         else "rounded-lg px-3 py-1 text-xs font-bold"
     )
     return rx.cond(
-        product["local"],
-        rx.flex(
-            rx.foreach(
-                product["months"],
-                lambda month: rx.box(
-                    month_name(month),
-                    class_name=rx.cond(
-                        month == CURRENT_MONTH,
-                        f"{pill_class} {styles.product_card.month_current}",
-                        f"{pill_class} {styles.product_card.month_default}",
+        product["local"] != None,
+        rx.cond(
+            product["local"],
+            rx.flex(
+                rx.foreach(
+                    product["months"],
+                    lambda month: rx.box(
+                        month_name(month),
+                        class_name=rx.cond(
+                            month == CURRENT_MONTH,
+                            f"{pill_class} {styles.product_card.month_current}",
+                            f"{pill_class} {styles.product_card.month_default}",
+                        ),
                     ),
                 ),
+                class_name=styles.product_card.months,
             ),
-            class_name=styles.product_card.months,
+            rx.text(
+                "Can't grow locally",
+                class_name=styles.product_card.month_missing,
+            ),
         ),
         rx.text(
-            "Can't grow locally",
+            "Season months unknown",
             class_name=styles.product_card.month_missing,
         ),
     )
@@ -72,6 +84,7 @@ def season_months(product, compact: bool = False) -> rx.Component:
 
 def product_card(product) -> rx.Component:
     is_in = (product["status"] == "peak") | (product["status"] == "season")
+    has_local_status = product["local"] != None
     return rx.box(
         rx.box(
             rx.image(
@@ -93,14 +106,18 @@ def product_card(product) -> rx.Component:
                 ),
                 rx.box(
                     rx.text(
-                        rx.cond(product["local"], "Grown Locally", rx.fragment("Grown in ", product["origin"])),
+                        rx.cond(
+                            has_local_status,
+                            rx.cond(product["local"], "Grown Locally", rx.fragment("Grown in ", product["origin"])),
+                            "Origin unknown",
+                        ),
                         class_name=styles.product_card.origin_title,
                     ),
                     rx.text(carbon_label(product["co2"]), class_name=styles.product_card.carbon_label),
                     class_name=styles.product_card.origin_copy,
                 ),
                 rx.box(
-                    rx.text(product["co2"], " kg CO2e"),
+                    rx.text(rx.cond(product["co2"] == None, "???", product["co2"]), " kg CO2e"),
                     rx.text("/ kg"),
                     class_name=styles.product_card.carbon_value,
                 ),

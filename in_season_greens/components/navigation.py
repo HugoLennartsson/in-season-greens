@@ -12,7 +12,7 @@ def desktop_header(state) -> rx.Component:
                 APP_NAME,
                 class_name=styles.navigation.desktop_logo,
             ),
-            search_input(),
+            search_input(state),
             rx.hstack(
                 *[filter_button(label, key) for key, label in FILTERS],
                 class_name=styles.navigation.desktop_filters,
@@ -39,9 +39,9 @@ def mobile_header(state) -> rx.Component:
     )
 
 
-def mobile_sticky_filters() -> rx.Component:
+def mobile_sticky_filters(state) -> rx.Component:
     return rx.box(
-        search_input(),
+        search_input(state),
         rx.hstack(
             *[filter_button(label, key) for key, label in FILTERS],
             class_name=styles.navigation.mobile_filter_row,
