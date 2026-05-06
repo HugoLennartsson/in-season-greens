@@ -3,6 +3,8 @@ import reflex as rx
 from .. import styles
 from ..data import APP_NAME, get_full_location, get_nav_items
 from .ui import FILTERS, app_icon, filter_button, hamburger_button, search_input
+from ..state import State
+from ..location_state import LocationState
 
 
 def desktop_header(state) -> rx.Component:
@@ -56,7 +58,9 @@ def drawer(state) -> rx.Component:
     return rx.fragment(
         rx.cond(
             state.menu_open,
-            rx.box(on_click=state.close_menu, class_name=styles.navigation.drawer_overlay),
+            rx.box(
+                on_click=state.close_menu, class_name=styles.navigation.drawer_overlay
+            ),
             rx.fragment(),
         ),
         rx.box(
@@ -68,7 +72,10 @@ def drawer(state) -> rx.Component:
                 ),
                 rx.hstack(
                     app_icon("map_pin", styles.navigation.drawer_location_icon, 2),
-                    rx.text(get_full_location(), class_name=styles.navigation.drawer_location),
+                    rx.text(
+                        LocationState.location_display,
+                        class_name=styles.navigation.drawer_location,
+                    ),
                     class_name=styles.navigation.drawer_location_row,
                 ),
                 class_name=styles.navigation.drawer_header,
@@ -78,8 +85,14 @@ def drawer(state) -> rx.Component:
                     rx.hstack(
                         app_icon(item["icon"], styles.navigation.drawer_item_icon, 2),
                         rx.box(
-                            rx.text(item["label"], class_name=styles.navigation.drawer_item_label),
-                            rx.text(item["subtitle"], class_name=styles.navigation.drawer_item_subtitle),
+                            rx.text(
+                                item["label"],
+                                class_name=styles.navigation.drawer_item_label,
+                            ),
+                            rx.text(
+                                item["subtitle"],
+                                class_name=styles.navigation.drawer_item_subtitle,
+                            ),
                         ),
                         on_click=state.close_menu,
                         class_name=styles.navigation.drawer_item,

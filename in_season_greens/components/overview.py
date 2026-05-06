@@ -1,6 +1,8 @@
 import reflex as rx
 
 from .. import styles
+from ..state import State
+from ..location_state import LocationState
 from ..data import (
     get_current_month_name,
     get_overview_signals,
@@ -28,7 +30,16 @@ def overview_section() -> rx.Component:
                 rx.box(
                     rx.hstack(
                         app_icon("map_pin", styles.overview.location_icon, 2),
-                        rx.text(get_short_location(), class_name=styles.overview.location_text),
+                        rx.button(
+                            rx.text(
+                                LocationState.location_display,
+                                class_name=styles.overview.location_text,
+                            ),
+                            on_click=LocationState.get_location,
+                            variant="ghost",  # Keeps it looking like text, not a chunky button
+                            padding="0",  # Prevents the button from expanding too much
+                            _hover={"cursor": "pointer", "opacity": 0.8},
+                        ),
                         class_name=styles.overview.location_row,
                     ),
                     rx.text(get_current_month_name(), class_name=styles.overview.month),
@@ -45,10 +56,18 @@ def overview_section() -> rx.Component:
                     rx.grid(
                         *[
                             rx.hstack(
-                                app_icon(signal["icon"], styles.overview.signal_icon, 2),
+                                app_icon(
+                                    signal["icon"], styles.overview.signal_icon, 2
+                                ),
                                 rx.box(
-                                    rx.text(signal["value"], class_name=styles.overview.signal_value),
-                                    rx.text(signal["label"], class_name=styles.overview.signal_label),
+                                    rx.text(
+                                        signal["value"],
+                                        class_name=styles.overview.signal_value,
+                                    ),
+                                    rx.text(
+                                        signal["label"],
+                                        class_name=styles.overview.signal_label,
+                                    ),
                                     class_name=styles.overview.signal_copy,
                                 ),
                                 class_name=styles.overview.signal_row,
@@ -68,7 +87,10 @@ def overview_section() -> rx.Component:
                         *[
                             rx.hstack(
                                 app_icon(item["icon"], styles.overview.outlook_icon, 2),
-                                rx.text(item["text"], class_name=styles.overview.outlook_text),
+                                rx.text(
+                                    item["text"],
+                                    class_name=styles.overview.outlook_text,
+                                ),
                                 class_name=styles.overview.outlook_row,
                             )
                             for item in outlook
