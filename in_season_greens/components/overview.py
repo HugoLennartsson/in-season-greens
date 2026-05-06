@@ -30,15 +30,9 @@ def overview_section() -> rx.Component:
                 rx.box(
                     rx.hstack(
                         app_icon("map_pin", styles.overview.location_icon, 2),
-                        rx.button(
-                            rx.text(
-                                LocationState.location_display,
-                                class_name=styles.overview.location_text,
-                            ),
-                            on_click=LocationState.get_location,
-                            variant="ghost",  # Keeps it looking like text, not a chunky button
-                            padding="0",  # Prevents the button from expanding too much
-                            _hover={"cursor": "pointer", "opacity": 0.8},
+                        rx.text(
+                            LocationState.location_display,
+                            class_name=styles.overview.location_text,
                         ),
                         class_name=styles.overview.location_row,
                     ),
