@@ -2,36 +2,66 @@ import reflex as rx
 
 
 class LocationState(rx.State):
-    lat: str = ""
-    lon: str = ""
-    location_display: str = "Gothenburg, SE"
-    is_loading: bool = False
-    error_message: str = ""
+    lat: float | None = None
+    lon: float | None = None
+    error: str = ""
 
-    def update_location(self, pos: dict):
-        print("wts")
-        self.lat = str(pos["coords"]["latitude"])
-        self.lon = str(pos["coords"]["longitude"])
-        # For now just show coordinates; later you can reverse geocode
-        self.location_display = f"{float(self.lat):.2f}, {float(self.lon):.2f}"
+    @rx.var
+    def location_display(self) -> str:
+        """Human-readable location string."""
+        if self.lat is None or self.lon is None:
+            return "Locating..."
 
-    def handle_error(self, error: dict):
-        pass  # keep default fallback
+        return f"{self.lat:.4f}, {self.lon:.4f}"
 
+    @rx.event
+    def set_location(self, lat: float, lon: float):
+        print(f"[DEBUG] Received location: lat={lat}, lon={lon}")
+        self.lat = lat
+        self.lon = lon
+
+    @rx.event
+    def set_error(self, message: str):
+        self.error = message
+
+    @rx.event
     def get_location(self):
-        return rx.call_script(f"""
-            navigator.geolocation.getCurrentPosition(
-                (position) => {{
-                    applyDelta({{
-                        name: "{self.get_full_name()}.update_location",
-                        payload: {{pos: {{coords: {{latitude: position.coords.latitude, longitude: position.coords.longitude}}}}}}
-                    }});
-                }},
-                (error) => {{
-                    applyDelta({{
-                        name: "{self.get_full_name()}.handle_error",
-                        payload: {{error: {{message: error.message}}}}
-                    }});
-                }}
-            );
-        """)
+        return rx.call_script(
+            """
+            new Promise((resolve) => {
+                navigator.geolocation.getCurrentPosition(
+                    (pos) => {
+                        const lat = pos.coords.latitude;
+                        const lon = pos.coords.longitude;
+
+                        console.log("[DEBUG] Resolving:", lat, lon);
+                        resolve([lat, lon]);
+                    },
+                    (err) => {
+                        console.error("[DEBUG] Error:", err.message);
+                        resolve(["ERROR", err.message]);
+                    }
+                );
+            })
+            """,
+            callback=LocationState.handle_location_result,
+        )
+    
+    @rx.event
+    def handle_location_result(self, result):
+        print(f"[DEBUG] Raw result: {result}")
+
+        if result is None:
+            print("[DEBUG] No result received")
+            return
+
+        if result[0] == "ERROR":
+            self.error = result[1]
+            print(f"[DEBUG] Error received: {self.error}")
+            return
+
+        lat, lon = result
+        print(f"[DEBUG] Received location: lat={lat}, lon={lon}")
+
+        self.lat = lat
+        self.lon = lon
