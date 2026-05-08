@@ -1,18 +1,31 @@
 import reflex as rx
-
+from geopy.geocoders import Nominatim
 
 class LocationState(rx.State):
     lat: float | None = None
     lon: float | None = None
+    city: str = ""
     error: str = ""
 
+    def _reverse_geocode(self, lat: float, lon: float) -> str:
+        """Helper to convert coordinates to a city name."""
+        try:
+            geolocator = Nominatim(user_agent="reflex_app")
+            location = geolocator.reverse(f"{lat}, {lon}", timeout=5)
+            if location and "address" in location.raw:
+                address = location.raw["address"]
+                return address.get("city")
+            return "Unknown Location"
+        except Exception:
+            return "City Lookup Failed"
+        
     @rx.var
     def location_display(self) -> str:
         """Human-readable location string."""
         if self.lat is None or self.lon is None:
             return "Locating..."
 
-        return f"{self.lat:.4f}, {self.lon:.4f}"
+        return self.city
 
     @rx.event
     def set_location(self, lat: float, lon: float):
@@ -65,3 +78,4 @@ class LocationState(rx.State):
 
         self.lat = lat
         self.lon = lon
+        self.city = self._reverse_geocode(lat,lon)
