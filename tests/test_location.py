@@ -36,7 +36,7 @@ def test_handle_location_error(state):
     assert state.location_display == "Locating..."
 
 
-@patch("your_app.location_state.Nominatim")
+@patch("in_season_greens.location_state.Nominatim")
 def test_reverse_geocode_api_success(mock_nominatim, state):
     """Test the logic inside the geocoder helper."""
     # Setup mock response
@@ -48,7 +48,7 @@ def test_reverse_geocode_api_success(mock_nominatim, state):
     assert result == "New York"
 
 
-@patch("your_app.location_state.Nominatim")
+@patch("in_season_greens.location_state.Nominatim")
 def test_reverse_geocode_api_failure(mock_nominatim, state):
     """Test the helper's try/except block."""
     mock_nominatim.side_effect = Exception("API Down")
