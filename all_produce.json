@@ -1,372 +1,1412 @@
 [
-  {
-    "id": "annona",
-    "name_en": "Annona",
-    "category": "fruit"
-  },
-  {
-    "id": "apple",
-    "name_en": "Apple",
-    "category": "fruit"
-  },
-  {
-    "id": "apricot",
-    "name_en": "Apricot",
-    "category": "fruit"
-  },
-  {
-    "id": "avocado",
-    "name_en": "Avocado",
-    "category": "fruit"
-  },
-  {
-    "id": "banana",
-    "name_en": "Banana",
-    "category": "fruit"
-  },
-  {
-    "id": "blackberry",
-    "name_en": "Blackberry",
-    "category": "fruit"
-  },
-  {
-    "id": "blueberry",
-    "name_en": "Blueberry",
-    "category": "fruit"
-  },
-  {
-    "id": "ceylon_gooseberry",
-    "name_en": "Ceylon Gooseberry",
-    "category": "fruit"
-  },
-  {
-    "id": "cherry",
-    "name_en": "Cherry",
-    "category": "fruit"
-  },
-  {
-    "id": "cranberry",
-    "name_en": "Cranberry",
-    "category": "fruit"
-  },
-  {
-    "id": "dragonfruit",
-    "name_en": "Dragonfruit",
-    "category": "fruit"
-  },
-  {
-    "id": "durian",
-    "name_en": "Durian",
-    "category": "fruit"
-  },
-  {
-    "id": "feijoa",
-    "name_en": "Feijoa",
-    "category": "fruit"
-  },
-  {
-    "id": "fig",
-    "name_en": "Fig",
-    "category": "fruit"
-  },
-  {
-    "id": "gooseberry",
-    "name_en": "Gooseberry",
-    "category": "fruit"
-  },
-  {
-    "id": "grape",
-    "name_en": "Grape",
-    "category": "fruit"
-  },
-  {
-    "id": "greenapple",
-    "name_en": "GreenApple",
-    "category": "fruit"
-  },
-  {
-    "id": "guava",
-    "name_en": "Guava",
-    "category": "fruit"
-  },
-  {
-    "id": "hazelnut",
-    "name_en": "Hazelnut",
-    "category": "fruit"
-  },
-  {
-    "id": "horned_melon",
-    "name_en": "Horned Melon",
-    "category": "fruit"
-  },
-  {
-    "id": "jackfruit",
-    "name_en": "Jackfruit",
-    "category": "fruit"
-  },
-  {
-    "id": "japanese_persimmon",
-    "name_en": "Japanese Persimmon",
-    "category": "fruit"
-  },
-  {
-    "id": "kiwi",
-    "name_en": "Kiwi",
-    "category": "fruit"
-  },
-  {
-    "id": "kiwifruit",
-    "name_en": "Kiwifruit",
-    "category": "fruit"
-  },
-  {
-    "id": "lemon",
-    "name_en": "Lemon",
-    "category": "fruit"
-  },
-  {
-    "id": "lime",
-    "name_en": "Lime",
-    "category": "fruit"
-  },
-  {
-    "id": "lingonberry",
-    "name_en": "Lingonberry",
-    "category": "fruit"
-  },
-  {
-    "id": "lychee",
-    "name_en": "Lychee",
-    "category": "fruit"
-  },
-  {
-    "id": "mango",
-    "name_en": "Mango",
-    "category": "fruit"
-  },
-  {
-    "id": "mangosteen",
-    "name_en": "Mangosteen",
-    "category": "fruit"
-  },
-  {
-    "id": "melon",
-    "name_en": "Melon",
-    "category": "fruit"
-  },
-  {
-    "id": "morus",
-    "name_en": "Morus",
-    "category": "fruit"
-  },
-  {
-    "id": "orange",
-    "name_en": "Orange",
-    "category": "fruit"
-  },
-  {
-    "id": "papaya",
-    "name_en": "Papaya",
-    "category": "fruit"
-  },
-  {
-    "id": "passionfruit",
-    "name_en": "Passionfruit",
-    "category": "fruit"
-  },
-  {
-    "id": "peach",
-    "name_en": "Peach",
-    "category": "fruit"
-  },
-  {
-    "id": "pear",
-    "name_en": "Pear",
-    "category": "fruit"
-  },
-  {
-    "id": "persimmon",
-    "name_en": "Persimmon",
-    "category": "fruit"
-  },
-  {
-    "id": "pineapple",
-    "name_en": "Pineapple",
-    "category": "fruit"
-  },
-  {
-    "id": "pitahaya",
-    "name_en": "Pitahaya",
-    "category": "fruit"
-  },
-  {
-    "id": "plum",
-    "name_en": "Plum",
-    "category": "fruit"
-  },
-  {
-    "id": "pomegranate",
-    "name_en": "Pomegranate",
-    "category": "fruit"
-  },
-  {
-    "id": "pomelo",
-    "name_en": "Pomelo",
-    "category": "fruit"
-  },
-  {
-    "id": "pumpkin",
-    "name_en": "Pumpkin",
-    "category": "fruit"
-  },
-  {
-    "id": "raspberry",
-    "name_en": "Raspberry",
-    "category": "fruit"
-  },
-  {
-    "id": "strawberry",
-    "name_en": "Strawberry",
-    "category": "fruit"
-  },
-  {
-    "id": "tangerine",
-    "name_en": "Tangerine",
-    "category": "fruit"
-  },
-  {
-    "id": "tomato",
-    "name_en": "Tomato",
-    "category": "fruit"
-  },
-  {
-    "id": "watermelon",
-    "name_en": "Watermelon",
-    "category": "fruit"
-  },
-  {
-    "id": "artichoke",
-    "name_en": "Artichoke",
-    "category": "vegetable"
-  },
-  {
-    "id": "asparagus",
-    "name_en": "Asparagus",
-    "category": "vegetable"
-  },
-  {
-    "id": "aubergine",
-    "name_en": "Aubergine",
-    "category": "vegetable"
-  },
-  {
-    "id": "broccoli",
-    "name_en": "Broccoli",
-    "category": "vegetable"
-  },
-  {
-    "id": "brussels_sprout",
-    "name_en": "Brussels Sprout",
-    "category": "vegetable"
-  },
-  {
-    "id": "cabbage",
-    "name_en": "Cabbage",
-    "category": "vegetable"
-  },
-  {
-    "id": "carrot",
-    "name_en": "Carrot",
-    "category": "vegetable"
-  },
-  {
-    "id": "cauliflower",
-    "name_en": "Cauliflower",
-    "category": "vegetable"
-  },
-  {
-    "id": "celery",
-    "name_en": "Celery",
-    "category": "vegetable"
-  },
-  {
-    "id": "corn",
-    "name_en": "Corn",
-    "category": "vegetable"
-  },
-  {
-    "id": "cucumber",
-    "name_en": "Cucumber",
-    "category": "vegetable"
-  },
-  {
-    "id": "garlic",
-    "name_en": "Garlic",
-    "category": "vegetable"
-  },
-  {
-    "id": "ginger",
-    "name_en": "Ginger",
-    "category": "vegetable"
-  },
-  {
-    "id": "kale",
-    "name_en": "Kale",
-    "category": "vegetable"
-  },
-  {
-    "id": "leek",
-    "name_en": "Leek",
-    "category": "vegetable"
-  },
-  {
-    "id": "lettuce",
-    "name_en": "Lettuce",
-    "category": "vegetable"
-  },
-  {
-    "id": "mushroom",
-    "name_en": "Mushroom",
-    "category": "vegetable"
-  },
-  {
-    "id": "onion",
-    "name_en": "Onion",
-    "category": "vegetable"
-  },
-  {
-    "id": "parsnip",
-    "name_en": "Parsnip",
-    "category": "vegetable"
-  },
-  {
-    "id": "peas",
-    "name_en": "Peas",
-    "category": "vegetable"
-  },
-  {
-    "id": "potato",
-    "name_en": "Potato",
-    "category": "vegetable"
-  },
-  {
-    "id": "radish",
-    "name_en": "Radish",
-    "category": "vegetable"
-  },
-  {
-    "id": "spinach",
-    "name_en": "Spinach",
-    "category": "vegetable"
-  },
-  {
-    "id": "sweet_potato",
-    "name_en": "Sweet Potato",
-    "category": "vegetable"
-  },
-  {
-    "id": "zucchini",
-    "name_en": "Zucchini",
-    "category": "vegetable"
-  }
+    {
+        "id": "annona",
+        "name_en": "Annona",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 207.0,
+                "serving_size_g": 220.0,
+                "fat_total_g": 0.7,
+                "fat_saturated_g": 0.2,
+                "protein_g": 4.6,
+                "sodium_mg": 9,
+                "potassium_mg": 543,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 51.9,
+                "fiber_g": 9.7,
+                "sugar_g": 40.0
+            }
+      ]
+    },
+    {
+        "id": "apple",
+        "name_en": "Apple",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 96.4,
+                "serving_size_g": 182.0,
+                "fat_total_g": 0.3,
+                "fat_saturated_g": 0.1,
+                "protein_g": 0.5,
+                "sodium_mg": 1,
+                "potassium_mg": 20,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 25.6,
+                "fiber_g": 4.3,
+                "sugar_g": 18.8
+            }
+        ]
+    },
+    {
+        "id": "apricot",
+        "name_en": "Apricot",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 16.9,
+                "serving_size_g": 35.0,
+                "fat_total_g": 0.1,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.5,
+                "sodium_mg": 0,
+                "potassium_mg": 7,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 3.9,
+                "fiber_g": 0.7,
+                "sugar_g": 3.2
+            }
+        ]
+    },
+    {
+        "id": "avocado",
+        "name_en": "Avocado",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 227.3,
+                "serving_size_g": 136.0,
+                "fat_total_g": 21.2,
+                "fat_saturated_g": 2.9,
+                "protein_g": 2.7,
+                "sodium_mg": 10,
+                "potassium_mg": 74,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 11.7,
+                "fiber_g": 9.2,
+                "sugar_g": 0.4
+            }
+        ]
+    },
+    {
+        "id": "banana",
+        "name_en": "Banana",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 105.5,
+                "serving_size_g": 118.0,
+                "fat_total_g": 0.4,
+                "fat_saturated_g": 0.1,
+                "protein_g": 1.3,
+                "sodium_mg": 1,
+                "potassium_mg": 26,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 27.4,
+                "fiber_g": 3.0,
+                "sugar_g": 14.5
+            }
+        ]
+    },
+    {
+        "id": "blackberry",
+        "name_en": "Blackberry",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 2.9,
+                "serving_size_g": 6.5,
+                "fat_total_g": 0.0,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.1,
+                "sodium_mg": 0,
+                "potassium_mg": 1,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 0.6,
+                "fiber_g": 0.3,
+                "sugar_g": 0.3
+            }
+        ]
+    },
+    {
+        "id": "blueberry",
+        "name_en": "Blueberry",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 0.8,
+                "serving_size_g": 1.36,
+                "fat_total_g": 0.0,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.0,
+                "sodium_mg": 0,
+                "potassium_mg": 0,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 0.2,
+                "fiber_g": 0.0,
+                "sugar_g": 0.1
+            }
+        ]
+    },
+    {
+        "id": "ceylon_gooseberry",
+        "name_en": "Ceylon Gooseberry",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 66.1,
+                "serving_size_g": 150.0,
+                "fat_total_g": 0.9,
+                "fat_saturated_g": 0.1,
+                "protein_g": 1.3,
+                "sodium_mg": 1,
+                "potassium_mg": 41,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 15.1,
+                "fiber_g": 6.3,
+                "sugar_g": 0.0
+            }
+        ]
+    },
+    {
+        "id": "cherry",
+        "name_en": "Cherry",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 5.2,
+                "serving_size_g": 8.2,
+                "fat_total_g": 0.0,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.1,
+                "sodium_mg": 0,
+                "potassium_mg": 1,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 1.3,
+                "fiber_g": 0.2,
+                "sugar_g": 1.1
+            }
+        ]
+    },
+    {
+        "id": "cranberry",
+        "name_en": "Cranberry",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 49.9,
+                "serving_size_g": 110.0,
+                "fat_total_g": 0.1,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.5,
+                "sodium_mg": 2,
+                "potassium_mg": 11,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 13.4,
+                "fiber_g": 4.0,
+                "sugar_g": 4.7
+            }
+        ]
+    },
+    {
+        "id": "dragonfruit",
+        "name_en": "Dragonfruit",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 61.9,
+                "serving_size_g": 198.0,
+                "fat_total_g": 0.5,
+                "fat_saturated_g": 0.0,
+                "protein_g": 1.1,
+                "sodium_mg": 6,
+                "potassium_mg": 34,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 14.4,
+                "fiber_g": 3.0,
+                "sugar_g": 9.0
+            }
+        ]
+    },
+    {
+        "id": "durian",
+        "name_en": "Durian",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 367.3,
+                "serving_size_g": 243.0,
+                "fat_total_g": 13.1,
+                "fat_saturated_g": 0.0,
+                "protein_g": 3.6,
+                "sodium_mg": 4,
+                "potassium_mg": 95,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 66.4,
+                "fiber_g": 9.1,
+                "sugar_g": 0.0
+            }
+        ]
+    },
+    {
+        "id": "feijoa",
+        "name_en": "Feijoa",
+        "category": "fruit",
+        "nutrients": []
+    },
+    {
+        "id": "fig",
+        "name_en": "Fig",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 38.0,
+                "serving_size_g": 50.0,
+                "fat_total_g": 0.1,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.4,
+                "sodium_mg": 0,
+                "potassium_mg": 7,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 9.7,
+                "fiber_g": 1.5,
+                "sugar_g": 8.2
+            }
+        ]
+    },
+    {
+        "id": "gooseberry",
+        "name_en": "Gooseberry",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 66.1,
+                "serving_size_g": 150.0,
+                "fat_total_g": 0.9,
+                "fat_saturated_g": 0.1,
+                "protein_g": 1.3,
+                "sodium_mg": 1,
+                "potassium_mg": 41,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 15.1,
+                "fiber_g": 6.3,
+                "sugar_g": 0.0
+            }
+        ]
+    },
+    {
+        "id": "grape",
+        "name_en": "Grape",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 33.0,
+                "serving_size_g": 49.0,
+                "fat_total_g": 0.1,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.4,
+                "sodium_mg": 0,
+                "potassium_mg": 9,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 9.0,
+                "fiber_g": 0.4,
+                "sugar_g": 7.6
+            }
+        ]
+    },
+    {
+        "id": "greenapple",
+        "name_en": "GreenApple",
+        "category": "fruit",
+        "nutrients": []
+    },
+    {
+        "id": "guava",
+        "name_en": "Guava",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 111.7,
+                "serving_size_g": 165.0,
+                "fat_total_g": 1.5,
+                "fat_saturated_g": 0.4,
+                "protein_g": 4.2,
+                "sodium_mg": 3,
+                "potassium_mg": 65,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 23.7,
+                "fiber_g": 9.0,
+                "sugar_g": 14.7
+            }
+        ]
+    },
+    {
+        "id": "hazelnut",
+        "name_en": "Hazelnut",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 186.0,
+                "serving_size_g": 28.35,
+                "fat_total_g": 17.4,
+                "fat_saturated_g": 1.3,
+                "protein_g": 4.2,
+                "sodium_mg": 0,
+                "potassium_mg": 88,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 5.0,
+                "fiber_g": 2.7,
+                "sugar_g": 1.4
+            }
+        ]
+    },
+    {
+        "id": "horned_melon",
+        "name_en": "Horned Melon",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 59.4,
+                "serving_size_g": 177.0,
+                "fat_total_g": 0.3,
+                "fat_saturated_g": 0.1,
+                "protein_g": 1.5,
+                "sodium_mg": 28,
+                "potassium_mg": 26,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 14.7,
+                "fiber_g": 1.6,
+                "sugar_g": 13.9
+            }
+        ]
+    },
+    {
+        "id": "jackfruit",
+        "name_en": "Jackfruit",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 156.5,
+                "serving_size_g": 165.0,
+                "fat_total_g": 1.1,
+                "fat_saturated_g": 0.3,
+                "protein_g": 2.8,
+                "sodium_mg": 3,
+                "potassium_mg": 34,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 38.5,
+                "fiber_g": 2.5,
+                "sugar_g": 31.3
+            }
+        ]
+    },
+    {
+        "id": "japanese_persimmon",
+        "name_en": "Japanese Persimmon",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 116.6,
+                "serving_size_g": 168.0,
+                "fat_total_g": 0.3,
+                "fat_saturated_g": 0.0,
+                "protein_g": 1.0,
+                "sodium_mg": 1,
+                "potassium_mg": 28,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 31.6,
+                "fiber_g": 6.0,
+                "sugar_g": 21.2
+            }
+        ]
+    },
+    {
+        "id": "kiwi",
+        "name_en": "Kiwi",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 41.0,
+                "serving_size_g": 69.0,
+                "fat_total_g": 0.4,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.8,
+                "sodium_mg": 2,
+                "potassium_mg": 23,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 10.3,
+                "fiber_g": 2.1,
+                "sugar_g": 6.3
+            }
+        ]
+    },
+    {
+        "id": "kiwifruit",
+        "name_en": "Kiwifruit",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 41.2,
+                "serving_size_g": 69.0,
+                "fat_total_g": 0.4,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.8,
+                "sodium_mg": 2,
+                "potassium_mg": 23,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 10.0,
+                "fiber_g": 2.1,
+                "sugar_g": 6.2
+            }
+        ]
+    },
+    {
+        "id": "lemon",
+        "name_en": "Lemon",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 24.4,
+                "serving_size_g": 84.0,
+                "fat_total_g": 0.2,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.9,
+                "sodium_mg": 1,
+                "potassium_mg": 13,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 7.8,
+                "fiber_g": 2.3,
+                "sugar_g": 2.1
+            }
+        ]
+    },
+    {
+        "id": "lime",
+        "name_en": "Lime",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 19.8,
+                "serving_size_g": 67.0,
+                "fat_total_g": 0.1,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.5,
+                "sodium_mg": 1,
+                "potassium_mg": 11,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 7.1,
+                "fiber_g": 1.9,
+                "sugar_g": 1.1
+            }
+        ]
+    },
+    {
+        "id": "lingonberry",
+        "name_en": "Lingonberry",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 86.5,
+                "serving_size_g": 148.0,
+                "fat_total_g": 0.5,
+                "fat_saturated_g": 0.0,
+                "protein_g": 1.1,
+                "sodium_mg": 1,
+                "potassium_mg": 17,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 21.2,
+                "fiber_g": 3.5,
+                "sugar_g": 14.8
+            }
+        ]
+    },
+    {
+        "id": "lychee",
+        "name_en": "Lychee",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 122.3,
+                "serving_size_g": 190.0,
+                "fat_total_g": 0.8,
+                "fat_saturated_g": 0.2,
+                "protein_g": 1.6,
+                "sodium_mg": 1,
+                "potassium_mg": 59,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 32.0,
+                "fiber_g": 2.5,
+                "sugar_g": 28.8
+            }
+        ]
+    },
+    {
+        "id": "mango",
+        "name_en": "Mango",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 101.6,
+                "serving_size_g": 165.0,
+                "fat_total_g": 0.6,
+                "fat_saturated_g": 0.1,
+                "protein_g": 1.3,
+                "sodium_mg": 1,
+                "potassium_mg": 23,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 24.4,
+                "fiber_g": 2.7,
+                "sugar_g": 22.4
+            }
+        ]
+    },
+    {
+        "id": "mangosteen",
+        "name_en": "Mangosteen",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 54.0,
+                "serving_size_g": 76.0,
+                "fat_total_g": 0.4,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.3,
+                "sodium_mg": 5,
+                "potassium_mg": 5,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 13.7,
+                "fiber_g": 1.4,
+                "sugar_g": 0.0
+            }
+        ]
+    },
+    {
+        "id": "melon",
+        "name_en": "Melon",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 59.4,
+                "serving_size_g": 177.0,
+                "fat_total_g": 0.3,
+                "fat_saturated_g": 0.1,
+                "protein_g": 1.5,
+                "sodium_mg": 28,
+                "potassium_mg": 26,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 14.7,
+                "fiber_g": 1.6,
+                "sugar_g": 13.9
+            }
+        ]
+    },
+    {
+        "id": "morus",
+        "name_en": "Morus",
+        "category": "fruit",
+        "nutrients": []
+    },
+    {
+        "id": "orange",
+        "name_en": "Orange",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 70.5,
+                "serving_size_g": 140.0,
+                "fat_total_g": 0.2,
+                "fat_saturated_g": 0.0,
+                "protein_g": 1.3,
+                "sodium_mg": 1,
+                "potassium_mg": 32,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 17.3,
+                "fiber_g": 3.1,
+                "sugar_g": 11.8
+            }
+        ]
+    },
+    {
+        "id": "papaya",
+        "name_en": "Papaya",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 62.3,
+                "serving_size_g": 145.0,
+                "fat_total_g": 0.4,
+                "fat_saturated_g": 0.1,
+                "protein_g": 0.7,
+                "sodium_mg": 11,
+                "potassium_mg": 14,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 15.6,
+                "fiber_g": 2.4,
+                "sugar_g": 11.3
+            }
+        ]
+    },
+    {
+        "id": "passionfruit",
+        "name_en": "Passionfruit",
+        "category": "fruit",
+        "nutrients": []
+    },
+    {
+        "id": "peach",
+        "name_en": "Peach",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 69.9,
+                "serving_size_g": 175.0,
+                "fat_total_g": 0.4,
+                "fat_saturated_g": 0.0,
+                "protein_g": 1.6,
+                "sodium_mg": 0,
+                "potassium_mg": 35,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 16.9,
+                "fiber_g": 2.7,
+                "sugar_g": 14.8
+            }
+        ]
+    },
+    {
+        "id": "pear",
+        "name_en": "Pear",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 100.9,
+                "serving_size_g": 178.0,
+                "fat_total_g": 0.3,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.6,
+                "sodium_mg": 1,
+                "potassium_mg": 21,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 26.6,
+                "fiber_g": 5.6,
+                "sugar_g": 17.4
+            }
+        ]
+    },
+    {
+        "id": "persimmon",
+        "name_en": "Persimmon",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 116.6,
+                "serving_size_g": 168.0,
+                "fat_total_g": 0.3,
+                "fat_saturated_g": 0.0,
+                "protein_g": 1.0,
+                "sodium_mg": 1,
+                "potassium_mg": 28,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 31.6,
+                "fiber_g": 6.0,
+                "sugar_g": 21.2
+            }
+        ]
+    },
+    {
+        "id": "pineapple",
+        "name_en": "Pineapple",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 41.9,
+                "serving_size_g": 82.5,
+                "fat_total_g": 0.1,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.4,
+                "sodium_mg": 0,
+                "potassium_mg": 6,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 10.8,
+                "fiber_g": 1.2,
+                "sugar_g": 8.1
+            }
+        ]
+    },
+    {
+        "id": "pitahaya",
+        "name_en": "Pitahaya",
+        "category": "fruit",
+        "nutrients": []
+    },
+    {
+        "id": "plum",
+        "name_en": "Plum",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 30.5,
+                "serving_size_g": 66.0,
+                "fat_total_g": 0.2,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.5,
+                "sodium_mg": 0,
+                "potassium_mg": 10,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 7.5,
+                "fiber_g": 0.9,
+                "sugar_g": 6.6
+            }
+        ]
+    },
+    {
+        "id": "pomegranate",
+        "name_en": "Pomegranate",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 237.5,
+                "serving_size_g": 282.0,
+                "fat_total_g": 3.3,
+                "fat_saturated_g": 0.3,
+                "protein_g": 4.7,
+                "sodium_mg": 8,
+                "potassium_mg": 100,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 52.3,
+                "fiber_g": 11.5,
+                "sugar_g": 38.6
+            }
+        ]
+    },
+    {
+        "id": "pomelo",
+        "name_en": "Pomelo",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 235.0,
+                "serving_size_g": 609.0,
+                "fat_total_g": 0.2,
+                "fat_saturated_g": 0.0,
+                "protein_g": 4.6,
+                "sodium_mg": 6,
+                "potassium_mg": 101,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 58.1,
+                "fiber_g": 6.2,
+                "sugar_g": 0.0
+            }
+        ]
+    },
+    {
+        "id": "pumpkin",
+        "name_en": "Pumpkin",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 50.2,
+                "serving_size_g": 245.0,
+                "fat_total_g": 0.2,
+                "fat_saturated_g": 0.1,
+                "protein_g": 1.8,
+                "sodium_mg": 2,
+                "potassium_mg": 74,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 12.0,
+                "fiber_g": 2.7,
+                "sugar_g": 5.1
+            }
+        ]
+    },
+    {
+        "id": "raspberry",
+        "name_en": "Raspberry",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 1.1,
+                "serving_size_g": 2.0,
+                "fat_total_g": 0.0,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.0,
+                "sodium_mg": 0,
+                "potassium_mg": 0,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 0.2,
+                "fiber_g": 0.1,
+                "sugar_g": 0.1
+            }
+        ]
+    },
+    {
+        "id": "strawberry",
+        "name_en": "Strawberry",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 28.7,
+                "serving_size_g": 90.0,
+                "fat_total_g": 0.3,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.6,
+                "sodium_mg": 0,
+                "potassium_mg": 21,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 6.9,
+                "fiber_g": 1.8,
+                "sugar_g": 4.4
+            }
+        ]
+    },
+    {
+        "id": "tangerine",
+        "name_en": "Tangerine",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 45.3,
+                "serving_size_g": 88.0,
+                "fat_total_g": 0.3,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.7,
+                "sodium_mg": 1,
+                "potassium_mg": 17,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 11.7,
+                "fiber_g": 1.6,
+                "sugar_g": 9.3
+            }
+        ]
+    },
+    {
+        "id": "tomato",
+        "name_en": "Tomato",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 22.4,
+                "serving_size_g": 123.0,
+                "fat_total_g": 0.2,
+                "fat_saturated_g": 0.0,
+                "protein_g": 1.1,
+                "sodium_mg": 6,
+                "potassium_mg": 29,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 4.8,
+                "fiber_g": 1.5,
+                "sugar_g": 3.2
+            }
+        ]
+    },
+    {
+        "id": "watermelon",
+        "name_en": "Watermelon",
+        "category": "fruit",
+        "nutrients": [
+            {
+                "calories": 86.6,
+                "serving_size_g": 286.0,
+                "fat_total_g": 0.4,
+                "fat_saturated_g": 0.1,
+                "protein_g": 1.8,
+                "sodium_mg": 2,
+                "potassium_mg": 31,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 21.2,
+                "fiber_g": 1.1,
+                "sugar_g": 17.7
+            }
+        ]
+    },
+    {
+        "id": "artichoke",
+        "name_en": "Artichoke",
+        "category": "vegetable",
+        "nutrients": [
+            {
+                "calories": 64.4,
+                "serving_size_g": 120.0,
+                "fat_total_g": 0.4,
+                "fat_saturated_g": 0.1,
+                "protein_g": 3.5,
+                "sodium_mg": 72,
+                "potassium_mg": 86,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 14.1,
+                "fiber_g": 6.9,
+                "sugar_g": 1.2
+            }
+        ]
+    },
+    {
+        "id": "asparagus",
+        "name_en": "Asparagus",
+        "category": "vegetable",
+        "nutrients": [
+            {
+                "calories": 16.1,
+                "serving_size_g": 75.0,
+                "fat_total_g": 0.2,
+                "fat_saturated_g": 0.0,
+                "protein_g": 1.8,
+                "sodium_mg": 10,
+                "potassium_mg": 40,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 3.1,
+                "fiber_g": 1.5,
+                "sugar_g": 1.0
+            }
+        ]
+    },
+    {
+        "id": "aubergine",
+        "name_en": "Aubergine",
+        "category": "vegetable",
+        "nutrients": [
+            {
+                "calories": 197.5,
+                "serving_size_g": 566.0,
+                "fat_total_g": 1.3,
+                "fat_saturated_g": 0.3,
+                "protein_g": 4.7,
+                "sodium_mg": 5,
+                "potassium_mg": 86,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 49.4,
+                "fiber_g": 14.2,
+                "sugar_g": 18.2
+            }
+        ]
+    },
+    {
+        "id": "broccoli",
+        "name_en": "Broccoli",
+        "category": "vegetable",
+        "nutrients": [
+            {
+                "calories": 12.9,
+                "serving_size_g": 37.0,
+                "fat_total_g": 0.2,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.9,
+                "sodium_mg": 15,
+                "potassium_mg": 24,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 2.7,
+                "fiber_g": 1.2,
+                "sugar_g": 0.5
+            }
+        ]
+    },
+    {
+        "id": "brussels_sprout",
+        "name_en": "Brussels Sprout",
+        "category": "vegetable",
+        "nutrients": [
+            {
+                "calories": 61.2,
+                "serving_size_g": 168.0,
+                "fat_total_g": 0.8,
+                "fat_saturated_g": 0.2,
+                "protein_g": 4.3,
+                "sodium_mg": 35,
+                "potassium_mg": 93,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 11.9,
+                "fiber_g": 4.4,
+                "sugar_g": 2.9
+            }
+        ]
+    },
+    {
+        "id": "cabbage",
+        "name_en": "Cabbage",
+        "category": "vegetable",
+        "nutrients": [
+            {
+                "calories": 17.5,
+                "serving_size_g": 75.0,
+                "fat_total_g": 0.0,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.9,
+                "sodium_mg": 5,
+                "potassium_mg": 24,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 4.1,
+                "fiber_g": 1.4,
+                "sugar_g": 2.1
+            }
+        ]
+    },
+    {
+        "id": "carrot",
+        "name_en": "Carrot",
+        "category": "vegetable",
+        "nutrients": [
+            {
+                "calories": 15.6,
+                "serving_size_g": 46.0,
+                "fat_total_g": 0.1,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.4,
+                "sodium_mg": 26,
+                "potassium_mg": 13,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 3.8,
+                "fiber_g": 1.4,
+                "sugar_g": 1.6
+            }
+        ]
+    },
+    {
+        "id": "cauliflower",
+        "name_en": "Cauliflower",
+        "category": "vegetable",
+        "nutrients": [
+            {
+                "calories": 129.1,
+                "serving_size_g": 575.0,
+                "fat_total_g": 2.6,
+                "fat_saturated_g": 0.4,
+                "protein_g": 10.5,
+                "sodium_mg": 85,
+                "potassium_mg": 182,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 23.4,
+                "fiber_g": 13.4,
+                "sugar_g": 11.8
+            }
+        ]
+    },
+    {
+        "id": "celery",
+        "name_en": "Celery",
+        "category": "vegetable",
+        "nutrients": [
+            {
+                "calories": 6.7,
+                "serving_size_g": 37.5,
+                "fat_total_g": 0.1,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.3,
+                "sodium_mg": 34,
+                "potassium_mg": 9,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 1.5,
+                "fiber_g": 0.6,
+                "sugar_g": 0.9
+            }
+        ]
+    },
+    {
+        "id": "corn",
+        "name_en": "Corn",
+        "category": "vegetable",
+        "nutrients": [
+            {
+                "calories": 96.7,
+                "serving_size_g": 103.0,
+                "fat_total_g": 1.6,
+                "fat_saturated_g": 0.2,
+                "protein_g": 3.5,
+                "sodium_mg": 1,
+                "potassium_mg": 78,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 21.6,
+                "fiber_g": 2.4,
+                "sugar_g": 4.7
+            }
+        ]
+    },
+    {
+        "id": "cucumber",
+        "name_en": "Cucumber",
+        "category": "vegetable",
+        "nutrients": [
+            {
+                "calories": 30.7,
+                "serving_size_g": 201.0,
+                "fat_total_g": 0.2,
+                "fat_saturated_g": 0.1,
+                "protein_g": 1.3,
+                "sodium_mg": 3,
+                "potassium_mg": 49,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 7.4,
+                "fiber_g": 1.0,
+                "sugar_g": 3.4
+            }
+        ]
+    },
+    {
+        "id": "garlic",
+        "name_en": "Garlic",
+        "category": "vegetable",
+        "nutrients": [
+            {
+                "calories": 4.3,
+                "serving_size_g": 3.0,
+                "fat_total_g": 0.0,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.2,
+                "sodium_mg": 0,
+                "potassium_mg": 4,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 1.0,
+                "fiber_g": 0.1,
+                "sugar_g": 0.0
+            }
+        ]
+    },
+    {
+        "id": "ginger",
+        "name_en": "Ginger",
+        "category": "vegetable",
+        "nutrients": [
+            {
+                "calories": 1.6,
+                "serving_size_g": 2.0,
+                "fat_total_g": 0.0,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.0,
+                "sodium_mg": 0,
+                "potassium_mg": 0,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 0.4,
+                "fiber_g": 0.0,
+                "sugar_g": 0.0
+            }
+        ]
+    },
+    {
+        "id": "kale",
+        "name_en": "Kale",
+        "category": "vegetable",
+        "nutrients": [
+            {
+                "calories": 35.4,
+                "serving_size_g": 130.0,
+                "fat_total_g": 0.5,
+                "fat_saturated_g": 0.1,
+                "protein_g": 2.5,
+                "sodium_mg": 30,
+                "potassium_mg": 36,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 7.3,
+                "fiber_g": 2.6,
+                "sugar_g": 1.6
+            }
+        ]
+    },
+    {
+        "id": "leek",
+        "name_en": "Leek",
+        "category": "vegetable",
+        "nutrients": [
+            {
+                "calories": 39.6,
+                "serving_size_g": 124.0,
+                "fat_total_g": 0.3,
+                "fat_saturated_g": 0.0,
+                "protein_g": 1.0,
+                "sodium_mg": 12,
+                "potassium_mg": 21,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 9.4,
+                "fiber_g": 1.3,
+                "sugar_g": 2.6
+            }
+        ]
+    },
+    {
+        "id": "lettuce",
+        "name_en": "Lettuce",
+        "category": "vegetable",
+        "nutrients": [
+            {
+                "calories": 16.0,
+                "serving_size_g": 94.0,
+                "fat_total_g": 0.3,
+                "fat_saturated_g": 0.0,
+                "protein_g": 1.2,
+                "sodium_mg": 7,
+                "potassium_mg": 28,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 3.1,
+                "fiber_g": 2.0,
+                "sugar_g": 1.1
+            }
+        ]
+    },
+    {
+        "id": "mushroom",
+        "name_en": "Mushroom",
+        "category": "vegetable",
+        "nutrients": [
+            {
+                "calories": 3.4,
+                "serving_size_g": 12.0,
+                "fat_total_g": 0.1,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.3,
+                "sodium_mg": 0,
+                "potassium_mg": 10,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 0.6,
+                "fiber_g": 0.3,
+                "sugar_g": 0.3
+            }
+        ]
+    },
+    {
+        "id": "onion",
+        "name_en": "Onion",
+        "category": "vegetable",
+        "nutrients": [
+            {
+                "calories": 42.0,
+                "serving_size_g": 94.0,
+                "fat_total_g": 0.2,
+                "fat_saturated_g": 0.0,
+                "protein_g": 1.3,
+                "sodium_mg": 2,
+                "potassium_mg": 32,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 9.5,
+                "fiber_g": 1.3,
+                "sugar_g": 4.4
+            }
+        ]
+    },
+    {
+        "id": "parsnip",
+        "name_en": "Parsnip",
+        "category": "vegetable",
+        "nutrients": [
+            {
+                "calories": 71.0,
+                "serving_size_g": 98.0,
+                "fat_total_g": 0.3,
+                "fat_saturated_g": 0.1,
+                "protein_g": 1.3,
+                "sodium_mg": 9,
+                "potassium_mg": 66,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 16.8,
+                "fiber_g": 3.5,
+                "sugar_g": 4.7
+            }
+        ]
+    },
+    {
+        "id": "peas",
+        "name_en": "Peas",
+        "category": "vegetable",
+        "nutrients": [
+            {
+                "calories": 131.9,
+                "serving_size_g": 160.0,
+                "fat_total_g": 0.3,
+                "fat_saturated_g": 0.1,
+                "protein_g": 8.6,
+                "sodium_mg": 4,
+                "potassium_mg": 187,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 25.4,
+                "fiber_g": 8.7,
+                "sugar_g": 9.5
+            }
+        ]
+    },
+    {
+        "id": "potato",
+        "name_en": "Potato",
+        "category": "vegetable",
+        "nutrients": [
+            {
+                "calories": 160.4,
+                "serving_size_g": 173.0,
+                "fat_total_g": 0.2,
+                "fat_saturated_g": 0.1,
+                "protein_g": 4.4,
+                "sodium_mg": 17,
+                "potassium_mg": 122,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 36.3,
+                "fiber_g": 3.8,
+                "sugar_g": 2.0
+            }
+        ]
+    },
+    {
+        "id": "radish",
+        "name_en": "Radish",
+        "category": "vegetable",
+        "nutrients": [
+            {
+                "calories": 0.7,
+                "serving_size_g": 4.5,
+                "fat_total_g": 0.0,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.0,
+                "sodium_mg": 1,
+                "potassium_mg": 0,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 0.1,
+                "fiber_g": 0.1,
+                "sugar_g": 0.1
+            }
+        ]
+    },
+    {
+        "id": "spinach",
+        "name_en": "Spinach",
+        "category": "vegetable",
+        "nutrients": [
+            {
+                "calories": 42.0,
+                "serving_size_g": 180.0,
+                "fat_total_g": 0.5,
+                "fat_saturated_g": 0.1,
+                "protein_g": 5.3,
+                "sodium_mg": 125,
+                "potassium_mg": 99,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 6.8,
+                "fiber_g": 4.4,
+                "sugar_g": 0.8
+            }
+        ]
+    },
+    {
+        "id": "sweet_potato",
+        "name_en": "Sweet Potato",
+        "category": "vegetable",
+        "nutrients": [
+            {
+                "calories": 117.0,
+                "serving_size_g": 151.0,
+                "fat_total_g": 0.2,
+                "fat_saturated_g": 0.1,
+                "protein_g": 2.1,
+                "sodium_mg": 40,
+                "potassium_mg": 48,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 26.4,
+                "fiber_g": 3.8,
+                "sugar_g": 8.7
+            }
+        ]
+    },
+    {
+        "id": "zucchini",
+        "name_en": "Zucchini",
+        "category": "vegetable",
+        "nutrients": [
+            {
+                "calories": 52.8,
+                "serving_size_g": 342.0,
+                "fat_total_g": 1.2,
+                "fat_saturated_g": 0.2,
+                "protein_g": 3.9,
+                "sodium_mg": 10,
+                "potassium_mg": 124,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 9.3,
+                "fiber_g": 3.5,
+                "sugar_g": 5.9
+            }
+        ]
+    }
 ]
