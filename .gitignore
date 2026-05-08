@@ -10,3 +10,4 @@ __pycache__/
 .web/
 .DS_Store
 .coverage
+.scripts/
