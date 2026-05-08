@@ -4,17 +4,18 @@ from pathlib import Path
 from typing import TypedDict
 
 
-class Product(TypedDict):
-    id: str
-    name: str
-    category: str
-    status: str
-    months: list[int]
-    co2: float | None
-    origin: str
-    local: bool | None
-    nutrients: list[str]
-    image_src: str
+class NutritionFacts(TypedDict):
+    calories: float
+    serving_size_g: float
+    fat_total_g: float
+    fat_saturated_g: float
+    protein_g: float
+    sodium_mg: int
+    potassium_mg: int
+    cholesterol_mg: int
+    carbohydrates_total_g: float
+    fiber_g: float
+    sugar_g: float
 
 
 class OverviewSignal(TypedDict):
@@ -32,6 +33,7 @@ class ProduceItem(TypedDict):
     id: str
     name_en: str
     category: str
+    nutrients: list[NutritionFacts]
 
 
 class NavItem(TypedDict):
@@ -82,25 +84,6 @@ def _load_all_produce() -> list[ProduceItem]:
 
 
 ALL_PRODUCE: list[ProduceItem] = _load_all_produce()
-
-
-def get_all_produce_ids() -> set[str]:
-    return {item["id"] for item in ALL_PRODUCE}
-
-
-def product_from_produce(item: ProduceItem) -> Product:
-    return {
-        "id": item["id"],
-        "name": item["name_en"],
-        "category": item["category"],
-        "status": "unknown",  # Legacy card field: all_produce.json has no season status.
-        "months": [],  # Legacy card field: all_produce.json has no month calendar.
-        "co2": None,  # Legacy card field: all_produce.json has no CO2 estimate.
-        "origin": "???",  # Legacy card field: all_produce.json has no origin/source country.
-        "local": None,  # Legacy card field: all_produce.json has no local availability flag.
-        "nutrients": ["???"],  # Legacy card field: all_produce.json has no nutrient data.
-        "image_src": f"/img/{item['id']}.jpg",
-    }
 
 
 def normalize_search_text(value: str) -> str:
@@ -159,29 +142,29 @@ def get_search_suggestions(query: str, limit: int = SEARCH_SUGGESTION_LIMIT) -> 
     return [item for _, __, item in scored_items[:limit]]
 
 
-def search_products(query: str, products: list[Product] | None = None) -> list[Product]:
+def search_products(query: str, products: list[ProduceItem] | None = None) -> list[ProduceItem]:
     products_to_search = products or get_products()
     if not normalize_search_text(query):
         return products_to_search
 
     scored_products = [
-        (score, product["name"], product)
+        (score, product["name_en"], product)
         for product in products_to_search
-        if (score := fuzzy_search_score(query, product["name"])) is not None
+        if (score := fuzzy_search_score(query, product["name_en"])) is not None
     ]
     scored_products.sort(key=lambda match: (match[0], match[1]))
     return [product for _, __, product in scored_products]
 
 
-def get_products() -> list[Product]:
-    return [product_from_produce(item) for item in ALL_PRODUCE]
+def get_products() -> list[ProduceItem]:
+    return ALL_PRODUCE
 
 
 def get_all_produce() -> list[ProduceItem]:
     return ALL_PRODUCE
 
 
-def get_seasonal_veggies() -> list[Product]:
+def get_seasonal_veggies() -> list[ProduceItem]:
     return get_products()
 
 

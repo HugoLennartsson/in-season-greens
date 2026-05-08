@@ -4,13 +4,12 @@ from .data import (
     get_products,
     get_search_suggestions,
     search_products,
-    Product,
     ProduceItem,
 )
 
 
 class State(rx.State):
-    products: list[Product] = get_products()
+    products: list[ProduceItem] = get_products()
     search_query: str = ""
     search_suggestions_open: bool = False
     menu_open: bool = False
@@ -47,7 +46,7 @@ class State(rx.State):
         self.search_suggestions_open = False
 
     @rx.var
-    def filtered_products(self) -> list[Product]:
+    def filtered_products(self) -> list[ProduceItem]:
         return search_products(self.search_query, self.products)
 
     @rx.var

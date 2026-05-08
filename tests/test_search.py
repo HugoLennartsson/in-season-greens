@@ -22,7 +22,7 @@ def test_search_suggestions_find_misspelled_words():
 def test_product_search_matches_misspellings():
     products = search_products("strawbery")
 
-    assert [product["name"] for product in products] == ["Strawberry"]
+    assert [product["name_en"] for product in products] == ["Strawberry"]
 
 
 def test_fuzzy_search_ignores_spaces_and_punctuation():
