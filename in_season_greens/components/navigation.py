@@ -69,11 +69,31 @@ def drawer(state) -> rx.Component:
                     rx.text(APP_NAME, class_name=styles.navigation.drawer_brand),
                     class_name=styles.navigation.drawer_brand_row,
                 ),
-                rx.hstack(
-                    app_icon("map_pin", styles.navigation.drawer_location_icon, 2),
-                    rx.text(
-                        LocationState.location_display,
-                        class_name=styles.navigation.drawer_location,
+                rx.vstack(
+                    rx.hstack(
+                        app_icon("map_pin", styles.navigation.drawer_location_icon, 2),
+                        rx.input(
+                            value=LocationState.typed_city,
+                            placeholder="Type city...",
+                            on_change=LocationState.set_typed_city,
+                            on_blur=LocationState.validate_city,
+                            on_key_down=LocationState.handle_key_down,
+                            variant="soft",
+                            size="1",
+                            width="100%",
+                        ),
+                        rx.icon(
+                            tag="locate-fixed",
+                            on_click=LocationState.get_location,
+                            cursor="pointer",
+                            size=18,
+                        ),
+                        align="center",
+                        width="100%",
+                    ),
+                    rx.cond(
+                        LocationState.error != "",
+                        rx.text(LocationState.error, color="red", font_size="10px"),
                     ),
                     class_name=styles.navigation.drawer_location_row,
                 ),

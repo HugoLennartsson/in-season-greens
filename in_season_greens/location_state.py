@@ -7,6 +7,7 @@ class LocationState(rx.State):
     lon: float | None = None
     city: str = ""
     error: str = ""
+    typed_city: str = ""
 
     def _reverse_geocode(self, lat: float, lon: float) -> str:
         """Helper to convert coordinates to a city name."""
@@ -15,7 +16,7 @@ class LocationState(rx.State):
             location = geolocator.reverse(f"{lat}, {lon}", timeout=5)
             if location and "address" in location.raw:
                 address = location.raw["address"]
-                return address.get("city")
+                return address.get("city", "Unknown Location")
             return "Unknown Location"
         except Exception:
             return "City Lookup Failed"
@@ -27,12 +28,6 @@ class LocationState(rx.State):
             return "Locating..."
 
         return self.city
-
-    @rx.event
-    def set_location(self, lat: float, lon: float):
-        print(f"[DEBUG] Received location: lat={lat}, lon={lon}")
-        self.lat = lat
-        self.lon = lon
 
     @rx.event
     def set_error(self, message: str):
@@ -80,3 +75,54 @@ class LocationState(rx.State):
         self.lat = lat
         self.lon = lon
         self.city = self._reverse_geocode(lat, lon)
+        self.typed_city = self.city
+
+    @rx.event
+    def set_typed_city(self, val: str):
+        self.typed_city = val
+
+    @rx.event
+    def validate_city(self):
+        val = self.typed_city.strip()
+
+        if not val:
+            self.error = "City cannot be empty"
+            return
+
+        try:
+            geolocator = Nominatim(user_agent="reflex_app")
+
+            location = geolocator.geocode(
+                val,
+                exactly_one=True,
+                timeout=5,
+                addressdetails=True,
+            )
+
+            if location is None:
+                self.error = "Invalid city"
+                return
+
+            allowed = {"city", "town", "village", "municipality"}
+
+            place_type = location.raw.get("type", "")
+
+            if place_type not in allowed:
+                self.error = "Please enter a valid city"
+                return
+
+            self.city = location.address.split(",")[0]
+            self.typed_city = self.city
+
+            self.lat = location.latitude
+            self.lon = location.longitude
+
+            self.error = ""
+
+        except Exception:
+            self.error = "City lookup failed"
+
+    @rx.event
+    def handle_key_down(self, key: str):
+        if key == "Enter":
+            return LocationState.validate_city
