@@ -4,20 +4,20 @@
         "name_en": "Annona",
         "category": "fruit",
         "nutrients": [
-            {
-                "calories": 207.0,
-                "serving_size_g": 220.0,
-                "fat_total_g": 0.7,
-                "fat_saturated_g": 0.2,
-                "protein_g": 4.6,
-                "sodium_mg": 9,
-                "potassium_mg": 543,
-                "cholesterol_mg": 0,
-                "carbohydrates_total_g": 51.9,
-                "fiber_g": 9.7,
-                "sugar_g": 40.0
-            }
-      ]
+          {
+              "calories": 94.0,
+              "serving_size_g": 100.0,
+              "fat_total_g": 0.3,
+              "fat_saturated_g": 0.1,
+              "protein_g": 2.1,
+              "sodium_mg": 4,
+              "potassium_mg": 247,
+              "cholesterol_mg": 0,
+              "carbohydrates_total_g": 23.6,
+              "fiber_g": 4.4,
+              "sugar_g": 18.2
+          }
+        ]
     },
     {
         "id": "apple",
@@ -25,17 +25,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 96.4,
-                "serving_size_g": 182.0,
-                "fat_total_g": 0.3,
-                "fat_saturated_g": 0.1,
-                "protein_g": 0.5,
+                "calories": 53.0,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.2,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.3,
                 "sodium_mg": 1,
-                "potassium_mg": 20,
+                "potassium_mg": 11,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 25.6,
-                "fiber_g": 4.3,
-                "sugar_g": 18.8
+                "carbohydrates_total_g": 14.1,
+                "fiber_g": 2.4,
+                "sugar_g": 10.3
             }
         ]
     },
@@ -45,17 +45,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 16.9,
-                "serving_size_g": 35.0,
-                "fat_total_g": 0.1,
+                "calories": 48.3,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.4,
                 "fat_saturated_g": 0.0,
-                "protein_g": 0.5,
+                "protein_g": 1.4,
                 "sodium_mg": 0,
-                "potassium_mg": 7,
+                "potassium_mg": 22,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 3.9,
-                "fiber_g": 0.7,
-                "sugar_g": 3.2
+                "carbohydrates_total_g": 11.1,
+                "fiber_g": 2.0,
+                "sugar_g": 9.3
             }
         ]
     },
@@ -65,17 +65,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 227.3,
-                "serving_size_g": 136.0,
-                "fat_total_g": 21.2,
-                "fat_saturated_g": 2.9,
-                "protein_g": 2.7,
-                "sodium_mg": 10,
-                "potassium_mg": 74,
+                "calories": 167.2,
+                "serving_size_g": 100.0,
+                "fat_total_g": 15.6,
+                "fat_saturated_g": 2.1,
+                "protein_g": 2.0,
+                "sodium_mg": 7,
+                "potassium_mg": 55,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 11.7,
-                "fiber_g": 9.2,
-                "sugar_g": 0.4
+                "carbohydrates_total_g": 8.6,
+                "fiber_g": 6.7,
+                "sugar_g": 0.3
             }
         ]
     },
@@ -85,17 +85,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 105.5,
-                "serving_size_g": 118.0,
-                "fat_total_g": 0.4,
+                "calories": 89.4,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.3,
                 "fat_saturated_g": 0.1,
-                "protein_g": 1.3,
+                "protein_g": 1.1,
                 "sodium_mg": 1,
-                "potassium_mg": 26,
+                "potassium_mg": 22,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 27.4,
-                "fiber_g": 3.0,
-                "sugar_g": 14.5
+                "carbohydrates_total_g": 23.2,
+                "fiber_g": 2.6,
+                "sugar_g": 12.3
             }
         ]
     },
@@ -105,17 +105,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 2.9,
-                "serving_size_g": 6.5,
-                "fat_total_g": 0.0,
+                "calories": 44.0,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.5,
                 "fat_saturated_g": 0.0,
-                "protein_g": 0.1,
-                "sodium_mg": 0,
-                "potassium_mg": 1,
+                "protein_g": 1.4,
+                "sodium_mg": 1,
+                "potassium_mg": 22,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 0.6,
-                "fiber_g": 0.3,
-                "sugar_g": 0.3
+                "carbohydrates_total_g": 9.5,
+                "fiber_g": 5.2,
+                "sugar_g": 5.0
             }
         ]
     },
@@ -125,17 +125,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 0.8,
-                "serving_size_g": 1.36,
+                "calories": 56.2,
+                "serving_size_g": 100.0,
                 "fat_total_g": 0.0,
                 "fat_saturated_g": 0.0,
-                "protein_g": 0.0,
+                "protein_g": 0.7,
                 "sodium_mg": 0,
-                "potassium_mg": 0,
+                "potassium_mg": 11,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 0.2,
-                "fiber_g": 0.0,
-                "sugar_g": 0.1
+                "carbohydrates_total_g": 14.8,
+                "fiber_g": 2.2,
+                "sugar_g": 10.4
             }
         ]
     },
@@ -145,16 +145,16 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 66.1,
-                "serving_size_g": 150.0,
-                "fat_total_g": 0.9,
-                "fat_saturated_g": 0.1,
-                "protein_g": 1.3,
-                "sodium_mg": 1,
-                "potassium_mg": 41,
+                "calories": 44.1,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.6,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.9,
+                "sodium_mg": 0,
+                "potassium_mg": 27,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 15.1,
-                "fiber_g": 6.3,
+                "carbohydrates_total_g": 10.1,
+                "fiber_g": 4.2,
                 "sugar_g": 0.0
             }
         ]
@@ -165,17 +165,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 5.2,
-                "serving_size_g": 8.2,
-                "fat_total_g": 0.0,
+                "calories": 63.8,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.2,
                 "fat_saturated_g": 0.0,
-                "protein_g": 0.1,
+                "protein_g": 1.1,
                 "sodium_mg": 0,
-                "potassium_mg": 1,
+                "potassium_mg": 20,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 1.3,
-                "fiber_g": 0.2,
-                "sugar_g": 1.1
+                "carbohydrates_total_g": 15.9,
+                "fiber_g": 2.1,
+                "sugar_g": 12.8
             }
         ]
     },
@@ -185,17 +185,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 49.9,
-                "serving_size_g": 110.0,
+                "calories": 45.4,
+                "serving_size_g": 100.0,
                 "fat_total_g": 0.1,
                 "fat_saturated_g": 0.0,
                 "protein_g": 0.5,
-                "sodium_mg": 2,
-                "potassium_mg": 11,
+                "sodium_mg": 1,
+                "potassium_mg": 10,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 13.4,
-                "fiber_g": 4.0,
-                "sugar_g": 4.7
+                "carbohydrates_total_g": 12.2,
+                "fiber_g": 3.6,
+                "sugar_g": 4.3
             }
         ]
     },
@@ -205,17 +205,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 61.9,
-                "serving_size_g": 198.0,
-                "fat_total_g": 0.5,
+                "calories": 31.3,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.3,
                 "fat_saturated_g": 0.0,
-                "protein_g": 1.1,
-                "sodium_mg": 6,
-                "potassium_mg": 34,
+                "protein_g": 0.6,
+                "sodium_mg": 3,
+                "potassium_mg": 17,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 14.4,
-                "fiber_g": 3.0,
-                "sugar_g": 9.0
+                "carbohydrates_total_g": 7.3,
+                "fiber_g": 1.5,
+                "sugar_g": 4.5
             }
         ]
     },
@@ -225,16 +225,16 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 367.3,
-                "serving_size_g": 243.0,
-                "fat_total_g": 13.1,
+                "calories": 151.1,
+                "serving_size_g": 100.0,
+                "fat_total_g": 5.4,
                 "fat_saturated_g": 0.0,
-                "protein_g": 3.6,
-                "sodium_mg": 4,
-                "potassium_mg": 95,
+                "protein_g": 1.5,
+                "sodium_mg": 1,
+                "potassium_mg": 39,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 66.4,
-                "fiber_g": 9.1,
+                "carbohydrates_total_g": 27.3,
+                "fiber_g": 3.8,
                 "sugar_g": 0.0
             }
         ]
@@ -243,7 +243,21 @@
         "id": "feijoa",
         "name_en": "Feijoa",
         "category": "fruit",
-        "nutrients": []
+        "nutrients": [
+            {
+                "calories": 55.0,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.6,
+                "fat_saturated_g": 0.1,
+                "protein_g": 0.7,
+                "sodium_mg": 3,
+                "potassium_mg": 172,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 13.0,
+                "fiber_g": 6.4,
+                "sugar_g": 8.2
+            }
+        ]
     },
     {
         "id": "fig",
@@ -251,17 +265,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 38.0,
-                "serving_size_g": 50.0,
-                "fat_total_g": 0.1,
-                "fat_saturated_g": 0.0,
-                "protein_g": 0.4,
+                "calories": 76.1,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.3,
+                "fat_saturated_g": 0.1,
+                "protein_g": 0.8,
                 "sodium_mg": 0,
-                "potassium_mg": 7,
+                "potassium_mg": 14,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 9.7,
-                "fiber_g": 1.5,
-                "sugar_g": 8.2
+                "carbohydrates_total_g": 19.4,
+                "fiber_g": 2.9,
+                "sugar_g": 16.4
             }
         ]
     },
@@ -271,16 +285,16 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 66.1,
-                "serving_size_g": 150.0,
-                "fat_total_g": 0.9,
-                "fat_saturated_g": 0.1,
-                "protein_g": 1.3,
-                "sodium_mg": 1,
-                "potassium_mg": 41,
+                "calories": 44.1,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.6,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.9,
+                "sodium_mg": 0,
+                "potassium_mg": 27,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 15.1,
-                "fiber_g": 6.3,
+                "carbohydrates_total_g": 10.1,
+                "fiber_g": 4.2,
                 "sugar_g": 0.0
             }
         ]
@@ -291,17 +305,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 33.0,
-                "serving_size_g": 49.0,
-                "fat_total_g": 0.1,
-                "fat_saturated_g": 0.0,
-                "protein_g": 0.4,
-                "sodium_mg": 0,
-                "potassium_mg": 9,
+                "calories": 67.4,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.2,
+                "fat_saturated_g": 0.1,
+                "protein_g": 0.7,
+                "sodium_mg": 1,
+                "potassium_mg": 20,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 9.0,
-                "fiber_g": 0.4,
-                "sugar_g": 7.6
+                "carbohydrates_total_g": 18.3,
+                "fiber_g": 0.9,
+                "sugar_g": 15.6
             }
         ]
     },
@@ -309,7 +323,21 @@
         "id": "greenapple",
         "name_en": "GreenApple",
         "category": "fruit",
-        "nutrients": []
+        "nutrients": [
+                {
+                  "calories": 50.8,
+                  "serving_size_g": 100,
+                  "fat_total_g": 0.2,
+                  "fat_saturated_g": 0,
+                  "protein_g": 0.3,
+                  "sodium_mg": 0,
+                  "potassium_mg": 11,
+                  "cholesterol_mg": 0,
+                  "carbohydrates_total_g": 13.9,
+                  "fiber_g": 2.4,
+                  "sugar_g": 10.3
+                }
+              ]
     },
     {
         "id": "guava",
@@ -317,17 +345,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 111.7,
-                "serving_size_g": 165.0,
-                "fat_total_g": 1.5,
-                "fat_saturated_g": 0.4,
-                "protein_g": 4.2,
-                "sodium_mg": 3,
-                "potassium_mg": 65,
+                "calories": 67.7,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.9,
+                "fat_saturated_g": 0.3,
+                "protein_g": 2.5,
+                "sodium_mg": 1,
+                "potassium_mg": 39,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 23.7,
-                "fiber_g": 9.0,
-                "sugar_g": 14.7
+                "carbohydrates_total_g": 14.4,
+                "fiber_g": 5.5,
+                "sugar_g": 8.9
             }
         ]
     },
@@ -337,17 +365,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 186.0,
-                "serving_size_g": 28.35,
-                "fat_total_g": 17.4,
-                "fat_saturated_g": 1.3,
-                "protein_g": 4.2,
+                "calories": 656.2,
+                "serving_size_g": 100.0,
+                "fat_total_g": 61.5,
+                "fat_saturated_g": 4.5,
+                "protein_g": 14.9,
                 "sodium_mg": 0,
-                "potassium_mg": 88,
+                "potassium_mg": 310,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 5.0,
-                "fiber_g": 2.7,
-                "sugar_g": 1.4
+                "carbohydrates_total_g": 17.8,
+                "fiber_g": 9.4,
+                "sugar_g": 4.9
             }
         ]
     },
@@ -357,17 +385,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 59.4,
-                "serving_size_g": 177.0,
-                "fat_total_g": 0.3,
+                "calories": 33.6,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.2,
                 "fat_saturated_g": 0.1,
-                "protein_g": 1.5,
-                "sodium_mg": 28,
-                "potassium_mg": 26,
+                "protein_g": 0.8,
+                "sodium_mg": 16,
+                "potassium_mg": 15,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 14.7,
-                "fiber_g": 1.6,
-                "sugar_g": 13.9
+                "carbohydrates_total_g": 8.3,
+                "fiber_g": 0.9,
+                "sugar_g": 7.8
             }
         ]
     },
@@ -377,17 +405,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 156.5,
-                "serving_size_g": 165.0,
-                "fat_total_g": 1.1,
-                "fat_saturated_g": 0.3,
-                "protein_g": 2.8,
-                "sodium_mg": 3,
-                "potassium_mg": 34,
+                "calories": 94.9,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.6,
+                "fat_saturated_g": 0.2,
+                "protein_g": 1.7,
+                "sodium_mg": 2,
+                "potassium_mg": 20,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 38.5,
-                "fiber_g": 2.5,
-                "sugar_g": 31.3
+                "carbohydrates_total_g": 23.4,
+                "fiber_g": 1.5,
+                "sugar_g": 19.0
             }
         ]
     },
@@ -397,17 +425,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 116.6,
-                "serving_size_g": 168.0,
-                "fat_total_g": 0.3,
+                "calories": 69.4,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.2,
                 "fat_saturated_g": 0.0,
-                "protein_g": 1.0,
-                "sodium_mg": 1,
-                "potassium_mg": 28,
+                "protein_g": 0.6,
+                "sodium_mg": 0,
+                "potassium_mg": 17,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 31.6,
-                "fiber_g": 6.0,
-                "sugar_g": 21.2
+                "carbohydrates_total_g": 18.8,
+                "fiber_g": 3.6,
+                "sugar_g": 12.6
             }
         ]
     },
@@ -417,17 +445,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 41.0,
-                "serving_size_g": 69.0,
-                "fat_total_g": 0.4,
+                "calories": 59.5,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.5,
                 "fat_saturated_g": 0.0,
-                "protein_g": 0.8,
-                "sodium_mg": 2,
-                "potassium_mg": 23,
+                "protein_g": 1.1,
+                "sodium_mg": 3,
+                "potassium_mg": 33,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 10.3,
-                "fiber_g": 2.1,
-                "sugar_g": 6.3
+                "carbohydrates_total_g": 14.9,
+                "fiber_g": 3.0,
+                "sugar_g": 9.1
             }
         ]
     },
@@ -437,17 +465,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 41.2,
-                "serving_size_g": 69.0,
-                "fat_total_g": 0.4,
+                "calories": 59.7,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.5,
                 "fat_saturated_g": 0.0,
-                "protein_g": 0.8,
+                "protein_g": 1.1,
                 "sodium_mg": 2,
-                "potassium_mg": 23,
+                "potassium_mg": 34,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 10.0,
-                "fiber_g": 2.1,
-                "sugar_g": 6.2
+                "carbohydrates_total_g": 14.5,
+                "fiber_g": 3.0,
+                "sugar_g": 9.0
             }
         ]
     },
@@ -457,17 +485,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 24.4,
-                "serving_size_g": 84.0,
-                "fat_total_g": 0.2,
+                "calories": 29.0,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.3,
                 "fat_saturated_g": 0.0,
-                "protein_g": 0.9,
-                "sodium_mg": 1,
-                "potassium_mg": 13,
+                "protein_g": 1.1,
+                "sodium_mg": 2,
+                "potassium_mg": 15,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 7.8,
-                "fiber_g": 2.3,
-                "sugar_g": 2.1
+                "carbohydrates_total_g": 9.3,
+                "fiber_g": 2.7,
+                "sugar_g": 2.5
             }
         ]
     },
@@ -477,17 +505,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 19.8,
-                "serving_size_g": 67.0,
-                "fat_total_g": 0.1,
+                "calories": 29.6,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.2,
                 "fat_saturated_g": 0.0,
-                "protein_g": 0.5,
-                "sodium_mg": 1,
-                "potassium_mg": 11,
+                "protein_g": 0.7,
+                "sodium_mg": 2,
+                "potassium_mg": 17,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 7.1,
-                "fiber_g": 1.9,
-                "sugar_g": 1.1
+                "carbohydrates_total_g": 10.6,
+                "fiber_g": 2.9,
+                "sugar_g": 1.7
             }
         ]
     },
@@ -497,17 +525,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 86.5,
-                "serving_size_g": 148.0,
-                "fat_total_g": 0.5,
+                "calories": 58.5,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.3,
                 "fat_saturated_g": 0.0,
-                "protein_g": 1.1,
+                "protein_g": 0.7,
                 "sodium_mg": 1,
-                "potassium_mg": 17,
+                "potassium_mg": 11,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 21.2,
-                "fiber_g": 3.5,
-                "sugar_g": 14.8
+                "carbohydrates_total_g": 14.3,
+                "fiber_g": 2.4,
+                "sugar_g": 10.0
             }
         ]
     },
@@ -517,17 +545,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 122.3,
-                "serving_size_g": 190.0,
-                "fat_total_g": 0.8,
-                "fat_saturated_g": 0.2,
-                "protein_g": 1.6,
-                "sodium_mg": 1,
-                "potassium_mg": 59,
+                "calories": 64.4,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.4,
+                "fat_saturated_g": 0.1,
+                "protein_g": 0.8,
+                "sodium_mg": 0,
+                "potassium_mg": 31,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 32.0,
-                "fiber_g": 2.5,
-                "sugar_g": 28.8
+                "carbohydrates_total_g": 16.9,
+                "fiber_g": 1.3,
+                "sugar_g": 15.2
             }
         ]
     },
@@ -537,17 +565,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 101.6,
-                "serving_size_g": 165.0,
-                "fat_total_g": 0.6,
+                "calories": 61.6,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.4,
                 "fat_saturated_g": 0.1,
-                "protein_g": 1.3,
-                "sodium_mg": 1,
-                "potassium_mg": 23,
+                "protein_g": 0.8,
+                "sodium_mg": 0,
+                "potassium_mg": 14,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 24.4,
-                "fiber_g": 2.7,
-                "sugar_g": 22.4
+                "carbohydrates_total_g": 14.8,
+                "fiber_g": 1.6,
+                "sugar_g": 13.6
             }
         ]
     },
@@ -557,16 +585,16 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 54.0,
-                "serving_size_g": 76.0,
-                "fat_total_g": 0.4,
+                "calories": 71.1,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.6,
                 "fat_saturated_g": 0.0,
-                "protein_g": 0.3,
-                "sodium_mg": 5,
-                "potassium_mg": 5,
+                "protein_g": 0.4,
+                "sodium_mg": 6,
+                "potassium_mg": 7,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 13.7,
-                "fiber_g": 1.4,
+                "carbohydrates_total_g": 18.0,
+                "fiber_g": 1.8,
                 "sugar_g": 0.0
             }
         ]
@@ -577,17 +605,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 59.4,
-                "serving_size_g": 177.0,
-                "fat_total_g": 0.3,
+                "calories": 33.6,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.2,
                 "fat_saturated_g": 0.1,
-                "protein_g": 1.5,
-                "sodium_mg": 28,
-                "potassium_mg": 26,
+                "protein_g": 0.8,
+                "sodium_mg": 16,
+                "potassium_mg": 15,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 14.7,
-                "fiber_g": 1.6,
-                "sugar_g": 13.9
+                "carbohydrates_total_g": 8.3,
+                "fiber_g": 0.9,
+                "sugar_g": 7.8
             }
         ]
     },
@@ -595,7 +623,21 @@
         "id": "morus",
         "name_en": "Morus",
         "category": "fruit",
-        "nutrients": []
+        "nutrients": [
+              {
+                "calories": 42.8,
+                "serving_size_g": 100,
+                "fat_total_g": 0.4,
+                "fat_saturated_g": 0,
+                "protein_g": 1.4,
+                "sodium_mg": 9,
+                "potassium_mg": 37,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 9.8,
+                "fiber_g": 1.7,
+                "sugar_g": 8.2
+              }
+          ]
     },
     {
         "id": "orange",
@@ -603,17 +645,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 70.5,
-                "serving_size_g": 140.0,
-                "fat_total_g": 0.2,
+                "calories": 50.4,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.1,
                 "fat_saturated_g": 0.0,
-                "protein_g": 1.3,
+                "protein_g": 0.9,
                 "sodium_mg": 1,
-                "potassium_mg": 32,
+                "potassium_mg": 23,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 17.3,
-                "fiber_g": 3.1,
-                "sugar_g": 11.8
+                "carbohydrates_total_g": 12.4,
+                "fiber_g": 2.2,
+                "sugar_g": 8.4
             }
         ]
     },
@@ -623,25 +665,39 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 62.3,
-                "serving_size_g": 145.0,
-                "fat_total_g": 0.4,
+                "calories": 43.0,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.3,
                 "fat_saturated_g": 0.1,
-                "protein_g": 0.7,
-                "sodium_mg": 11,
-                "potassium_mg": 14,
+                "protein_g": 0.5,
+                "sodium_mg": 7,
+                "potassium_mg": 9,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 15.6,
-                "fiber_g": 2.4,
-                "sugar_g": 11.3
+                "carbohydrates_total_g": 10.8,
+                "fiber_g": 1.7,
+                "sugar_g": 7.8
             }
         ]
     },
     {
         "id": "passionfruit",
-        "name_en": "Passionfruit",
+        "name_en": "Passion fruit",
         "category": "fruit",
-        "nutrients": []
+        "nutrients": [
+              {
+                "calories": 98.1,
+                "serving_size_g": 100,
+                "fat_total_g": 0.7,
+                "fat_saturated_g": 0.1,
+                "protein_g": 2.2,
+                "sodium_mg": 27,
+                "potassium_mg": 67,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 23.3,
+                "fiber_g": 10.4,
+                "sugar_g": 11.1
+              }
+        ]
     },
     {
         "id": "peach",
@@ -649,17 +705,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 69.9,
-                "serving_size_g": 175.0,
-                "fat_total_g": 0.4,
+                "calories": 39.9,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.3,
                 "fat_saturated_g": 0.0,
-                "protein_g": 1.6,
+                "protein_g": 0.9,
                 "sodium_mg": 0,
-                "potassium_mg": 35,
+                "potassium_mg": 20,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 16.9,
-                "fiber_g": 2.7,
-                "sugar_g": 14.8
+                "carbohydrates_total_g": 9.7,
+                "fiber_g": 1.5,
+                "sugar_g": 8.5
             }
         ]
     },
@@ -669,17 +725,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 100.9,
-                "serving_size_g": 178.0,
-                "fat_total_g": 0.3,
+                "calories": 56.7,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.1,
                 "fat_saturated_g": 0.0,
-                "protein_g": 0.6,
+                "protein_g": 0.4,
                 "sodium_mg": 1,
-                "potassium_mg": 21,
+                "potassium_mg": 11,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 26.6,
-                "fiber_g": 5.6,
-                "sugar_g": 17.4
+                "carbohydrates_total_g": 14.9,
+                "fiber_g": 3.1,
+                "sugar_g": 9.8
             }
         ]
     },
@@ -689,17 +745,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 116.6,
-                "serving_size_g": 168.0,
-                "fat_total_g": 0.3,
+                "calories": 69.4,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.2,
                 "fat_saturated_g": 0.0,
-                "protein_g": 1.0,
-                "sodium_mg": 1,
-                "potassium_mg": 28,
+                "protein_g": 0.6,
+                "sodium_mg": 0,
+                "potassium_mg": 17,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 31.6,
-                "fiber_g": 6.0,
-                "sugar_g": 21.2
+                "carbohydrates_total_g": 18.8,
+                "fiber_g": 3.6,
+                "sugar_g": 12.6
             }
         ]
     },
@@ -709,17 +765,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 41.9,
-                "serving_size_g": 82.5,
+                "calories": 50.8,
+                "serving_size_g": 100.0,
                 "fat_total_g": 0.1,
                 "fat_saturated_g": 0.0,
-                "protein_g": 0.4,
+                "protein_g": 0.5,
                 "sodium_mg": 0,
-                "potassium_mg": 6,
+                "potassium_mg": 8,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 10.8,
-                "fiber_g": 1.2,
-                "sugar_g": 8.1
+                "carbohydrates_total_g": 13.0,
+                "fiber_g": 1.4,
+                "sugar_g": 9.9
             }
         ]
     },
@@ -727,7 +783,21 @@
         "id": "pitahaya",
         "name_en": "Pitahaya",
         "category": "fruit",
-        "nutrients": []
+        "nutrients": [
+          {
+              "calories": 30.3,
+              "serving_size_g": 100,
+              "fat_total_g": 0.3,
+              "fat_saturated_g": 0,
+              "protein_g": 0.6,
+              "sodium_mg": 3,
+              "potassium_mg": 16,
+              "cholesterol_mg": 0,
+              "carbohydrates_total_g": 7.5,
+              "fiber_g": 1.5,
+              "sugar_g": 4.5
+            }
+        ]
     },
     {
         "id": "plum",
@@ -735,17 +805,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 30.5,
-                "serving_size_g": 66.0,
-                "fat_total_g": 0.2,
+                "calories": 46.2,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.3,
                 "fat_saturated_g": 0.0,
-                "protein_g": 0.5,
+                "protein_g": 0.7,
                 "sodium_mg": 0,
-                "potassium_mg": 10,
+                "potassium_mg": 16,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 7.5,
-                "fiber_g": 0.9,
-                "sugar_g": 6.6
+                "carbohydrates_total_g": 11.4,
+                "fiber_g": 1.4,
+                "sugar_g": 9.9
             }
         ]
     },
@@ -755,17 +825,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 237.5,
-                "serving_size_g": 282.0,
-                "fat_total_g": 3.3,
-                "fat_saturated_g": 0.3,
-                "protein_g": 4.7,
-                "sodium_mg": 8,
-                "potassium_mg": 100,
+                "calories": 84.2,
+                "serving_size_g": 100.0,
+                "fat_total_g": 1.2,
+                "fat_saturated_g": 0.1,
+                "protein_g": 1.7,
+                "sodium_mg": 2,
+                "potassium_mg": 35,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 52.3,
-                "fiber_g": 11.5,
-                "sugar_g": 38.6
+                "carbohydrates_total_g": 18.5,
+                "fiber_g": 4.1,
+                "sugar_g": 13.7
             }
         ]
     },
@@ -775,16 +845,16 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 235.0,
-                "serving_size_g": 609.0,
-                "fat_total_g": 0.2,
+                "calories": 38.6,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.0,
                 "fat_saturated_g": 0.0,
-                "protein_g": 4.6,
-                "sodium_mg": 6,
-                "potassium_mg": 101,
+                "protein_g": 0.8,
+                "sodium_mg": 0,
+                "potassium_mg": 16,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 58.1,
-                "fiber_g": 6.2,
+                "carbohydrates_total_g": 9.5,
+                "fiber_g": 1.0,
                 "sugar_g": 0.0
             }
         ]
@@ -795,17 +865,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 50.2,
-                "serving_size_g": 245.0,
-                "fat_total_g": 0.2,
-                "fat_saturated_g": 0.1,
-                "protein_g": 1.8,
-                "sodium_mg": 2,
-                "potassium_mg": 74,
+                "calories": 20.5,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.1,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.7,
+                "sodium_mg": 0,
+                "potassium_mg": 30,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 12.0,
-                "fiber_g": 2.7,
-                "sugar_g": 5.1
+                "carbohydrates_total_g": 4.9,
+                "fiber_g": 1.1,
+                "sugar_g": 2.1
             }
         ]
     },
@@ -815,17 +885,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 1.1,
-                "serving_size_g": 2.0,
-                "fat_total_g": 0.0,
+                "calories": 52.7,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.5,
                 "fat_saturated_g": 0.0,
-                "protein_g": 0.0,
-                "sodium_mg": 0,
-                "potassium_mg": 0,
+                "protein_g": 1.0,
+                "sodium_mg": 1,
+                "potassium_mg": 28,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 0.2,
-                "fiber_g": 0.1,
-                "sugar_g": 0.1
+                "carbohydrates_total_g": 11.9,
+                "fiber_g": 6.5,
+                "sugar_g": 4.5
             }
         ]
     },
@@ -835,17 +905,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 28.7,
-                "serving_size_g": 90.0,
+                "calories": 31.9,
+                "serving_size_g": 100.0,
                 "fat_total_g": 0.3,
                 "fat_saturated_g": 0.0,
-                "protein_g": 0.6,
+                "protein_g": 0.7,
                 "sodium_mg": 0,
-                "potassium_mg": 21,
+                "potassium_mg": 23,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 6.9,
-                "fiber_g": 1.8,
-                "sugar_g": 4.4
+                "carbohydrates_total_g": 7.7,
+                "fiber_g": 2.0,
+                "sugar_g": 4.9
             }
         ]
     },
@@ -855,17 +925,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 45.3,
-                "serving_size_g": 88.0,
+                "calories": 51.5,
+                "serving_size_g": 100.0,
                 "fat_total_g": 0.3,
                 "fat_saturated_g": 0.0,
-                "protein_g": 0.7,
+                "protein_g": 0.8,
                 "sodium_mg": 1,
-                "potassium_mg": 17,
+                "potassium_mg": 19,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 11.7,
-                "fiber_g": 1.6,
-                "sugar_g": 9.3
+                "carbohydrates_total_g": 13.3,
+                "fiber_g": 1.8,
+                "sugar_g": 10.6
             }
         ]
     },
@@ -875,17 +945,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 22.4,
-                "serving_size_g": 123.0,
+                "calories": 18.2,
+                "serving_size_g": 100.0,
                 "fat_total_g": 0.2,
                 "fat_saturated_g": 0.0,
-                "protein_g": 1.1,
-                "sodium_mg": 6,
-                "potassium_mg": 29,
+                "protein_g": 0.9,
+                "sodium_mg": 4,
+                "potassium_mg": 23,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 4.8,
-                "fiber_g": 1.5,
-                "sugar_g": 3.2
+                "carbohydrates_total_g": 3.9,
+                "fiber_g": 1.2,
+                "sugar_g": 2.6
             }
         ]
     },
@@ -895,17 +965,17 @@
         "category": "fruit",
         "nutrients": [
             {
-                "calories": 86.6,
-                "serving_size_g": 286.0,
-                "fat_total_g": 0.4,
-                "fat_saturated_g": 0.1,
-                "protein_g": 1.8,
-                "sodium_mg": 2,
-                "potassium_mg": 31,
+                "calories": 30.3,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.1,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.6,
+                "sodium_mg": 0,
+                "potassium_mg": 10,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 21.2,
-                "fiber_g": 1.1,
-                "sugar_g": 17.7
+                "carbohydrates_total_g": 7.4,
+                "fiber_g": 0.4,
+                "sugar_g": 6.2
             }
         ]
     },
@@ -915,17 +985,17 @@
         "category": "vegetable",
         "nutrients": [
             {
-                "calories": 64.4,
-                "serving_size_g": 120.0,
-                "fat_total_g": 0.4,
+                "calories": 53.7,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.3,
                 "fat_saturated_g": 0.1,
-                "protein_g": 3.5,
-                "sodium_mg": 72,
-                "potassium_mg": 86,
+                "protein_g": 2.9,
+                "sodium_mg": 60,
+                "potassium_mg": 72,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 14.1,
-                "fiber_g": 6.9,
-                "sugar_g": 1.2
+                "carbohydrates_total_g": 11.7,
+                "fiber_g": 5.7,
+                "sugar_g": 1.0
             }
         ]
     },
@@ -935,17 +1005,17 @@
         "category": "vegetable",
         "nutrients": [
             {
-                "calories": 16.1,
-                "serving_size_g": 75.0,
+                "calories": 21.4,
+                "serving_size_g": 100.0,
                 "fat_total_g": 0.2,
-                "fat_saturated_g": 0.0,
-                "protein_g": 1.8,
-                "sodium_mg": 10,
-                "potassium_mg": 40,
+                "fat_saturated_g": 0.1,
+                "protein_g": 2.4,
+                "sodium_mg": 14,
+                "potassium_mg": 54,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 3.1,
-                "fiber_g": 1.5,
-                "sugar_g": 1.0
+                "carbohydrates_total_g": 4.2,
+                "fiber_g": 2.0,
+                "sugar_g": 1.3
             }
         ]
     },
@@ -955,17 +1025,17 @@
         "category": "vegetable",
         "nutrients": [
             {
-                "calories": 197.5,
-                "serving_size_g": 566.0,
-                "fat_total_g": 1.3,
-                "fat_saturated_g": 0.3,
-                "protein_g": 4.7,
-                "sodium_mg": 5,
-                "potassium_mg": 86,
+                "calories": 34.9,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.2,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.8,
+                "sodium_mg": 0,
+                "potassium_mg": 15,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 49.4,
-                "fiber_g": 14.2,
-                "sugar_g": 18.2
+                "carbohydrates_total_g": 8.7,
+                "fiber_g": 2.5,
+                "sugar_g": 3.2
             }
         ]
     },
@@ -975,17 +1045,17 @@
         "category": "vegetable",
         "nutrients": [
             {
-                "calories": 12.9,
-                "serving_size_g": 37.0,
-                "fat_total_g": 0.2,
-                "fat_saturated_g": 0.0,
-                "protein_g": 0.9,
-                "sodium_mg": 15,
-                "potassium_mg": 24,
+                "calories": 35.0,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.4,
+                "fat_saturated_g": 0.1,
+                "protein_g": 2.4,
+                "sodium_mg": 41,
+                "potassium_mg": 65,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 2.7,
-                "fiber_g": 1.2,
-                "sugar_g": 0.5
+                "carbohydrates_total_g": 7.3,
+                "fiber_g": 3.3,
+                "sugar_g": 1.4
             }
         ]
     },
@@ -995,17 +1065,17 @@
         "category": "vegetable",
         "nutrients": [
             {
-                "calories": 61.2,
-                "serving_size_g": 168.0,
-                "fat_total_g": 0.8,
-                "fat_saturated_g": 0.2,
-                "protein_g": 4.3,
-                "sodium_mg": 35,
-                "potassium_mg": 93,
+                "calories": 36.4,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.5,
+                "fat_saturated_g": 0.1,
+                "protein_g": 2.5,
+                "sodium_mg": 21,
+                "potassium_mg": 55,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 11.9,
-                "fiber_g": 4.4,
-                "sugar_g": 2.9
+                "carbohydrates_total_g": 7.1,
+                "fiber_g": 2.6,
+                "sugar_g": 1.7
             }
         ]
     },
@@ -1015,17 +1085,17 @@
         "category": "vegetable",
         "nutrients": [
             {
-                "calories": 17.5,
-                "serving_size_g": 75.0,
-                "fat_total_g": 0.0,
+                "calories": 23.4,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.1,
                 "fat_saturated_g": 0.0,
-                "protein_g": 0.9,
-                "sodium_mg": 5,
-                "potassium_mg": 24,
+                "protein_g": 1.3,
+                "sodium_mg": 7,
+                "potassium_mg": 32,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 4.1,
-                "fiber_g": 1.4,
-                "sugar_g": 2.1
+                "carbohydrates_total_g": 5.5,
+                "fiber_g": 1.9,
+                "sugar_g": 2.8
             }
         ]
     },
@@ -1035,17 +1105,17 @@
         "category": "vegetable",
         "nutrients": [
             {
-                "calories": 15.6,
-                "serving_size_g": 46.0,
-                "fat_total_g": 0.1,
+                "calories": 34.0,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.2,
                 "fat_saturated_g": 0.0,
-                "protein_g": 0.4,
-                "sodium_mg": 26,
-                "potassium_mg": 13,
+                "protein_g": 0.8,
+                "sodium_mg": 57,
+                "potassium_mg": 30,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 3.8,
-                "fiber_g": 1.4,
-                "sugar_g": 1.6
+                "carbohydrates_total_g": 8.3,
+                "fiber_g": 3.0,
+                "sugar_g": 3.4
             }
         ]
     },
@@ -1055,17 +1125,17 @@
         "category": "vegetable",
         "nutrients": [
             {
-                "calories": 129.1,
-                "serving_size_g": 575.0,
-                "fat_total_g": 2.6,
-                "fat_saturated_g": 0.4,
-                "protein_g": 10.5,
-                "sodium_mg": 85,
-                "potassium_mg": 182,
+                "calories": 22.4,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.5,
+                "fat_saturated_g": 0.1,
+                "protein_g": 1.8,
+                "sodium_mg": 14,
+                "potassium_mg": 31,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 23.4,
-                "fiber_g": 13.4,
-                "sugar_g": 11.8
+                "carbohydrates_total_g": 4.1,
+                "fiber_g": 2.3,
+                "sugar_g": 2.1
             }
         ]
     },
@@ -1075,17 +1145,17 @@
         "category": "vegetable",
         "nutrients": [
             {
-                "calories": 6.7,
-                "serving_size_g": 37.5,
-                "fat_total_g": 0.1,
-                "fat_saturated_g": 0.0,
-                "protein_g": 0.3,
-                "sodium_mg": 34,
-                "potassium_mg": 9,
+                "calories": 17.9,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.2,
+                "fat_saturated_g": 0.1,
+                "protein_g": 0.8,
+                "sodium_mg": 91,
+                "potassium_mg": 25,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 1.5,
-                "fiber_g": 0.6,
-                "sugar_g": 0.9
+                "carbohydrates_total_g": 4.0,
+                "fiber_g": 1.6,
+                "sugar_g": 2.4
             }
         ]
     },
@@ -1095,17 +1165,17 @@
         "category": "vegetable",
         "nutrients": [
             {
-                "calories": 96.7,
-                "serving_size_g": 103.0,
-                "fat_total_g": 1.6,
+                "calories": 93.9,
+                "serving_size_g": 100.0,
+                "fat_total_g": 1.5,
                 "fat_saturated_g": 0.2,
-                "protein_g": 3.5,
+                "protein_g": 3.4,
                 "sodium_mg": 1,
-                "potassium_mg": 78,
+                "potassium_mg": 75,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 21.6,
+                "carbohydrates_total_g": 21.0,
                 "fiber_g": 2.4,
-                "sugar_g": 4.7
+                "sugar_g": 4.6
             }
         ]
     },
@@ -1115,17 +1185,17 @@
         "category": "vegetable",
         "nutrients": [
             {
-                "calories": 30.7,
-                "serving_size_g": 201.0,
-                "fat_total_g": 0.2,
-                "fat_saturated_g": 0.1,
-                "protein_g": 1.3,
-                "sodium_mg": 3,
-                "potassium_mg": 49,
+                "calories": 15.3,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.1,
+                "fat_saturated_g": 0.0,
+                "protein_g": 0.6,
+                "sodium_mg": 1,
+                "potassium_mg": 24,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 7.4,
-                "fiber_g": 1.0,
-                "sugar_g": 3.4
+                "carbohydrates_total_g": 3.7,
+                "fiber_g": 0.5,
+                "sugar_g": 1.7
             }
         ]
     },
@@ -1135,17 +1205,17 @@
         "category": "vegetable",
         "nutrients": [
             {
-                "calories": 4.3,
-                "serving_size_g": 3.0,
-                "fat_total_g": 0.0,
+                "calories": 144.8,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.7,
                 "fat_saturated_g": 0.0,
-                "protein_g": 0.2,
-                "sodium_mg": 0,
-                "potassium_mg": 4,
+                "protein_g": 6.4,
+                "sodium_mg": 16,
+                "potassium_mg": 153,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 1.0,
-                "fiber_g": 0.1,
-                "sugar_g": 0.0
+                "carbohydrates_total_g": 32.5,
+                "fiber_g": 2.0,
+                "sugar_g": 1.0
             }
         ]
     },
@@ -1155,17 +1225,17 @@
         "category": "vegetable",
         "nutrients": [
             {
-                "calories": 1.6,
-                "serving_size_g": 2.0,
-                "fat_total_g": 0.0,
+                "calories": 78.3,
+                "serving_size_g": 100.0,
+                "fat_total_g": 1.0,
                 "fat_saturated_g": 0.0,
-                "protein_g": 0.0,
-                "sodium_mg": 0,
-                "potassium_mg": 0,
+                "protein_g": 2.0,
+                "sodium_mg": 13,
+                "potassium_mg": 34,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 0.4,
-                "fiber_g": 0.0,
-                "sugar_g": 0.0
+                "carbohydrates_total_g": 18.3,
+                "fiber_g": 2.0,
+                "sugar_g": 1.5
             }
         ]
     },
@@ -1175,17 +1245,17 @@
         "category": "vegetable",
         "nutrients": [
             {
-                "calories": 35.4,
-                "serving_size_g": 130.0,
-                "fat_total_g": 0.5,
+                "calories": 27.2,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.4,
                 "fat_saturated_g": 0.1,
-                "protein_g": 2.5,
-                "sodium_mg": 30,
-                "potassium_mg": 36,
+                "protein_g": 1.9,
+                "sodium_mg": 23,
+                "potassium_mg": 28,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 7.3,
-                "fiber_g": 2.6,
-                "sugar_g": 1.6
+                "carbohydrates_total_g": 5.6,
+                "fiber_g": 2.0,
+                "sugar_g": 1.3
             }
         ]
     },
@@ -1195,17 +1265,17 @@
         "category": "vegetable",
         "nutrients": [
             {
-                "calories": 39.6,
-                "serving_size_g": 124.0,
-                "fat_total_g": 0.3,
+                "calories": 31.9,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.2,
                 "fat_saturated_g": 0.0,
-                "protein_g": 1.0,
-                "sodium_mg": 12,
-                "potassium_mg": 21,
+                "protein_g": 0.8,
+                "sodium_mg": 9,
+                "potassium_mg": 17,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 9.4,
-                "fiber_g": 1.3,
-                "sugar_g": 2.6
+                "carbohydrates_total_g": 7.6,
+                "fiber_g": 1.0,
+                "sugar_g": 2.1
             }
         ]
     },
@@ -1215,17 +1285,17 @@
         "category": "vegetable",
         "nutrients": [
             {
-                "calories": 16.0,
-                "serving_size_g": 94.0,
+                "calories": 17.0,
+                "serving_size_g": 100.0,
                 "fat_total_g": 0.3,
                 "fat_saturated_g": 0.0,
                 "protein_g": 1.2,
                 "sodium_mg": 7,
-                "potassium_mg": 28,
+                "potassium_mg": 30,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 3.1,
-                "fiber_g": 2.0,
-                "sugar_g": 1.1
+                "carbohydrates_total_g": 3.3,
+                "fiber_g": 2.1,
+                "sugar_g": 1.2
             }
         ]
     },
@@ -1235,17 +1305,17 @@
         "category": "vegetable",
         "nutrients": [
             {
-                "calories": 3.4,
-                "serving_size_g": 12.0,
-                "fat_total_g": 0.1,
-                "fat_saturated_g": 0.0,
-                "protein_g": 0.3,
-                "sodium_mg": 0,
-                "potassium_mg": 10,
+                "calories": 28.0,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.5,
+                "fat_saturated_g": 0.1,
+                "protein_g": 2.1,
+                "sodium_mg": 1,
+                "potassium_mg": 87,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 0.6,
-                "fiber_g": 0.3,
-                "sugar_g": 0.3
+                "carbohydrates_total_g": 5.3,
+                "fiber_g": 2.1,
+                "sugar_g": 2.3
             }
         ]
     },
@@ -1255,17 +1325,17 @@
         "category": "vegetable",
         "nutrients": [
             {
-                "calories": 42.0,
-                "serving_size_g": 94.0,
+                "calories": 44.7,
+                "serving_size_g": 100.0,
                 "fat_total_g": 0.2,
                 "fat_saturated_g": 0.0,
-                "protein_g": 1.3,
+                "protein_g": 1.4,
                 "sodium_mg": 2,
-                "potassium_mg": 32,
+                "potassium_mg": 35,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 9.5,
-                "fiber_g": 1.3,
-                "sugar_g": 4.4
+                "carbohydrates_total_g": 10.1,
+                "fiber_g": 1.4,
+                "sugar_g": 4.7
             }
         ]
     },
@@ -1275,17 +1345,17 @@
         "category": "vegetable",
         "nutrients": [
             {
-                "calories": 71.0,
-                "serving_size_g": 98.0,
+                "calories": 72.5,
+                "serving_size_g": 100.0,
                 "fat_total_g": 0.3,
                 "fat_saturated_g": 0.1,
                 "protein_g": 1.3,
-                "sodium_mg": 9,
-                "potassium_mg": 66,
+                "sodium_mg": 10,
+                "potassium_mg": 68,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 16.8,
-                "fiber_g": 3.5,
-                "sugar_g": 4.7
+                "carbohydrates_total_g": 17.1,
+                "fiber_g": 3.6,
+                "sugar_g": 4.8
             }
         ]
     },
@@ -1295,17 +1365,17 @@
         "category": "vegetable",
         "nutrients": [
             {
-                "calories": 131.9,
-                "serving_size_g": 160.0,
-                "fat_total_g": 0.3,
-                "fat_saturated_g": 0.1,
-                "protein_g": 8.6,
-                "sodium_mg": 4,
-                "potassium_mg": 187,
+                "calories": 82.4,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.2,
+                "fat_saturated_g": 0.0,
+                "protein_g": 5.4,
+                "sodium_mg": 3,
+                "potassium_mg": 117,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 25.4,
-                "fiber_g": 8.7,
-                "sugar_g": 9.5
+                "carbohydrates_total_g": 15.9,
+                "fiber_g": 5.4,
+                "sugar_g": 5.9
             }
         ]
     },
@@ -1315,17 +1385,17 @@
         "category": "vegetable",
         "nutrients": [
             {
-                "calories": 160.4,
-                "serving_size_g": 173.0,
-                "fat_total_g": 0.2,
-                "fat_saturated_g": 0.1,
-                "protein_g": 4.4,
-                "sodium_mg": 17,
-                "potassium_mg": 122,
+                "calories": 92.7,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.1,
+                "fat_saturated_g": 0.0,
+                "protein_g": 2.5,
+                "sodium_mg": 10,
+                "potassium_mg": 70,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 36.3,
-                "fiber_g": 3.8,
-                "sugar_g": 2.0
+                "carbohydrates_total_g": 21.0,
+                "fiber_g": 2.2,
+                "sugar_g": 1.2
             }
         ]
     },
@@ -1335,17 +1405,17 @@
         "category": "vegetable",
         "nutrients": [
             {
-                "calories": 0.7,
-                "serving_size_g": 4.5,
+                "calories": 15.5,
+                "serving_size_g": 100.0,
                 "fat_total_g": 0.0,
                 "fat_saturated_g": 0.0,
-                "protein_g": 0.0,
-                "sodium_mg": 1,
-                "potassium_mg": 0,
+                "protein_g": 0.7,
+                "sodium_mg": 39,
+                "potassium_mg": 19,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 0.1,
-                "fiber_g": 0.1,
-                "sugar_g": 0.1
+                "carbohydrates_total_g": 3.3,
+                "fiber_g": 1.6,
+                "sugar_g": 1.8
             }
         ]
     },
@@ -1355,17 +1425,17 @@
         "category": "vegetable",
         "nutrients": [
             {
-                "calories": 42.0,
-                "serving_size_g": 180.0,
-                "fat_total_g": 0.5,
-                "fat_saturated_g": 0.1,
-                "protein_g": 5.3,
-                "sodium_mg": 125,
-                "potassium_mg": 99,
+                "calories": 23.3,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.3,
+                "fat_saturated_g": 0.0,
+                "protein_g": 2.9,
+                "sodium_mg": 69,
+                "potassium_mg": 55,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 6.8,
-                "fiber_g": 4.4,
-                "sugar_g": 0.8
+                "carbohydrates_total_g": 3.8,
+                "fiber_g": 2.4,
+                "sugar_g": 0.4
             }
         ]
     },
@@ -1375,17 +1445,17 @@
         "category": "vegetable",
         "nutrients": [
             {
-                "calories": 117.0,
-                "serving_size_g": 151.0,
-                "fat_total_g": 0.2,
-                "fat_saturated_g": 0.1,
-                "protein_g": 2.1,
-                "sodium_mg": 40,
-                "potassium_mg": 48,
+                "calories": 77.5,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.1,
+                "fat_saturated_g": 0.0,
+                "protein_g": 1.4,
+                "sodium_mg": 26,
+                "potassium_mg": 32,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 26.4,
-                "fiber_g": 3.8,
-                "sugar_g": 8.7
+                "carbohydrates_total_g": 17.5,
+                "fiber_g": 2.5,
+                "sugar_g": 5.8
             }
         ]
     },
@@ -1395,17 +1465,17 @@
         "category": "vegetable",
         "nutrients": [
             {
-                "calories": 52.8,
-                "serving_size_g": 342.0,
-                "fat_total_g": 1.2,
-                "fat_saturated_g": 0.2,
-                "protein_g": 3.9,
-                "sodium_mg": 10,
-                "potassium_mg": 124,
+                "calories": 15.4,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.4,
+                "fat_saturated_g": 0.1,
+                "protein_g": 1.1,
+                "sodium_mg": 2,
+                "potassium_mg": 36,
                 "cholesterol_mg": 0,
-                "carbohydrates_total_g": 9.3,
-                "fiber_g": 3.5,
-                "sugar_g": 5.9
+                "carbohydrates_total_g": 2.7,
+                "fiber_g": 1.0,
+                "sugar_g": 1.7
             }
         ]
     }

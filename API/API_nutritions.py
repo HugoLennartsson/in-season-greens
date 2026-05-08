@@ -10,7 +10,7 @@ with open('all_produce.json') as f:
 for i in d:
     if "name_en" in i:  
         
-        query = "1 " + i["name_en"]
+        query = i["name_en"]
         response = requests.get(api_url + query, headers={'X-Api-Key': 'ayNXvPJGIyjZ2B3WhlJzxQ==XicV8IFlPMOsogPx'})
         response2 = response.json()["items"]
         
