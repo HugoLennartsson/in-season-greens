@@ -9,3 +9,4 @@ __pycache__/
 .states/
 .web/
 .DS_Store
+.coverage
