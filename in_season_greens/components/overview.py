@@ -1,13 +1,11 @@
 import reflex as rx
 
 from .. import styles
-from ..state import State
 from ..location_state import LocationState
 from ..data import (
     get_current_month_name,
     get_overview_signals,
     get_season_outlook,
-    get_short_location,
 )
 from .ui import app_icon
 

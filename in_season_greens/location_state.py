@@ -1,6 +1,7 @@
 import reflex as rx
 from geopy.geocoders import Nominatim
 
+
 class LocationState(rx.State):
     lat: float | None = None
     lon: float | None = None
@@ -18,7 +19,7 @@ class LocationState(rx.State):
             return "Unknown Location"
         except Exception:
             return "City Lookup Failed"
-        
+
     @rx.var
     def location_display(self) -> str:
         """Human-readable location string."""
@@ -59,7 +60,7 @@ class LocationState(rx.State):
             """,
             callback=LocationState.handle_location_result,
         )
-    
+
     @rx.event
     def handle_location_result(self, result):
         print(f"[DEBUG] Raw result: {result}")
@@ -78,4 +79,4 @@ class LocationState(rx.State):
 
         self.lat = lat
         self.lon = lon
-        self.city = self._reverse_geocode(lat,lon)
+        self.city = self._reverse_geocode(lat, lon)

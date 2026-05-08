@@ -1,9 +1,8 @@
 import reflex as rx
 
 from .. import styles
-from ..data import APP_NAME, get_full_location, get_nav_items
+from ..data import APP_NAME, get_nav_items
 from .ui import FILTERS, app_icon, filter_button, hamburger_button, search_input
-from ..state import State
 from ..location_state import LocationState
 
 
