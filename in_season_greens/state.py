@@ -5,18 +5,17 @@ from .data import (
     get_products,
     get_search_suggestions,
     search_products,
-    Product,
     ProduceItem,
 )
 
 
 class State(rx.State):
-    products: list[Product] = get_products()
+    products: list[ProduceItem] = get_products()
     search_query: str = ""
     search_suggestions_open: bool = False
     menu_open: bool = False
     modal_open: bool = False
-    modal_product: Optional[Product] = None
+    modal_product: Optional[ProduceItem] = None
 
     def open_menu(self):
         self.menu_open = True
@@ -49,10 +48,9 @@ class State(rx.State):
         self.search_query = ""
         self.search_suggestions_open = False
 
-    def open_modal(self, product_name: str):
-        # Find the product by name
+    def open_modal(self, product_id: str):
         for product in self.products:
-            if product["name"] == product_name:
+            if product["id"] == product_id:
                 self.modal_product = product
                 self.modal_open = True
                 break
@@ -62,7 +60,7 @@ class State(rx.State):
         self.modal_product = None
 
     @rx.var
-    def filtered_products(self) -> list[Product]:
+    def filtered_products(self) -> list[ProduceItem]:
         return search_products(self.search_query, self.products)
 
     @rx.var

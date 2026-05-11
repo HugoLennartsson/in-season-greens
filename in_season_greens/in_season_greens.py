@@ -1,14 +1,6 @@
 import reflex as rx
 
 from . import styles
-from .data import (
-    Product,
-    ProduceItem,
-    get_catalog_label,
-    get_products,
-    get_search_suggestions,
-    search_products,
-)
 from .components.navigation import (
     desktop_header,
     drawer,

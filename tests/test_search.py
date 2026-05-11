@@ -22,7 +22,7 @@ def test_search_suggestions_find_misspelled_words():
 def test_product_search_matches_misspellings():
     products = search_products("strawbery")
 
-    assert [product["name"] for product in products] == ["Strawberry"]
+    assert [product["name_en"] for product in products] == ["Strawberry"]
 
 
 def test_fuzzy_search_ignores_spaces_and_punctuation():
@@ -66,3 +66,14 @@ def test_search_submit_closes_search_suggestions():
     assert state.search_query == "apple"
     assert not state.search_suggestions_open
     assert not state.has_search_suggestions
+
+
+def test_open_modal_selects_product_by_id():
+    state = State(_reflex_internal_init=True)
+
+    state.open_modal("apple")
+
+    assert state.modal_open
+    assert state.modal_product is not None
+    assert state.modal_product["id"] == "apple"
+    assert state.modal_product["name_en"] == "Apple"

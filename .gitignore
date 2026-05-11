@@ -10,4 +10,5 @@ __pycache__/
 .web/
 .DS_Store
 .coverage
+.scripts/
 key.env
