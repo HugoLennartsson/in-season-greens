@@ -25,7 +25,7 @@ def status_label(status) -> rx.Component:
     )
 
 
-def product_card(product) -> rx.Component:
+def product_card(product, state=None) -> rx.Component:
     status = "unknown"
 
     return rx.box(
@@ -87,6 +87,7 @@ def product_card(product) -> rx.Component:
                 rx.button(
                     app_icon("info", "size-3 text-white", 3),
                     "Show info",
+                    on_click=state.open_modal(product["id"]) if state else rx.fragment(),
                     class_name=styles.product_card.info_button,
                 ),
                 class_name=styles.product_card.actions,

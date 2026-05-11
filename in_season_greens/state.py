@@ -1,4 +1,5 @@
 import reflex as rx
+from typing import Optional
 from .data import (
     get_catalog_label,
     get_products,
@@ -13,6 +14,8 @@ class State(rx.State):
     search_query: str = ""
     search_suggestions_open: bool = False
     menu_open: bool = False
+    modal_open: bool = False
+    modal_product: Optional[ProduceItem] = None
 
     def open_menu(self):
         self.menu_open = True
@@ -44,6 +47,17 @@ class State(rx.State):
     def clear_search(self):
         self.search_query = ""
         self.search_suggestions_open = False
+
+    def open_modal(self, product_id: str):
+        for product in self.products:
+            if product["id"] == product_id:
+                self.modal_product = product
+                self.modal_open = True
+                break
+
+    def close_modal(self):
+        self.modal_open = False
+        self.modal_product = None
 
     @rx.var
     def filtered_products(self) -> list[ProduceItem]:

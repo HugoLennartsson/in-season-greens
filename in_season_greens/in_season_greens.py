@@ -9,6 +9,7 @@ from .components.navigation import (
 )
 from .components.overview import overview_section
 from .components.product_card import product_card
+from .components.ui import product_modal
 
 from .state import State
 from .location_state import LocationState
@@ -32,7 +33,7 @@ def catalog() -> rx.Component:
         rx.grid(
             rx.foreach(
                 State.filtered_products,
-                lambda product: product_card(product),
+                lambda product: product_card(product, State),
             ),
             class_name=styles.catalog.grid,
         ),
@@ -42,6 +43,7 @@ def catalog() -> rx.Component:
 
 def home_view() -> rx.Component:
     return rx.box(
+        product_modal(State),
         drawer(State),
         desktop_header(State),
         mobile_header(State),

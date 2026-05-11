@@ -66,3 +66,14 @@ def test_search_submit_closes_search_suggestions():
     assert state.search_query == "apple"
     assert not state.search_suggestions_open
     assert not state.has_search_suggestions
+
+
+def test_open_modal_selects_product_by_id():
+    state = State(_reflex_internal_init=True)
+
+    state.open_modal("apple")
+
+    assert state.modal_open
+    assert state.modal_product is not None
+    assert state.modal_product["id"] == "apple"
+    assert state.modal_product["name_en"] == "Apple"
