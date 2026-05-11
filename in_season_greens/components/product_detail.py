@@ -2,7 +2,7 @@ import reflex as rx
 
 from .. import styles
 from ..data import CURRENT_MONTH, APP_NAME, get_full_location, get_nav_items
-from .ui import app_icon, FILTERS, filter_button, hamburger_button, search_input
+from .ui import app_icon, FILTERS, filter_button, hamburger_button, search_input, get_category_emoji
 from .product_card import carbon_label, month_name, status_label
 
 
@@ -79,7 +79,7 @@ def product_detail_view(product, go_back) -> rx.Component:
         ),
         rx.grid(
             rx.box(
-                rx.text(product["emoji"], class_name="text-[6rem] leading-none mb-4"),
+                rx.text(get_category_emoji(product["category"]), class_name="text-[6rem] leading-none mb-4"),
                 rx.box(status_label(product["status"]), class_name=styles.product_card.badge(product["status"])),
                 rx.text(
                     carbon_label(product["co2"]),
