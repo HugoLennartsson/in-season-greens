@@ -82,7 +82,7 @@ def season_months(product, compact: bool = False) -> rx.Component:
     )
 
 
-def product_card(product) -> rx.Component:
+def product_card(product, state=None) -> rx.Component:
     is_in = (product["status"] == "peak") | (product["status"] == "season")
     has_local_status = product["local"] != None
     return rx.box(
@@ -146,6 +146,7 @@ def product_card(product) -> rx.Component:
                 rx.button(
                     app_icon("info", "size-3 text-white", 3),
                     "Show info",
+                    on_click=state.open_modal(product["name"]) if state else rx.fragment(),
                     class_name=styles.product_card.info_button,
                 ),
                 class_name=styles.product_card.actions,
