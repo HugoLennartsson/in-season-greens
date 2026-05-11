@@ -320,26 +320,6 @@
         ]
     },
     {
-        "id": "greenapple",
-        "name_en": "GreenApple",
-        "category": "fruit",
-        "nutrients": [
-                {
-                  "calories": 50.8,
-                  "serving_size_g": 100,
-                  "fat_total_g": 0.2,
-                  "fat_saturated_g": 0,
-                  "protein_g": 0.3,
-                  "sodium_mg": 0,
-                  "potassium_mg": 11,
-                  "cholesterol_mg": 0,
-                  "carbohydrates_total_g": 13.9,
-                  "fiber_g": 2.4,
-                  "sugar_g": 10.3
-                }
-              ]
-    },
-    {
         "id": "guava",
         "name_en": "Guava",
         "category": "fruit",
@@ -460,8 +440,8 @@
         ]
     },
     {
-        "id": "kiwifruit",
-        "name_en": "Kiwifruit",
+        "id": "Chinese Goonberry",
+        "name_en": "Chinese Goonberry",
         "category": "fruit",
         "nutrients": [
             {
