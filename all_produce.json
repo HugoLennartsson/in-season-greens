@@ -301,7 +301,7 @@
     },
     {
         "id": "grape",
-        "name_en": "Grape",
+        "name_en": "Grape Fruit",
         "category": "fruit",
         "nutrients": [
             {
@@ -440,7 +440,7 @@
         ]
     },
     {
-        "id": "Chinese Goonberry",
+        "id": "kiwifruit",
         "name_en": "Chinese Goonberry",
         "category": "fruit",
         "nutrients": [
