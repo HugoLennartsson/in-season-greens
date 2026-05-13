@@ -1,6 +1,6 @@
 import reflex as rx
 from geopy.geocoders import Nominatim
-
+from in_season_greens.weather_state import WeatherState
 
 class LocationState(rx.State):
     lat: float | None = None
@@ -8,6 +8,9 @@ class LocationState(rx.State):
     city: str = ""
     error: str = ""
     typed_city: str = ""
+    avg_temp: str = "Awaiting Location.."
+    rain_outlook: str = "Awaiting Location.."
+    harvest_outlook: str = "Awaiting Location.."
 
     def _reverse_geocode(self, lat: float, lon: float) -> str:
         """Helper to convert coordinates to a city name."""
@@ -76,6 +79,8 @@ class LocationState(rx.State):
         self.lon = lon
         self.city = self._reverse_geocode(lat, lon)
         self.typed_city = self.city
+        
+        yield LocationState.fetch_weather
 
     @rx.event
     def set_typed_city(self, val: str):
@@ -118,6 +123,7 @@ class LocationState(rx.State):
             self.lon = location.longitude
 
             self.error = ""
+            yield LocationState.fetch_weather
 
         except Exception:
             self.error = "City lookup failed"
@@ -126,3 +132,13 @@ class LocationState(rx.State):
     def handle_key_down(self, key: str):
         if key == "Enter":
             return LocationState.validate_city
+    
+    @rx.event
+    def fetch_weather(self):
+        if self.lat is None or self.lon is None:
+            self.avg_temp = "Locating..."
+            return
+            
+        self.avg_temp = WeatherState.get_avg_temp(self.lat, self.lon)
+        self.rain_outlook = WeatherState.get_rain_outlook(self.lat, self.lon)
+        self.harvest_outlook = WeatherState.get_harvest_outlook(self.lat, self.lon)

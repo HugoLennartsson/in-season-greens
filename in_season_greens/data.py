@@ -1,8 +1,10 @@
+from datetime import datetime
 import json
 import re
 from pathlib import Path
 from typing import TypedDict
 
+from in_season_greens.location_state import LocationState
 
 class NutritionFacts(TypedDict):
     calories: float
@@ -43,21 +45,9 @@ class NavItem(TypedDict):
 
 
 APP_NAME = "InSeasonGreens"
-MONTHS = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-]
-CURRENT_MONTH = 5
+
+CURRENT_MONTH = datetime.now().strftime("%B")
+
 
 LOCATION = "Gothenburg"
 COUNTRY = "SE"
@@ -71,7 +61,7 @@ HARVEST = "Favorable"
 
 NAV_ITEMS: list[NavItem] = [
     {"icon": "home", "label": "Home", "subtitle": "Browse all products"},
-    {"icon": "map_pin", "label": "Local", "subtitle": f"Grown near {LOCATION}"},
+    {"icon": "map_pin", "label": "Local", "subtitle": f"Grown near {LocationState}"},
     {"icon": "wind", "label": "CO2 Tracker", "subtitle": "Compare CO2 per kg"},
     {"icon": "droplets", "label": "Water Usage", "subtitle": "Water per kg ratings"},
     {"icon": "bookmark", "label": "Saved", "subtitle": "Your saved products"},
@@ -178,7 +168,7 @@ def get_nav_items() -> list[NavItem]:
 
 
 def get_current_month_name() -> str:
-    return MONTHS[CURRENT_MONTH]
+    return CURRENT_MONTH
 
 
 def get_short_location() -> str:
@@ -190,11 +180,13 @@ def get_full_location() -> str:
 
 
 def get_temperature_range() -> str:
-    return f"{AVG_TEMP[0]}-{AVG_TEMP[1]} C"
+    return LocationState.avg_temp
 
+def get_rain_outlook() -> str:
+    return LocationState.rain_outlook
 
-def get_catalog_label(product_count: int) -> str:
-    return f"{product_count} PRODUCTS · {LOCATION.upper()} · {get_current_month_name().upper()}"
+def get_harvest_outlook() -> str:
+    return LocationState.harvest_outlook
 
 
 def get_overview_signals() -> list[OverviewSignal]:
@@ -205,7 +197,7 @@ def get_overview_signals() -> list[OverviewSignal]:
             "value": get_temperature_range(),
             "label": "Avg temp normal",
         },
-        {"icon": "cloud_rain", "value": PRECIPITATION, "label": "Rain outlook"},
+        {"icon": "cloud_rain", "value": get_rain_outlook(), "label": "Rain outlook"},
         {"icon": "sprout", "value": HARVEST, "label": "Harvest outlook"},
     ]
 
@@ -214,15 +206,15 @@ def get_season_outlook() -> list[OverviewOutlook]:
     return [
         {
             "icon": "thermometer",
-            "text": f"Average temperature is within {LOCATION}'s normal {get_current_month_name()} range.",
+            "text": f"Average temperature is within {LocationState.location_display}'s normal {get_current_month_name()} range.",
         },
         {
             "icon": "cloud_rain",
-            "text": f"Rain outlook is {PRECIPITATION.lower()} for outdoor leafy greens and field crops.",
+            "text": f"Rain outlook is {get_rain_outlook()} for outdoor leafy greens and field crops.",
         },
         {
             "icon": "sprout",
-            "text": f"Harvest outlook is {HARVEST.lower()} for local seasonal produce.",
+            "text": f"Harvest outlook is {get_harvest_outlook().lower()} for local seasonal produce.",
         },
         {
             "icon": "leaf",

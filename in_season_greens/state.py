@@ -1,7 +1,6 @@
 import reflex as rx
 from typing import Optional
 from .data import (
-    get_catalog_label,
     get_products,
     get_search_suggestions,
     search_products,
@@ -75,6 +74,3 @@ class State(rx.State):
     def has_search_suggestions(self) -> bool:
         return self.search_suggestions_open and bool(self.search_suggestions)
 
-    @rx.var
-    def catalog_label(self) -> str:
-        return get_catalog_label(len(self.filtered_products))
