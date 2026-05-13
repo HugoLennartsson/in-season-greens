@@ -78,6 +78,7 @@ NAV_ITEMS: list[NavItem] = [
     {"icon": "info", "label": "About", "subtitle": "Sources and methodology"},
 ]
 
+
 def _load_all_produce() -> list[ProduceItem]:
     with _ALL_PRODUCE_PATH.open(encoding="utf-8") as produce_file:
         return json.load(produce_file)
@@ -132,7 +133,9 @@ def fuzzy_search_score(query: str, value: str) -> int | None:
     return None
 
 
-def get_search_suggestions(query: str, limit: int = SEARCH_SUGGESTION_LIMIT) -> list[ProduceItem]:
+def get_search_suggestions(
+    query: str, limit: int = SEARCH_SUGGESTION_LIMIT
+) -> list[ProduceItem]:
     scored_items = [
         (score, item["name_en"], item)
         for item in ALL_PRODUCE
@@ -142,7 +145,9 @@ def get_search_suggestions(query: str, limit: int = SEARCH_SUGGESTION_LIMIT) -> 
     return [item for _, __, item in scored_items[:limit]]
 
 
-def search_products(query: str, products: list[ProduceItem] | None = None) -> list[ProduceItem]:
+def search_products(
+    query: str, products: list[ProduceItem] | None = None
+) -> list[ProduceItem]:
     products_to_search = products or get_products()
     if not normalize_search_text(query):
         return products_to_search
@@ -195,7 +200,11 @@ def get_catalog_label(product_count: int) -> str:
 def get_overview_signals() -> list[OverviewSignal]:
     return [
         {"icon": "info", "value": get_current_month_name(), "label": "Current month"},
-        {"icon": "thermometer", "value": get_temperature_range(), "label": "Avg temp normal"},
+        {
+            "icon": "thermometer",
+            "value": get_temperature_range(),
+            "label": "Avg temp normal",
+        },
         {"icon": "cloud_rain", "value": PRECIPITATION, "label": "Rain outlook"},
         {"icon": "sprout", "value": HARVEST, "label": "Harvest outlook"},
     ]
