@@ -3,26 +3,86 @@
         "id": "annona",
         "name_en": "Annona",
         "category": "fruit",
+        "countries": [
+            "BR",
+            "CO",
+            "EC",
+            "PE",
+            "MX",
+            "IN",
+            "TH",
+            "PH",
+            "VN",
+            "ID",
+            "AU"
+        ],
+        "season_months": [
+            8,
+            9,
+            10,
+            11
+        ],
+        "peak_months": [
+            9,
+            10
+        ],
         "nutrients": [
-          {
-              "calories": 94.0,
-              "serving_size_g": 100.0,
-              "fat_total_g": 0.3,
-              "fat_saturated_g": 0.1,
-              "protein_g": 2.1,
-              "sodium_mg": 4,
-              "potassium_mg": 247,
-              "cholesterol_mg": 0,
-              "carbohydrates_total_g": 23.6,
-              "fiber_g": 4.4,
-              "sugar_g": 18.2
-          }
+            {
+                "calories": 94.0,
+                "serving_size_g": 100.0,
+                "fat_total_g": 0.3,
+                "fat_saturated_g": 0.1,
+                "protein_g": 2.1,
+                "sodium_mg": 4,
+                "potassium_mg": 247,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 23.6,
+                "fiber_g": 4.4,
+                "sugar_g": 18.2
+            }
         ]
     },
     {
         "id": "apple",
         "name_en": "Apple",
         "category": "fruit",
+        "countries": [
+            "CN",
+            "US",
+            "TR",
+            "PL",
+            "IN",
+            "IT",
+            "FR",
+            "CL",
+            "IR",
+            "RU",
+            "DE",
+            "ES",
+            "ZA",
+            "NZ",
+            "AR",
+            "BR",
+            "UA",
+            "NL",
+            "BE",
+            "SE",
+            "GB"
+        ],
+        "season_months": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            1,
+            2,
+            3
+        ],
+        "peak_months": [
+            9,
+            10
+        ],
         "nutrients": [
             {
                 "calories": 53.0,
@@ -43,6 +103,30 @@
         "id": "apricot",
         "name_en": "Apricot",
         "category": "fruit",
+        "countries": [
+            "TR",
+            "UZ",
+            "IR",
+            "IT",
+            "DZ",
+            "PK",
+            "FR",
+            "ES",
+            "US",
+            "GR",
+            "CN",
+            "AF",
+            "MA",
+            "ZA"
+        ],
+        "season_months": [
+            6,
+            7,
+            8
+        ],
+        "peak_months": [
+            7
+        ],
         "nutrients": [
             {
                 "calories": 48.3,
@@ -63,6 +147,36 @@
         "id": "avocado",
         "name_en": "Avocado",
         "category": "fruit",
+        "countries": [
+            "MX",
+            "CO",
+            "PE",
+            "DO",
+            "KE",
+            "ID",
+            "BR",
+            "CL",
+            "US",
+            "ES",
+            "ZA",
+            "IL",
+            "MA"
+        ],
+        "season_months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+        ],
+        "peak_months": [],
         "nutrients": [
             {
                 "calories": 167.2,
@@ -83,6 +197,43 @@
         "id": "banana",
         "name_en": "Banana",
         "category": "fruit",
+        "countries": [
+            "IN",
+            "CN",
+            "ID",
+            "BR",
+            "EC",
+            "PH",
+            "GT",
+            "CR",
+            "CO",
+            "VN",
+            "TH",
+            "MX",
+            "PE",
+            "DO",
+            "HN",
+            "CM",
+            "CI",
+            "UG",
+            "TZ",
+            "AU"
+        ],
+        "season_months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+        ],
+        "peak_months": [],
         "nutrients": [
             {
                 "calories": 89.4,
@@ -103,6 +254,28 @@
         "id": "blackberry",
         "name_en": "Blackberry",
         "category": "fruit",
+        "countries": [
+            "MX",
+            "US",
+            "GB",
+            "ES",
+            "FR",
+            "PL",
+            "DE",
+            "NL",
+            "CL",
+            "RS",
+            "RO",
+            "SE"
+        ],
+        "season_months": [
+            7,
+            8,
+            9
+        ],
+        "peak_months": [
+            8
+        ],
         "nutrients": [
             {
                 "calories": 44.0,
@@ -123,6 +296,33 @@
         "id": "blueberry",
         "name_en": "Blueberry",
         "category": "fruit",
+        "countries": [
+            "US",
+            "CA",
+            "CL",
+            "PE",
+            "MX",
+            "ES",
+            "PL",
+            "DE",
+            "NL",
+            "FR",
+            "SE",
+            "FI",
+            "NO",
+            "NZ",
+            "AU",
+            "MA"
+        ],
+        "season_months": [
+            7,
+            8,
+            9
+        ],
+        "peak_months": [
+            7,
+            8
+        ],
         "nutrients": [
             {
                 "calories": 56.2,
@@ -143,6 +343,24 @@
         "id": "ceylon_gooseberry",
         "name_en": "Ceylon Gooseberry",
         "category": "fruit",
+        "countries": [
+            "LK",
+            "IN",
+            "TH",
+            "MY",
+            "ID",
+            "PH",
+            "BR",
+            "CO"
+        ],
+        "season_months": [
+            8,
+            9,
+            10
+        ],
+        "peak_months": [
+            9
+        ],
         "nutrients": [
             {
                 "calories": 44.1,
@@ -163,6 +381,32 @@
         "id": "cherry",
         "name_en": "Cherry",
         "category": "fruit",
+        "countries": [
+            "TR",
+            "US",
+            "CL",
+            "UZ",
+            "IR",
+            "IT",
+            "ES",
+            "GR",
+            "FR",
+            "PL",
+            "DE",
+            "RS",
+            "RO",
+            "BG",
+            "CN",
+            "SE"
+        ],
+        "season_months": [
+            6,
+            7,
+            8
+        ],
+        "peak_months": [
+            7
+        ],
         "nutrients": [
             {
                 "calories": 63.8,
@@ -183,6 +427,26 @@
         "id": "cranberry",
         "name_en": "Cranberry",
         "category": "fruit",
+        "countries": [
+            "US",
+            "CA",
+            "CL",
+            "PL",
+            "UA",
+            "LT",
+            "LV",
+            "BY"
+        ],
+        "season_months": [
+            9,
+            10,
+            11,
+            12
+        ],
+        "peak_months": [
+            10,
+            11
+        ],
         "nutrients": [
             {
                 "calories": 45.4,
@@ -203,6 +467,33 @@
         "id": "dragonfruit",
         "name_en": "Dragonfruit",
         "category": "fruit",
+        "countries": [
+            "VN",
+            "CN",
+            "TH",
+            "MY",
+            "ID",
+            "PH",
+            "MX",
+            "CO",
+            "EC",
+            "PE",
+            "IL",
+            "AU"
+        ],
+        "season_months": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+        ],
+        "peak_months": [
+            7,
+            8,
+            9
+        ],
         "nutrients": [
             {
                 "calories": 31.3,
@@ -223,6 +514,28 @@
         "id": "durian",
         "name_en": "Durian",
         "category": "fruit",
+        "countries": [
+            "TH",
+            "MY",
+            "ID",
+            "VN",
+            "PH",
+            "KH",
+            "LA",
+            "IN",
+            "LK",
+            "AU"
+        ],
+        "season_months": [
+            6,
+            7,
+            8,
+            9
+        ],
+        "peak_months": [
+            7,
+            8
+        ],
         "nutrients": [
             {
                 "calories": 151.1,
@@ -243,6 +556,30 @@
         "id": "feijoa",
         "name_en": "Feijoa",
         "category": "fruit",
+        "countries": [
+            "BR",
+            "CO",
+            "UY",
+            "AR",
+            "NZ",
+            "AU",
+            "US",
+            "FR",
+            "IT",
+            "ES",
+            "PT"
+        ],
+        "season_months": [
+            3,
+            4,
+            5,
+            10,
+            11
+        ],
+        "peak_months": [
+            4,
+            11
+        ],
         "nutrients": [
             {
                 "calories": 55.0,
@@ -263,6 +600,28 @@
         "id": "fig",
         "name_en": "Fig",
         "category": "fruit",
+        "countries": [
+            "TR",
+            "EG",
+            "MA",
+            "DZ",
+            "IR",
+            "ES",
+            "IT",
+            "GR",
+            "PT",
+            "US",
+            "BR",
+            "IL"
+        ],
+        "season_months": [
+            8,
+            9,
+            10
+        ],
+        "peak_months": [
+            9
+        ],
         "nutrients": [
             {
                 "calories": 76.1,
@@ -283,6 +642,27 @@
         "id": "gooseberry",
         "name_en": "Gooseberry",
         "category": "fruit",
+        "countries": [
+            "GB",
+            "DE",
+            "PL",
+            "NL",
+            "FR",
+            "SE",
+            "FI",
+            "NO",
+            "DK",
+            "CZ",
+            "UA",
+            "RU"
+        ],
+        "season_months": [
+            7,
+            8
+        ],
+        "peak_months": [
+            7
+        ],
         "nutrients": [
             {
                 "calories": 44.1,
@@ -303,6 +683,34 @@
         "id": "grape",
         "name_en": "Grape Fruit",
         "category": "fruit",
+        "countries": [
+            "CN",
+            "IT",
+            "US",
+            "ES",
+            "FR",
+            "TR",
+            "IN",
+            "CL",
+            "ZA",
+            "AR",
+            "BR",
+            "EG",
+            "IR",
+            "GR",
+            "AU",
+            "PE",
+            "MX",
+            "DE"
+        ],
+        "season_months": [
+            8,
+            9,
+            10
+        ],
+        "peak_months": [
+            9
+        ],
         "nutrients": [
             {
                 "calories": 67.4,
@@ -323,6 +731,37 @@
         "id": "guava",
         "name_en": "Guava",
         "category": "fruit",
+        "countries": [
+            "IN",
+            "CN",
+            "TH",
+            "ID",
+            "PH",
+            "VN",
+            "MX",
+            "BR",
+            "CO",
+            "PE",
+            "EG",
+            "ZA",
+            "PA",
+            "CR"
+        ],
+        "season_months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+        ],
+        "peak_months": [],
         "nutrients": [
             {
                 "calories": 67.7,
@@ -343,6 +782,30 @@
         "id": "hazelnut",
         "name_en": "Hazelnut",
         "category": "fruit",
+        "countries": [
+            "TR",
+            "IT",
+            "US",
+            "AZ",
+            "GE",
+            "ES",
+            "FR",
+            "CH",
+            "CL",
+            "IR"
+        ],
+        "season_months": [
+            9,
+            10,
+            11,
+            12,
+            1,
+            2
+        ],
+        "peak_months": [
+            9,
+            10
+        ],
         "nutrients": [
             {
                 "calories": 656.2,
@@ -363,6 +826,25 @@
         "id": "horned_melon",
         "name_en": "Horned Melon",
         "category": "fruit",
+        "countries": [
+            "ZW",
+            "ZA",
+            "KE",
+            "NZ",
+            "AU",
+            "US",
+            "IL",
+            "PT",
+            "ES"
+        ],
+        "season_months": [
+            8,
+            9,
+            10
+        ],
+        "peak_months": [
+            9
+        ],
         "nutrients": [
             {
                 "calories": 33.6,
@@ -383,6 +865,34 @@
         "id": "jackfruit",
         "name_en": "Jackfruit",
         "category": "fruit",
+        "countries": [
+            "IN",
+            "BD",
+            "TH",
+            "ID",
+            "MY",
+            "PH",
+            "VN",
+            "LK",
+            "BR",
+            "MX",
+            "UG",
+            "TZ"
+        ],
+        "season_months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "peak_months": [
+            5,
+            6,
+            7
+        ],
         "nutrients": [
             {
                 "calories": 94.9,
@@ -403,6 +913,28 @@
         "id": "japanese_persimmon",
         "name_en": "Japanese Persimmon",
         "category": "fruit",
+        "countries": [
+            "CN",
+            "JP",
+            "KR",
+            "ES",
+            "IT",
+            "TR",
+            "IL",
+            "BR",
+            "US",
+            "AZ",
+            "NZ"
+        ],
+        "season_months": [
+            10,
+            11,
+            12,
+            1
+        ],
+        "peak_months": [
+            11
+        ],
         "nutrients": [
             {
                 "calories": 69.4,
@@ -423,6 +955,36 @@
         "id": "kiwi",
         "name_en": "Kiwi",
         "category": "fruit",
+        "countries": [
+            "CN",
+            "IT",
+            "NZ",
+            "IR",
+            "GR",
+            "CL",
+            "FR",
+            "TR",
+            "PT",
+            "ES",
+            "US",
+            "JP"
+        ],
+        "season_months": [
+            10,
+            11,
+            12,
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "peak_months": [
+            11,
+            12,
+            1,
+            2
+        ],
         "nutrients": [
             {
                 "calories": 59.5,
@@ -443,6 +1005,36 @@
         "id": "kiwifruit",
         "name_en": "Chinese gooseberry",
         "category": "fruit",
+        "countries": [
+            "CN",
+            "IT",
+            "NZ",
+            "IR",
+            "GR",
+            "CL",
+            "FR",
+            "TR",
+            "PT",
+            "ES",
+            "US",
+            "JP"
+        ],
+        "season_months": [
+            10,
+            11,
+            12,
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "peak_months": [
+            11,
+            12,
+            1,
+            2
+        ],
         "nutrients": [
             {
                 "calories": 59.7,
@@ -463,6 +1055,34 @@
         "id": "lemon",
         "name_en": "Lemon",
         "category": "fruit",
+        "countries": [
+            "IN",
+            "MX",
+            "AR",
+            "ES",
+            "TR",
+            "US",
+            "SA",
+            "ZA",
+            "IT",
+            "EG",
+            "BR",
+            "GR",
+            "CH"
+        ],
+        "season_months": [
+            11,
+            12,
+            1,
+            2,
+            3,
+            4
+        ],
+        "peak_months": [
+            1,
+            2,
+            3
+        ],
         "nutrients": [
             {
                 "calories": 29.0,
@@ -483,6 +1103,35 @@
         "id": "lime",
         "name_en": "Lime",
         "category": "fruit",
+        "countries": [
+            "IN",
+            "MX",
+            "BR",
+            "CN",
+            "TH",
+            "VN",
+            "EG",
+            "CO",
+            "PE",
+            "US",
+            "GT",
+            "DO"
+        ],
+        "season_months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+        ],
+        "peak_months": [],
         "nutrients": [
             {
                 "calories": 29.6,
@@ -503,6 +1152,26 @@
         "id": "lingonberry",
         "name_en": "Lingonberry",
         "category": "fruit",
+        "countries": [
+            "SE",
+            "FI",
+            "NO",
+            "RU",
+            "CA",
+            "US",
+            "PL",
+            "EE",
+            "LV",
+            "LT"
+        ],
+        "season_months": [
+            8,
+            9,
+            10
+        ],
+        "peak_months": [
+            9
+        ],
         "nutrients": [
             {
                 "calories": 58.5,
@@ -523,6 +1192,31 @@
         "id": "lychee",
         "name_en": "Lychee",
         "category": "fruit",
+        "countries": [
+            "CN",
+            "IN",
+            "VN",
+            "TH",
+            "BD",
+            "MY",
+            "ID",
+            "PH",
+            "ZA",
+            "AU",
+            "MG",
+            "BR",
+            "MX"
+        ],
+        "season_months": [
+            5,
+            6,
+            7,
+            8
+        ],
+        "peak_months": [
+            6,
+            7
+        ],
         "nutrients": [
             {
                 "calories": 64.4,
@@ -543,6 +1237,39 @@
         "id": "mango",
         "name_en": "Mango",
         "category": "fruit",
+        "countries": [
+            "IN",
+            "CN",
+            "TH",
+            "ID",
+            "PK",
+            "MX",
+            "BR",
+            "PE",
+            "PH",
+            "EG",
+            "VN",
+            "BD",
+            "CO",
+            "EC",
+            "DO",
+            "CI",
+            "KE",
+            "AU"
+        ],
+        "season_months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ],
+        "peak_months": [
+            5,
+            6,
+            7
+        ],
         "nutrients": [
             {
                 "calories": 61.6,
@@ -563,6 +1290,28 @@
         "id": "mangosteen",
         "name_en": "Mangosteen",
         "category": "fruit",
+        "countries": [
+            "TH",
+            "ID",
+            "MY",
+            "VN",
+            "PH",
+            "IN",
+            "LK",
+            "AU"
+        ],
+        "season_months": [
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "peak_months": [
+            6,
+            7,
+            8
+        ],
         "nutrients": [
             {
                 "calories": 71.1,
@@ -583,6 +1332,30 @@
         "id": "melon",
         "name_en": "Melon",
         "category": "fruit",
+        "countries": [
+            "CN",
+            "TR",
+            "IR",
+            "IN",
+            "US",
+            "ES",
+            "BR",
+            "MX",
+            "EG",
+            "MA",
+            "IT",
+            "FR",
+            "GR",
+            "HN"
+        ],
+        "season_months": [
+            7,
+            8,
+            9
+        ],
+        "peak_months": [
+            8
+        ],
         "nutrients": [
             {
                 "calories": 33.6,
@@ -603,8 +1376,29 @@
         "id": "morus",
         "name_en": "Morus",
         "category": "fruit",
+        "countries": [
+            "CN",
+            "TR",
+            "IR",
+            "IN",
+            "PK",
+            "US",
+            "IT",
+            "ES",
+            "GR",
+            "UZ",
+            "AZ"
+        ],
+        "season_months": [
+            6,
+            7,
+            8
+        ],
+        "peak_months": [
+            7
+        ],
         "nutrients": [
-              {
+            {
                 "calories": 42.8,
                 "serving_size_g": 100,
                 "fat_total_g": 0.4,
@@ -616,13 +1410,43 @@
                 "carbohydrates_total_g": 9.8,
                 "fiber_g": 1.7,
                 "sugar_g": 8.2
-              }
-          ]
+            }
+        ]
     },
     {
         "id": "orange",
         "name_en": "Orange",
         "category": "fruit",
+        "countries": [
+            "BR",
+            "CN",
+            "IN",
+            "US",
+            "MX",
+            "ES",
+            "EG",
+            "TR",
+            "ZA",
+            "IT",
+            "MA",
+            "GR",
+            "AR",
+            "AU"
+        ],
+        "season_months": [
+            11,
+            12,
+            1,
+            2,
+            3,
+            4
+        ],
+        "peak_months": [
+            12,
+            1,
+            2,
+            3
+        ],
         "nutrients": [
             {
                 "calories": 50.4,
@@ -643,6 +1467,37 @@
         "id": "papaya",
         "name_en": "Papaya",
         "category": "fruit",
+        "countries": [
+            "IN",
+            "BR",
+            "ID",
+            "NG",
+            "MX",
+            "DO",
+            "PH",
+            "TH",
+            "CO",
+            "PE",
+            "VN",
+            "CN",
+            "GT",
+            "KE"
+        ],
+        "season_months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+        ],
+        "peak_months": [],
         "nutrients": [
             {
                 "calories": 43.0,
@@ -663,8 +1518,38 @@
         "id": "passionfruit",
         "name_en": "Passion fruit",
         "category": "fruit",
+        "countries": [
+            "BR",
+            "CO",
+            "PE",
+            "EC",
+            "ZA",
+            "KE",
+            "VN",
+            "TH",
+            "ID",
+            "AU",
+            "NZ",
+            "IN",
+            "LK"
+        ],
+        "season_months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+        ],
+        "peak_months": [],
         "nutrients": [
-              {
+            {
                 "calories": 98.1,
                 "serving_size_g": 100,
                 "fat_total_g": 0.7,
@@ -676,13 +1561,36 @@
                 "carbohydrates_total_g": 23.3,
                 "fiber_g": 10.4,
                 "sugar_g": 11.1
-              }
+            }
         ]
     },
     {
         "id": "peach",
         "name_en": "Peach",
         "category": "fruit",
+        "countries": [
+            "CN",
+            "IT",
+            "ES",
+            "US",
+            "GR",
+            "TR",
+            "IR",
+            "FR",
+            "CL",
+            "AR",
+            "ZA",
+            "AU",
+            "UZ"
+        ],
+        "season_months": [
+            7,
+            8,
+            9
+        ],
+        "peak_months": [
+            8
+        ],
         "nutrients": [
             {
                 "calories": 39.9,
@@ -703,6 +1611,34 @@
         "id": "pear",
         "name_en": "Pear",
         "category": "fruit",
+        "countries": [
+            "CN",
+            "US",
+            "AR",
+            "IT",
+            "TR",
+            "NL",
+            "BE",
+            "ES",
+            "ZA",
+            "CL",
+            "FR",
+            "PT",
+            "DE",
+            "SE"
+        ],
+        "season_months": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            1
+        ],
+        "peak_months": [
+            9,
+            10
+        ],
         "nutrients": [
             {
                 "calories": 56.7,
@@ -723,6 +1659,28 @@
         "id": "persimmon",
         "name_en": "Persimmon",
         "category": "fruit",
+        "countries": [
+            "CN",
+            "JP",
+            "KR",
+            "ES",
+            "IT",
+            "TR",
+            "IL",
+            "BR",
+            "US",
+            "AZ",
+            "NZ"
+        ],
+        "season_months": [
+            10,
+            11,
+            12,
+            1
+        ],
+        "peak_months": [
+            11
+        ],
         "nutrients": [
             {
                 "calories": 69.4,
@@ -743,6 +1701,37 @@
         "id": "pineapple",
         "name_en": "Pineapple",
         "category": "fruit",
+        "countries": [
+            "CR",
+            "PH",
+            "BR",
+            "TH",
+            "ID",
+            "IN",
+            "CN",
+            "MX",
+            "CO",
+            "GH",
+            "CI",
+            "KE",
+            "VN",
+            "EC"
+        ],
+        "season_months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+        ],
+        "peak_months": [],
         "nutrients": [
             {
                 "calories": 50.8,
@@ -763,19 +1752,46 @@
         "id": "pitahaya",
         "name_en": "Pitahaya",
         "category": "fruit",
+        "countries": [
+            "VN",
+            "CN",
+            "TH",
+            "MY",
+            "ID",
+            "PH",
+            "MX",
+            "CO",
+            "EC",
+            "PE",
+            "IL",
+            "AU"
+        ],
+        "season_months": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+        ],
+        "peak_months": [
+            7,
+            8,
+            9
+        ],
         "nutrients": [
-          {
-              "calories": 30.3,
-              "serving_size_g": 100,
-              "fat_total_g": 0.3,
-              "fat_saturated_g": 0,
-              "protein_g": 0.6,
-              "sodium_mg": 3,
-              "potassium_mg": 16,
-              "cholesterol_mg": 0,
-              "carbohydrates_total_g": 7.5,
-              "fiber_g": 1.5,
-              "sugar_g": 4.5
+            {
+                "calories": 30.3,
+                "serving_size_g": 100,
+                "fat_total_g": 0.3,
+                "fat_saturated_g": 0,
+                "protein_g": 0.6,
+                "sodium_mg": 3,
+                "potassium_mg": 16,
+                "cholesterol_mg": 0,
+                "carbohydrates_total_g": 7.5,
+                "fiber_g": 1.5,
+                "sugar_g": 4.5
             }
         ]
     },
@@ -783,6 +1799,29 @@
         "id": "plum",
         "name_en": "Plum",
         "category": "fruit",
+        "countries": [
+            "CN",
+            "RO",
+            "RS",
+            "US",
+            "TR",
+            "IR",
+            "CL",
+            "IT",
+            "ES",
+            "FR",
+            "ZA",
+            "AR",
+            "DE",
+            "PL"
+        ],
+        "season_months": [
+            8,
+            9
+        ],
+        "peak_months": [
+            8
+        ],
         "nutrients": [
             {
                 "calories": 46.2,
@@ -803,6 +1842,35 @@
         "id": "pomegranate",
         "name_en": "Pomegranate",
         "category": "fruit",
+        "countries": [
+            "IN",
+            "IR",
+            "TR",
+            "CN",
+            "US",
+            "ES",
+            "EG",
+            "AZ",
+            "AF",
+            "PK",
+            "IL",
+            "MA",
+            "GR",
+            "PE"
+        ],
+        "season_months": [
+            9,
+            10,
+            11,
+            12,
+            1,
+            2
+        ],
+        "peak_months": [
+            10,
+            11,
+            12
+        ],
         "nutrients": [
             {
                 "calories": 84.2,
@@ -823,6 +1891,30 @@
         "id": "pomelo",
         "name_en": "Pomelo",
         "category": "fruit",
+        "countries": [
+            "CN",
+            "TH",
+            "VN",
+            "MY",
+            "ID",
+            "IN",
+            "PH",
+            "TW",
+            "IL",
+            "US"
+        ],
+        "season_months": [
+            11,
+            12,
+            1,
+            2,
+            3
+        ],
+        "peak_months": [
+            12,
+            1,
+            2
+        ],
         "nutrients": [
             {
                 "calories": 38.6,
@@ -843,6 +1935,34 @@
         "id": "pumpkin",
         "name_en": "Pumpkin",
         "category": "fruit",
+        "countries": [
+            "CN",
+            "IN",
+            "RU",
+            "UA",
+            "US",
+            "MX",
+            "EG",
+            "TR",
+            "ES",
+            "IT",
+            "FR",
+            "DE",
+            "PL",
+            "SE",
+            "ZA",
+            "AU"
+        ],
+        "season_months": [
+            9,
+            10,
+            11,
+            12,
+            1
+        ],
+        "peak_months": [
+            10
+        ],
         "nutrients": [
             {
                 "calories": 20.5,
@@ -863,6 +1983,31 @@
         "id": "raspberry",
         "name_en": "Raspberry",
         "category": "fruit",
+        "countries": [
+            "RU",
+            "MX",
+            "US",
+            "PL",
+            "RS",
+            "ES",
+            "MA",
+            "GB",
+            "FR",
+            "DE",
+            "NL",
+            "SE",
+            "NO",
+            "CL"
+        ],
+        "season_months": [
+            7,
+            8,
+            9
+        ],
+        "peak_months": [
+            7,
+            8
+        ],
         "nutrients": [
             {
                 "calories": 52.7,
@@ -883,6 +2028,33 @@
         "id": "strawberry",
         "name_en": "Strawberry",
         "category": "fruit",
+        "countries": [
+            "CN",
+            "US",
+            "MX",
+            "TR",
+            "EG",
+            "ES",
+            "KR",
+            "JP",
+            "PL",
+            "DE",
+            "IT",
+            "FR",
+            "MA",
+            "NL",
+            "GB",
+            "SE"
+        ],
+        "season_months": [
+            6,
+            7,
+            8
+        ],
+        "peak_months": [
+            6,
+            7
+        ],
         "nutrients": [
             {
                 "calories": 31.9,
@@ -903,6 +2075,31 @@
         "id": "tangerine",
         "name_en": "Tangerine",
         "category": "fruit",
+        "countries": [
+            "CN",
+            "ES",
+            "TR",
+            "MA",
+            "EG",
+            "US",
+            "BR",
+            "JP",
+            "KR",
+            "IT",
+            "GR",
+            "PE",
+            "ZA"
+        ],
+        "season_months": [
+            11,
+            12,
+            1,
+            2
+        ],
+        "peak_months": [
+            12,
+            1
+        ],
         "nutrients": [
             {
                 "calories": 51.5,
@@ -923,6 +2120,36 @@
         "id": "tomato",
         "name_en": "Tomato",
         "category": "fruit",
+        "countries": [
+            "CN",
+            "IN",
+            "TR",
+            "US",
+            "EG",
+            "IT",
+            "ES",
+            "MX",
+            "BR",
+            "IR",
+            "MA",
+            "NL",
+            "FR",
+            "PL",
+            "GR",
+            "SE"
+        ],
+        "season_months": [
+            6,
+            7,
+            8,
+            9,
+            10
+        ],
+        "peak_months": [
+            7,
+            8,
+            9
+        ],
         "nutrients": [
             {
                 "calories": 18.2,
@@ -943,6 +2170,30 @@
         "id": "watermelon",
         "name_en": "Watermelon",
         "category": "fruit",
+        "countries": [
+            "CN",
+            "TR",
+            "IN",
+            "IR",
+            "BR",
+            "US",
+            "EG",
+            "MX",
+            "RU",
+            "UZ",
+            "ES",
+            "IT",
+            "MA",
+            "GR"
+        ],
+        "season_months": [
+            7,
+            8,
+            9
+        ],
+        "peak_months": [
+            8
+        ],
         "nutrients": [
             {
                 "calories": 30.3,
@@ -963,6 +2214,30 @@
         "id": "artichoke",
         "name_en": "Artichoke",
         "category": "vegetable",
+        "countries": [
+            "IT",
+            "EG",
+            "ES",
+            "PE",
+            "AR",
+            "FR",
+            "US",
+            "TR",
+            "MA",
+            "DZ"
+        ],
+        "season_months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "peak_months": [
+            5,
+            6
+        ],
         "nutrients": [
             {
                 "calories": 53.7,
@@ -983,6 +2258,27 @@
         "id": "asparagus",
         "name_en": "Asparagus",
         "category": "vegetable",
+        "countries": [
+            "CN",
+            "PE",
+            "MX",
+            "DE",
+            "ES",
+            "IT",
+            "US",
+            "FR",
+            "NL",
+            "GB",
+            "SE",
+            "PL"
+        ],
+        "season_months": [
+            5,
+            6
+        ],
+        "peak_months": [
+            5
+        ],
         "nutrients": [
             {
                 "calories": 21.4,
@@ -1003,6 +2299,32 @@
         "id": "aubergine",
         "name_en": "Aubergine",
         "category": "vegetable",
+        "countries": [
+            "CN",
+            "IN",
+            "EG",
+            "TR",
+            "IR",
+            "ID",
+            "IT",
+            "ES",
+            "MX",
+            "PH",
+            "JP",
+            "NL",
+            "FR",
+            "GR"
+        ],
+        "season_months": [
+            7,
+            8,
+            9,
+            10
+        ],
+        "peak_months": [
+            8,
+            9
+        ],
         "nutrients": [
             {
                 "calories": 34.9,
@@ -1023,6 +2345,33 @@
         "id": "broccoli",
         "name_en": "Broccoli",
         "category": "vegetable",
+        "countries": [
+            "CN",
+            "IN",
+            "US",
+            "ES",
+            "MX",
+            "IT",
+            "FR",
+            "PL",
+            "GB",
+            "DE",
+            "NL",
+            "SE",
+            "TR"
+        ],
+        "season_months": [
+            6,
+            7,
+            8,
+            9,
+            10
+        ],
+        "peak_months": [
+            7,
+            8,
+            9
+        ],
         "nutrients": [
             {
                 "calories": 35.0,
@@ -1043,6 +2392,30 @@
         "id": "brussels_sprout",
         "name_en": "Brussels Sprout",
         "category": "vegetable",
+        "countries": [
+            "BE",
+            "NL",
+            "GB",
+            "FR",
+            "DE",
+            "US",
+            "CA",
+            "PL",
+            "SE",
+            "DK"
+        ],
+        "season_months": [
+            9,
+            10,
+            11,
+            12,
+            1,
+            2
+        ],
+        "peak_months": [
+            11,
+            12
+        ],
         "nutrients": [
             {
                 "calories": 36.4,
@@ -1063,6 +2436,40 @@
         "id": "cabbage",
         "name_en": "Cabbage",
         "category": "vegetable",
+        "countries": [
+            "CN",
+            "IN",
+            "RU",
+            "KR",
+            "JP",
+            "US",
+            "PL",
+            "UA",
+            "DE",
+            "NL",
+            "FR",
+            "GB",
+            "SE",
+            "ES",
+            "TR"
+        ],
+        "season_months": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            1,
+            2,
+            3
+        ],
+        "peak_months": [
+            9,
+            10,
+            11
+        ],
         "nutrients": [
             {
                 "calories": 23.4,
@@ -1083,6 +2490,40 @@
         "id": "carrot",
         "name_en": "Carrot",
         "category": "vegetable",
+        "countries": [
+            "CN",
+            "UZ",
+            "US",
+            "RU",
+            "UA",
+            "PL",
+            "GB",
+            "DE",
+            "FR",
+            "NL",
+            "ES",
+            "IT",
+            "TR",
+            "SE",
+            "AU"
+        ],
+        "season_months": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            1,
+            2,
+            3
+        ],
+        "peak_months": [
+            8,
+            9,
+            10
+        ],
         "nutrients": [
             {
                 "calories": 34.0,
@@ -1103,6 +2544,32 @@
         "id": "cauliflower",
         "name_en": "Cauliflower",
         "category": "vegetable",
+        "countries": [
+            "CN",
+            "IN",
+            "US",
+            "ES",
+            "IT",
+            "FR",
+            "PL",
+            "GB",
+            "DE",
+            "NL",
+            "TR",
+            "MX",
+            "SE"
+        ],
+        "season_months": [
+            6,
+            7,
+            8,
+            9,
+            10
+        ],
+        "peak_months": [
+            8,
+            9
+        ],
         "nutrients": [
             {
                 "calories": 22.4,
@@ -1123,6 +2590,30 @@
         "id": "celery",
         "name_en": "Celery",
         "category": "vegetable",
+        "countries": [
+            "US",
+            "CN",
+            "ES",
+            "IT",
+            "MX",
+            "FR",
+            "GB",
+            "NL",
+            "DE",
+            "PL",
+            "SE",
+            "EG"
+        ],
+        "season_months": [
+            7,
+            8,
+            9,
+            10
+        ],
+        "peak_months": [
+            8,
+            9
+        ],
         "nutrients": [
             {
                 "calories": 17.9,
@@ -1143,6 +2634,31 @@
         "id": "corn",
         "name_en": "Corn",
         "category": "vegetable",
+        "countries": [
+            "US",
+            "CN",
+            "BR",
+            "AR",
+            "UA",
+            "IN",
+            "MX",
+            "ID",
+            "FR",
+            "RO",
+            "ZA",
+            "EG",
+            "TH",
+            "ES",
+            "IT",
+            "SE"
+        ],
+        "season_months": [
+            8,
+            9
+        ],
+        "peak_months": [
+            8
+        ],
         "nutrients": [
             {
                 "calories": 93.9,
@@ -1163,6 +2679,33 @@
         "id": "cucumber",
         "name_en": "Cucumber",
         "category": "vegetable",
+        "countries": [
+            "CN",
+            "TR",
+            "IR",
+            "RU",
+            "UA",
+            "US",
+            "ES",
+            "MX",
+            "NL",
+            "PL",
+            "DE",
+            "FR",
+            "SE",
+            "EG",
+            "GR"
+        ],
+        "season_months": [
+            6,
+            7,
+            8,
+            9
+        ],
+        "peak_months": [
+            7,
+            8
+        ],
         "nutrients": [
             {
                 "calories": 15.3,
@@ -1183,6 +2726,37 @@
         "id": "garlic",
         "name_en": "Garlic",
         "category": "vegetable",
+        "countries": [
+            "CN",
+            "IN",
+            "BD",
+            "EG",
+            "KR",
+            "RU",
+            "ES",
+            "AR",
+            "UA",
+            "US",
+            "FR",
+            "IT",
+            "TR",
+            "MX"
+        ],
+        "season_months": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            1,
+            2,
+            3
+        ],
+        "peak_months": [
+            8,
+            9
+        ],
         "nutrients": [
             {
                 "calories": 144.8,
@@ -1203,6 +2777,36 @@
         "id": "ginger",
         "name_en": "Ginger",
         "category": "vegetable",
+        "countries": [
+            "IN",
+            "CN",
+            "NG",
+            "NP",
+            "ID",
+            "TH",
+            "BD",
+            "JP",
+            "PH",
+            "BR",
+            "PE",
+            "FJ",
+            "AU"
+        ],
+        "season_months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+        ],
+        "peak_months": [],
         "nutrients": [
             {
                 "calories": 78.3,
@@ -1223,6 +2827,33 @@
         "id": "kale",
         "name_en": "Kale",
         "category": "vegetable",
+        "countries": [
+            "US",
+            "GB",
+            "DE",
+            "NL",
+            "SE",
+            "DK",
+            "FR",
+            "IT",
+            "ES",
+            "PL",
+            "CA"
+        ],
+        "season_months": [
+            9,
+            10,
+            11,
+            12,
+            1,
+            2,
+            3
+        ],
+        "peak_months": [
+            10,
+            11,
+            12
+        ],
         "nutrients": [
             {
                 "calories": 27.2,
@@ -1243,6 +2874,34 @@
         "id": "leek",
         "name_en": "Leek",
         "category": "vegetable",
+        "countries": [
+            "ID",
+            "TR",
+            "BE",
+            "FR",
+            "NL",
+            "DE",
+            "PL",
+            "GB",
+            "ES",
+            "IT",
+            "SE",
+            "DK"
+        ],
+        "season_months": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            1,
+            2,
+            3
+        ],
+        "peak_months": [
+            10,
+            11
+        ],
         "nutrients": [
             {
                 "calories": 31.9,
@@ -1263,6 +2922,35 @@
         "id": "lettuce",
         "name_en": "Lettuce",
         "category": "vegetable",
+        "countries": [
+            "CN",
+            "US",
+            "IN",
+            "ES",
+            "IT",
+            "MX",
+            "TR",
+            "FR",
+            "DE",
+            "NL",
+            "GB",
+            "SE",
+            "PL",
+            "EG"
+        ],
+        "season_months": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ],
+        "peak_months": [
+            6,
+            7,
+            8
+        ],
         "nutrients": [
             {
                 "calories": 17.0,
@@ -1283,6 +2971,37 @@
         "id": "mushroom",
         "name_en": "Mushroom",
         "category": "vegetable",
+        "countries": [
+            "CN",
+            "US",
+            "NL",
+            "PL",
+            "ES",
+            "FR",
+            "IT",
+            "IE",
+            "DE",
+            "GB",
+            "CA",
+            "SE",
+            "JP",
+            "KR"
+        ],
+        "season_months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+        ],
+        "peak_months": [],
         "nutrients": [
             {
                 "calories": 28.0,
@@ -1303,6 +3022,38 @@
         "id": "onion",
         "name_en": "Onion",
         "category": "vegetable",
+        "countries": [
+            "CN",
+            "IN",
+            "US",
+            "EG",
+            "TR",
+            "IR",
+            "PK",
+            "BD",
+            "NL",
+            "ES",
+            "PL",
+            "DE",
+            "FR",
+            "SE",
+            "MX"
+        ],
+        "season_months": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            1,
+            2,
+            3,
+            4
+        ],
+        "peak_months": [
+            9,
+            10
+        ],
         "nutrients": [
             {
                 "calories": 44.7,
@@ -1323,6 +3074,32 @@
         "id": "parsnip",
         "name_en": "Parsnip",
         "category": "vegetable",
+        "countries": [
+            "GB",
+            "IE",
+            "NL",
+            "DE",
+            "FR",
+            "DK",
+            "SE",
+            "NO",
+            "US",
+            "CA",
+            "PL"
+        ],
+        "season_months": [
+            9,
+            10,
+            11,
+            12,
+            1,
+            2,
+            3
+        ],
+        "peak_months": [
+            10,
+            11
+        ],
         "nutrients": [
             {
                 "calories": 72.5,
@@ -1343,6 +3120,31 @@
         "id": "peas",
         "name_en": "Peas",
         "category": "vegetable",
+        "countries": [
+            "CN",
+            "IN",
+            "US",
+            "FR",
+            "RU",
+            "GB",
+            "CA",
+            "ES",
+            "IT",
+            "NL",
+            "DE",
+            "SE",
+            "PL",
+            "KE"
+        ],
+        "season_months": [
+            6,
+            7,
+            8
+        ],
+        "peak_months": [
+            6,
+            7
+        ],
         "nutrients": [
             {
                 "calories": 82.4,
@@ -1363,6 +3165,41 @@
         "id": "potato",
         "name_en": "Potato",
         "category": "vegetable",
+        "countries": [
+            "CN",
+            "IN",
+            "UA",
+            "RU",
+            "US",
+            "DE",
+            "BD",
+            "FR",
+            "NL",
+            "PL",
+            "GB",
+            "BE",
+            "SE",
+            "DK",
+            "EG",
+            "TR"
+        ],
+        "season_months": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            1,
+            2,
+            3
+        ],
+        "peak_months": [
+            8,
+            9,
+            10
+        ],
         "nutrients": [
             {
                 "calories": 92.7,
@@ -1383,6 +3220,34 @@
         "id": "radish",
         "name_en": "Radish",
         "category": "vegetable",
+        "countries": [
+            "CN",
+            "JP",
+            "KR",
+            "IN",
+            "US",
+            "MX",
+            "DE",
+            "FR",
+            "NL",
+            "PL",
+            "GB",
+            "SE",
+            "IT",
+            "ES"
+        ],
+        "season_months": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ],
+        "peak_months": [
+            5,
+            6
+        ],
         "nutrients": [
             {
                 "calories": 15.5,
@@ -1403,6 +3268,35 @@
         "id": "spinach",
         "name_en": "Spinach",
         "category": "vegetable",
+        "countries": [
+            "CN",
+            "US",
+            "JP",
+            "TR",
+            "ID",
+            "FR",
+            "IT",
+            "ES",
+            "NL",
+            "DE",
+            "GB",
+            "SE",
+            "MX",
+            "PL"
+        ],
+        "season_months": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+        ],
+        "peak_months": [
+            5,
+            6,
+            9
+        ],
         "nutrients": [
             {
                 "calories": 23.3,
@@ -1423,6 +3317,32 @@
         "id": "sweet_potato",
         "name_en": "Sweet Potato",
         "category": "vegetable",
+        "countries": [
+            "CN",
+            "MW",
+            "TZ",
+            "NG",
+            "UG",
+            "ID",
+            "VN",
+            "US",
+            "IN",
+            "JP",
+            "EG",
+            "BR",
+            "PE",
+            "ES"
+        ],
+        "season_months": [
+            9,
+            10,
+            11,
+            12
+        ],
+        "peak_months": [
+            10,
+            11
+        ],
         "nutrients": [
             {
                 "calories": 77.5,
@@ -1443,6 +3363,29 @@
         "id": "zucchini",
         "name_en": "Zucchini",
         "category": "vegetable",
+        "countries": [
+            "CN",
+            "TR",
+            "US",
+            "ES",
+            "IT",
+            "MX",
+            "FR",
+            "NL",
+            "DE",
+            "GR",
+            "MA",
+            "SE",
+            "PL"
+        ],
+        "season_months": [
+            7,
+            8,
+            9
+        ],
+        "peak_months": [
+            8
+        ],
         "nutrients": [
             {
                 "calories": 15.4,

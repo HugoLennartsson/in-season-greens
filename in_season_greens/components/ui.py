@@ -1,14 +1,11 @@
 import reflex as rx
 
 from .. import styles
-
-
-FILTERS = [
-    ("all", "All"),
-    ("peak", "Peak"),
-    ("season", "In Season"),
-    ("out", "Out of Season"),
-]
+from ..data import (
+    COUNTRY_FILTER_OPTIONS,
+    NUTRIENT_SORT_OPTIONS,
+    SEASON_FILTER_OPTIONS,
+)
 
 
 def app_icon(tag: str, class_name: str = "size-4", stroke_width: int = 2) -> rx.Component:
@@ -26,10 +23,96 @@ def hamburger_button(on_click) -> rx.Component:
     )
 
 
-def filter_button(label: str, key: str) -> rx.Component:
+def filter_toggle_button(state) -> rx.Component:
     return rx.button(
-        label,
-        class_name=styles.ui.filter_active if key == "all" else styles.ui.filter_inactive,
+        app_icon("sliders-horizontal", styles.ui.filter_button_icon, 2),
+        "Filter",
+        rx.cond(
+            state.has_active_filters,
+            rx.box(class_name=styles.ui.filter_active_dot),
+            rx.fragment(),
+        ),
+        on_click=state.toggle_filters,
+        aria_label="Open filters",
+        class_name=styles.ui.filter_button,
+    )
+
+
+def filter_field(label: str, items: list[str], value, on_change) -> rx.Component:
+    return rx.box(
+        rx.text(label, class_name=styles.ui.filter_field_label),
+        rx.select(
+            items,
+            value=value,
+            on_change=on_change,
+            class_name=styles.ui.filter_select,
+        ),
+        class_name=styles.ui.filter_field,
+    )
+
+
+def filter_drawer(state) -> rx.Component:
+    return rx.fragment(
+        rx.cond(
+            state.filters_open,
+            rx.box(
+                on_click=state.close_filters,
+                class_name=styles.ui.filter_overlay,
+            ),
+            rx.fragment(),
+        ),
+        rx.box(
+            rx.hstack(
+                rx.hstack(
+                    app_icon("sliders-horizontal", styles.ui.filter_drawer_icon, 2),
+                    rx.heading("Filters", class_name=styles.ui.filter_drawer_title),
+                    class_name=styles.ui.filter_drawer_title_row,
+                ),
+                rx.button(
+                    app_icon("x", styles.ui.filter_close_icon, 2),
+                    on_click=state.close_filters,
+                    aria_label="Close filters",
+                    class_name=styles.ui.filter_close_button,
+                ),
+                class_name=styles.ui.filter_drawer_header,
+            ),
+            rx.vstack(
+                filter_field(
+                    "Country",
+                    COUNTRY_FILTER_OPTIONS,
+                    state.country_filter,
+                    state.set_country_filter,
+                ),
+                filter_field(
+                    "Season",
+                    SEASON_FILTER_OPTIONS,
+                    state.season_filter,
+                    state.set_season_filter,
+                ),
+                filter_field(
+                    "Nutrition",
+                    NUTRIENT_SORT_OPTIONS,
+                    state.nutrient_sort,
+                    state.set_nutrient_sort,
+                ),
+                class_name=styles.ui.filter_drawer_fields,
+            ),
+            rx.cond(
+                state.has_active_filters,
+                rx.button(
+                    app_icon("rotate-ccw", styles.ui.filter_reset_icon, 2),
+                    "Reset filters",
+                    on_click=state.clear_filters,
+                    class_name=styles.ui.filter_reset_button,
+                ),
+                rx.fragment(),
+            ),
+            class_name=rx.cond(
+                state.filters_open,
+                styles.ui.filter_drawer_open,
+                styles.ui.filter_drawer_closed,
+            ),
+        ),
     )
 
 
@@ -134,6 +217,16 @@ def product_modal(state) -> rx.Component:
             class_name="rounded-lg border border-[#e0e5dc] bg-[#f7f9f5] px-3 py-2",
         )
 
+    def product_fact(label: str, value) -> rx.Component:
+        return rx.box(
+            rx.text(label, class_name="text-[10px] font-black uppercase tracking-wide text-[#728072]"),
+            rx.text(
+                value,
+                class_name="break-words text-sm font-black leading-snug text-[#151915]",
+            ),
+            class_name="rounded-lg border border-[#e0e5dc] bg-white px-3 py-2",
+        )
+
     def nutrient_panel(nutrient) -> rx.Component:
         return rx.grid(
             nutrition_fact("Calories", nutrient["calories"], "kcal"),
@@ -193,6 +286,17 @@ def product_modal(state) -> rx.Component:
                             class_name="h-full w-full object-cover",
                         ),
                         class_name="mt-6 aspect-[16/9] overflow-hidden rounded-lg bg-[#dfe8dc]",
+                    ),
+                    rx.box(
+                        rx.heading("Season and sourcing", class_name="mb-3 text-lg font-black text-[#151915]"),
+                        rx.grid(
+                            product_fact("Season", product["season_label"]),
+                            product_fact("Peak", product["peak_label"]),
+                            product_fact("Lowest emissions", product["best_country_name"]),
+                            product_fact("Countries", product["countries_label"]),
+                            class_name="grid grid-cols-1 gap-2 md:grid-cols-2",
+                        ),
+                        class_name="mt-6",
                     ),
                     rx.box(
                         rx.heading("Nutrition per 100g", class_name="mb-3 text-lg font-black text-[#151915]"),

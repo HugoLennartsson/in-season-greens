@@ -76,6 +76,9 @@ class LocationState(rx.State):
         self.lon = lon
         self.city = self._reverse_geocode(lat, lon)
         self.typed_city = self.city
+        from .state import State
+
+        return State.set_user_location(lat, lon)
 
     @rx.event
     def set_typed_city(self, val: str):
@@ -116,8 +119,10 @@ class LocationState(rx.State):
 
             self.lat = location.latitude
             self.lon = location.longitude
-
             self.error = ""
+            from .state import State
+
+            return State.set_user_location(self.lat, self.lon)
 
         except Exception:
             self.error = "City lookup failed"

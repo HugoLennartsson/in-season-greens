@@ -27,6 +27,40 @@ class ui:
         "shrink-0 rounded-lg border border-[#dce3d9] bg-white px-3 py-2 "
         "text-xs font-black text-[#4f5b50] hover:bg-[#f7f9f5] md:px-3.5 md:text-[13px]"
     )
+    filter_button = (
+        "relative flex h-10 shrink-0 items-center justify-center gap-1.5 rounded-lg "
+        "border border-[#d9e1d6] bg-[#f7f9f5] px-3 text-xs font-black text-[#233024] "
+        "hover:bg-white md:h-[46px] md:px-4 md:text-[13px]"
+    )
+    filter_button_icon = "size-4 text-[#1a7a30]"
+    filter_active_dot = "absolute right-2 top-2 size-2 rounded-full bg-[#2db34a]"
+    filter_overlay = "fixed inset-0 z-30 bg-black/35"
+    filter_drawer_open = (
+        "fixed inset-y-0 right-0 z-40 flex w-full translate-x-0 flex-col bg-white "
+        "p-5 shadow-[-4px_0_24px_rgba(0,0,0,.15)] transition-transform duration-300 md:w-[380px]"
+    )
+    filter_drawer_closed = (
+        "fixed inset-y-0 right-0 z-40 flex w-full translate-x-full flex-col bg-white "
+        "p-5 shadow-[-4px_0_24px_rgba(0,0,0,.15)] transition-transform duration-300 md:w-[380px]"
+    )
+    filter_drawer_header = "items-center justify-between gap-4 border-b border-[#e8eee4] pb-4"
+    filter_drawer_title_row = "items-center gap-2"
+    filter_drawer_icon = "size-5 text-[#1a7a30]"
+    filter_drawer_title = "text-xl font-black text-[#151915]"
+    filter_close_icon = "size-5 text-[#555]"
+    filter_close_button = "rounded-lg p-2 hover:bg-[#e7ede4]"
+    filter_drawer_fields = "mt-5 gap-4"
+    filter_field = "w-full"
+    filter_field_label = "mb-1.5 text-[11px] font-black uppercase tracking-wide text-[#728072]"
+    filter_select = (
+        "h-10 w-full rounded-lg border border-[#d9e1d6] bg-[#f7f9f5] px-3 "
+        "text-[13px] font-black text-[#1b211b] outline-none"
+    )
+    filter_reset_icon = "size-4 text-[#4f5b50]"
+    filter_reset_button = (
+        "mt-auto flex items-center justify-center gap-2 rounded-lg border border-[#d9e1d6] "
+        "bg-[#f7f9f5] px-4 py-2 text-sm font-black text-[#4f5b50] hover:bg-white"
+    )
     search_clear_icon = "size-4 text-[#667166]"
     search_clear_button = (
         "absolute right-12 top-1/2 flex size-8 -translate-y-1/2 items-center "
@@ -64,8 +98,8 @@ class navigation:
         "shadow-[0_8px_28px_rgba(28,45,30,.08)] backdrop-blur md:block"
     )
     desktop_inner = (
-        "grid w-full grid-cols-[max-content_minmax(0,1fr)_max-content] items-center gap-3 "
-        "px-4 py-2.5 lg:grid-cols-[max-content_minmax(0,1fr)_max-content_max-content]"
+        "grid w-full grid-cols-[max-content_minmax(0,1fr)_max-content_max-content] items-center gap-3 "
+        "px-4 py-2.5"
     )
     desktop_logo = "whitespace-nowrap text-[23px] font-black leading-none text-[#123d1d]"
     desktop_filters = "hidden gap-2 overflow-x-auto lg:flex"
@@ -75,6 +109,7 @@ class navigation:
     mobile_logo_icon = "size-[17px] text-[#1a7a30]"
     mobile_logo = "text-[15px] font-black text-[#123d1d]"
     mobile_filters = "sticky top-12 z-10 border-b border-[#e8e8e8] bg-white px-3 py-2 shadow-[0_2px_12px_rgba(0,0,0,.07)] md:hidden"
+    mobile_search_row = "items-center gap-2"
     mobile_filter_row = "mt-2 gap-1.5 overflow-x-auto"
     drawer_overlay = "fixed inset-0 z-30 bg-black/35"
     drawer_open = (
@@ -144,6 +179,7 @@ class product_card:
     month_current = "bg-[#2db34a] text-white"
     month_default = "bg-[#e0e0e0] text-[#666]"
     month_missing = "mb-1.5 text-[10px] font-bold italic text-[#999]"
+    season_label = "mb-1.5 text-[10px] font-black uppercase tracking-wide text-[#6b766c]"
     origin_icon_local = "shrink-0 size-3.5 text-[#1a7a30]"
     origin_icon_far = "shrink-0 size-3.5 text-[#e03535]"
     origin_box_local = "mb-1.5 items-center gap-1 rounded-lg bg-[#e6f7ea] px-1.5 py-1.5"

@@ -1,5 +1,11 @@
 from in_season_greens.data import (
+    ALL_PRODUCE,
+    Country,
+    filter_products,
+    fetch_lowest_emission_origin,
     fuzzy_search_score,
+    get_products,
+    get_season_status,
     get_search_suggestions,
     search_products,
 )
@@ -23,6 +29,41 @@ def test_product_search_matches_misspellings():
     products = search_products("strawbery")
 
     assert [product["name_en"] for product in products] == ["Strawberry"]
+
+
+def test_all_products_have_country_and_season_metadata():
+    for product in ALL_PRODUCE:
+        assert product["countries"]
+        assert product["season_months"]
+        assert all(code in Country.__members__ for code in product["countries"])
+
+
+def test_country_filter_uses_country_enum_names():
+    products = filter_products(get_products(), country_filter=Country.SE.value)
+
+    assert products
+    assert all("SE" in product["countries"] for product in products)
+
+
+def test_nutrient_sort_orders_products_per_100g():
+    products = filter_products(get_products(), nutrient_sort="Lowest calories")
+    calories = [product["nutrients"][0]["calories"] for product in products]
+
+    assert calories == sorted(calories)
+
+
+def test_season_status_coming_soon_checks_next_two_months():
+    assert get_season_status([7, 8], [], month=5) == "soon"
+    assert get_season_status([8, 9], [], month=5) == "out"
+    assert get_season_status([], [], month=5) == "unknown"
+
+
+def test_emission_origin_prefers_nearby_country():
+    code, name, carbon_kg = fetch_lowest_emission_origin(["SE", "ES"], 57.7, 12.0)
+
+    assert code == "SE"
+    assert name == "Sweden"
+    assert carbon_kg > 0
 
 
 def test_fuzzy_search_ignores_spaces_and_punctuation():
