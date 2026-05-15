@@ -34,33 +34,76 @@ class ui:
     )
     filter_button_icon = "size-4 text-[#1a7a30]"
     filter_active_dot = "absolute right-2 top-2 size-2 rounded-full bg-[#2db34a]"
-    filter_overlay = "fixed inset-0 z-30 bg-black/35"
-    filter_drawer_open = (
-        "fixed inset-y-0 right-0 z-40 flex w-full translate-x-0 flex-col bg-white "
-        "p-5 shadow-[-4px_0_24px_rgba(0,0,0,.15)] transition-transform duration-300 md:w-[380px]"
+    filter_panel = "border-t border-[#e2e8df] bg-white px-3 pb-3 pt-3 md:px-4 md:pb-4"
+    filter_panel_header = "mb-3 items-center justify-between gap-3"
+    filter_panel_title_row = "items-center gap-2"
+    filter_panel_icon = "size-4 text-[#1a7a30]"
+    filter_panel_title = "text-[13px] font-black uppercase tracking-wide text-[#3f4d40]"
+    filter_panel_grid = (
+        "grid grid-cols-1 gap-4 lg:grid-cols-[minmax(280px,1.1fr)_minmax(220px,.8fr)_minmax(320px,1fr)]"
     )
-    filter_drawer_closed = (
-        "fixed inset-y-0 right-0 z-40 flex w-full translate-x-full flex-col bg-white "
-        "p-5 shadow-[-4px_0_24px_rgba(0,0,0,.15)] transition-transform duration-300 md:w-[380px]"
-    )
-    filter_drawer_header = "items-center justify-between gap-4 border-b border-[#e8eee4] pb-4"
-    filter_drawer_title_row = "items-center gap-2"
-    filter_drawer_icon = "size-5 text-[#1a7a30]"
-    filter_drawer_title = "text-xl font-black text-[#151915]"
-    filter_close_icon = "size-5 text-[#555]"
-    filter_close_button = "rounded-lg p-2 hover:bg-[#e7ede4]"
-    filter_drawer_fields = "mt-5 gap-4"
-    filter_field = "w-full"
-    filter_field_label = "mb-1.5 text-[11px] font-black uppercase tracking-wide text-[#728072]"
-    filter_select = (
-        "h-10 w-full rounded-lg border border-[#d9e1d6] bg-[#f7f9f5] px-3 "
-        "text-[13px] font-black text-[#1b211b] outline-none"
+    filter_group_header = "items-center justify-between gap-3"
+    filter_group_label = "text-[11px] font-black uppercase tracking-wide text-[#728072]"
+    filter_group_label_spaced = "mt-4 text-[11px] font-black uppercase tracking-wide text-[#728072]"
+    filter_country_group = "min-w-0"
+    filter_choice_group = "min-w-0"
+    filter_sort_group = "min-w-0"
+    filter_clear_button = (
+        "rounded-lg border border-[#d9e1d6] bg-[#f7f9f5] px-2.5 py-1.5 "
+        "text-[11px] font-black text-[#4f5b50] hover:bg-white"
     )
     filter_reset_icon = "size-4 text-[#4f5b50]"
     filter_reset_button = (
-        "mt-auto flex items-center justify-center gap-2 rounded-lg border border-[#d9e1d6] "
-        "bg-[#f7f9f5] px-4 py-2 text-sm font-black text-[#4f5b50] hover:bg-white"
+        "flex shrink-0 items-center justify-center gap-1.5 rounded-lg border border-[#d9e1d6] "
+        "bg-[#f7f9f5] px-3 py-1.5 text-[11px] font-black text-[#4f5b50] hover:bg-white"
     )
+    country_search_input = (
+        "mt-2 h-9 w-full rounded-lg border border-[#d9e1d6] bg-[#f7f9f5] "
+        "px-3 text-[13px] font-bold text-[#1b211b] outline-none placeholder:text-[#8a948a]"
+    )
+    selected_chips = "mt-2 min-h-8 flex-wrap gap-1.5"
+    selected_chip = (
+        "flex max-w-full items-center gap-1 rounded-lg border border-[#b7dfbd] bg-[#e6f7ea] "
+        "px-2 py-1 text-[11px] font-black text-[#164f26] hover:bg-[#d8f0dd]"
+    )
+    selected_chip_text = "truncate"
+    selected_chip_icon = "size-3 text-[#164f26]"
+    country_options = (
+        "mt-2 grid max-h-44 grid-cols-2 gap-1.5 overflow-y-auto pr-1 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3"
+    )
+    country_option = (
+        "flex min-h-8 items-center justify-start gap-1.5 rounded-lg border border-[#d9e1d6] "
+        "bg-[#f7f9f5] px-2 py-1 text-left text-[#3f4d40] hover:bg-white"
+    )
+    country_option_active = (
+        "flex min-h-8 items-center justify-start gap-1.5 rounded-lg border border-[#2db34a] "
+        "bg-[#2db34a] px-2 py-1 text-left text-white hover:bg-[#24943d]"
+    )
+    country_option_icon = "size-3.5 shrink-0 text-[#778477]"
+    country_option_icon_active = "size-3.5 shrink-0 text-white"
+    country_option_text = "truncate text-[11px] font-black"
+    option_group = "mt-2 flex-wrap gap-1.5"
+    option_button = (
+        "flex items-center gap-1 rounded-lg border border-[#d9e1d6] bg-[#f7f9f5] "
+        "px-3 py-2 text-[12px] font-black text-[#3f4d40] hover:bg-white"
+    )
+    option_button_active = (
+        "flex items-center gap-1 rounded-lg border border-[#2db34a] bg-[#2db34a] "
+        "px-3 py-2 text-[12px] font-black text-white hover:bg-[#24943d]"
+    )
+    option_icon_active = "size-3.5 text-white"
+    sort_summary = "truncate text-[11px] font-bold text-[#7a867a]"
+    sort_grid = "mt-2 grid grid-cols-2 gap-1.5 sm:grid-cols-3"
+    sort_option = (
+        "min-h-12 rounded-lg border border-[#d9e1d6] bg-[#f7f9f5] p-2 text-left text-[#3f4d40] hover:bg-white"
+    )
+    sort_option_active = (
+        "min-h-12 rounded-lg border border-[#164f26] bg-[#164f26] p-2 text-left text-white hover:bg-[#123f20]"
+    )
+    sort_option_copy = "w-full"
+    sort_option_label = "truncate text-[12px] font-black"
+    sort_option_state = "mt-0.5 text-[9px] font-black uppercase tracking-wide text-[#7a867a]"
+    sort_option_state_active = "mt-0.5 text-[9px] font-black uppercase tracking-wide text-[#a8e6ba]"
     search_clear_icon = "size-4 text-[#667166]"
     search_clear_button = (
         "absolute right-12 top-1/2 flex size-8 -translate-y-1/2 items-center "

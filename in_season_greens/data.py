@@ -57,6 +57,11 @@ class NavItem(TypedDict):
     subtitle: str
 
 
+class FilterOption(TypedDict):
+    value: str
+    label: str
+
+
 class Country(str, Enum):
     AF = "Afghanistan"
     AR = "Argentina"
@@ -143,25 +148,32 @@ class Country(str, Enum):
 
 
 APP_NAME = "InSeasonGreens"
-ALL_COUNTRIES_FILTER = "All countries"
-ALL_SEASON_FILTER = "Any season"
-DEFAULT_NUTRIENT_SORT = "Recommended"
-SEASON_FILTER_OPTIONS = [
-    ALL_SEASON_FILTER,
-    "Peak season",
-    "In season",
-    "Coming soon",
-    "Out of season",
-    "Unknown season",
+SORT_ASC = "asc"
+SORT_DESC = "desc"
+CATEGORY_FILTER_OPTIONS: list[FilterOption] = [
+    {"value": "fruit", "label": "Fruit"},
+    {"value": "vegetable", "label": "Vegetable"},
 ]
-NUTRIENT_SORT_OPTIONS = [
-    DEFAULT_NUTRIENT_SORT,
-    "Lowest calories",
-    "Highest protein",
-    "Highest fiber",
-    "Lowest sugar",
-    "Lowest carbs",
-    "Lowest fat",
+SEASON_FILTER_OPTIONS: list[FilterOption] = [
+    {"value": "peak", "label": "Peak season"},
+    {"value": "season", "label": "In season"},
+    {"value": "soon", "label": "Coming soon"},
+    {"value": "out", "label": "Out of season"},
+    {"value": "unknown", "label": "Unknown season"},
+]
+SORT_FIELD_OPTIONS: list[FilterOption] = [
+    {"value": "carbon_kg", "label": "CO2"},
+    {"value": "serving_size_g", "label": "Serving size"},
+    {"value": "calories", "label": "Calories"},
+    {"value": "fat_total_g", "label": "Fat"},
+    {"value": "fat_saturated_g", "label": "Sat fat"},
+    {"value": "protein_g", "label": "Protein"},
+    {"value": "sodium_mg", "label": "Sodium"},
+    {"value": "potassium_mg", "label": "Potassium"},
+    {"value": "cholesterol_mg", "label": "Cholesterol"},
+    {"value": "carbohydrates_total_g", "label": "Carbs"},
+    {"value": "fiber_g", "label": "Fiber"},
+    {"value": "sugar_g", "label": "Sugar"},
 ]
 MONTHS = [
     "January",
@@ -433,9 +445,9 @@ def _load_all_produce() -> list[ProduceItem]:
 
 
 ALL_PRODUCE: list[ProduceItem] = _load_all_produce()
-COUNTRY_FILTER_OPTIONS = [
-    ALL_COUNTRIES_FILTER,
-    *sorted({_country_name(code) for product in ALL_PRODUCE for code in product["countries"]}),
+COUNTRY_FILTER_OPTIONS: list[FilterOption] = [
+    {"value": country.name, "label": country.value}
+    for country in sorted(Country, key=lambda item: item.value)
 ]
 COUNTRY_CODE_BY_NAME = {country.value: country.name for country in Country}
 
@@ -530,63 +542,55 @@ def _nutrient_value(product: ProduceItem, nutrient_key: str) -> float:
     return float(nutrient[nutrient_key])
 
 
-def _sort_products(products: list[ProduceItem], nutrient_sort: str) -> list[ProduceItem]:
-    if nutrient_sort == "Lowest calories":
-        return sorted(products, key=lambda product: _nutrient_value(product, "calories"))
-    if nutrient_sort == "Highest protein":
-        return sorted(products, key=lambda product: -_nutrient_value(product, "protein_g"))
-    if nutrient_sort == "Highest fiber":
-        return sorted(products, key=lambda product: -_nutrient_value(product, "fiber_g"))
-    if nutrient_sort == "Lowest sugar":
-        return sorted(products, key=lambda product: _nutrient_value(product, "sugar_g"))
-    if nutrient_sort == "Lowest carbs":
-        return sorted(products, key=lambda product: _nutrient_value(product, "carbohydrates_total_g"))
-    if nutrient_sort == "Lowest fat":
-        return sorted(products, key=lambda product: _nutrient_value(product, "fat_total_g"))
-    return products
+def _sort_value(product: ProduceItem, sort_key: str) -> float:
+    if sort_key == "carbon_kg":
+        return float(product["carbon_kg"])
+    return _nutrient_value(product, sort_key)
+
+
+def _sort_products(
+    products: list[ProduceItem],
+    sort_key: str = "",
+    sort_direction: str = "",
+) -> list[ProduceItem]:
+    if not sort_key or sort_direction not in {SORT_ASC, SORT_DESC}:
+        return products
+    reverse = sort_direction == SORT_DESC
+    return sorted(products, key=lambda product: _sort_value(product, sort_key), reverse=reverse)
 
 
 def filter_products(
     products: list[ProduceItem],
     query: str = "",
-    country_filter: str = ALL_COUNTRIES_FILTER,
-    season_filter: str = ALL_SEASON_FILTER,
-    nutrient_sort: str = DEFAULT_NUTRIENT_SORT,
+    country_filters: list[str] | None = None,
+    season_filters: list[str] | None = None,
+    category_filters: list[str] | None = None,
+    sort_key: str = "",
+    sort_direction: str = "",
     user_lat: float | None = None,
     user_lon: float | None = None,
 ) -> list[ProduceItem]:
-    country_code = COUNTRY_CODE_BY_NAME.get(country_filter)
+    selected_countries = set(country_filters or [])
+    selected_seasons = set(season_filters or [])
+    selected_categories = set(category_filters or [])
     filtered_products = [
         _with_derived_fields(product, user_lat, user_lon)
         for product in products
-        if country_code is None or country_code in product["countries"]
+        if not selected_countries or selected_countries & set(product["countries"])
     ]
 
-    if season_filter == "Peak season":
+    if selected_categories:
         filtered_products = [
-            product for product in filtered_products if product["season_status"] == "peak"
+            product for product in filtered_products if product["category"] in selected_categories
         ]
-    elif season_filter == "In season":
+
+    if selected_seasons:
         filtered_products = [
-            product
-            for product in filtered_products
-            if product["season_status"] in {"peak", "season"}
-        ]
-    elif season_filter == "Coming soon":
-        filtered_products = [
-            product for product in filtered_products if product["season_status"] == "soon"
-        ]
-    elif season_filter == "Out of season":
-        filtered_products = [
-            product for product in filtered_products if product["season_status"] == "out"
-        ]
-    elif season_filter == "Unknown season":
-        filtered_products = [
-            product for product in filtered_products if product["season_status"] == "unknown"
+            product for product in filtered_products if product["season_status"] in selected_seasons
         ]
 
     filtered_products = search_products(query, filtered_products)
-    return _sort_products(filtered_products, nutrient_sort)
+    return _sort_products(filtered_products, sort_key, sort_direction)
 
 
 def get_products() -> list[ProduceItem]:

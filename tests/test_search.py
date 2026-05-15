@@ -39,17 +39,38 @@ def test_all_products_have_country_and_season_metadata():
 
 
 def test_country_filter_uses_country_enum_names():
-    products = filter_products(get_products(), country_filter=Country.SE.value)
+    products = filter_products(get_products(), country_filters=[Country.SE.name])
 
     assert products
     assert all("SE" in product["countries"] for product in products)
 
 
 def test_nutrient_sort_orders_products_per_100g():
-    products = filter_products(get_products(), nutrient_sort="Lowest calories")
+    products = filter_products(get_products(), sort_key="calories", sort_direction="asc")
     calories = [product["nutrients"][0]["calories"] for product in products]
 
     assert calories == sorted(calories)
+
+
+def test_carbon_sort_orders_products_by_emissions():
+    products = filter_products(get_products(), sort_key="carbon_kg", sort_direction="asc")
+    carbon_values = [product["carbon_kg"] for product in products]
+
+    assert carbon_values == sorted(carbon_values)
+
+
+def test_multi_filters_combine_categories_countries_and_seasons():
+    products = filter_products(
+        get_products(),
+        country_filters=["SE"],
+        category_filters=["vegetable"],
+        season_filters=["season", "peak"],
+    )
+
+    assert products
+    assert all("SE" in product["countries"] for product in products)
+    assert all(product["category"] == "vegetable" for product in products)
+    assert all(product["season_status"] in {"season", "peak"} for product in products)
 
 
 def test_season_status_coming_soon_checks_next_two_months():
