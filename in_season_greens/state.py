@@ -2,6 +2,7 @@ import reflex as rx
 from typing import Optional
 from .data import (
     CATEGORY_FILTER_OPTIONS,
+    COUNTRY,
     COUNTRY_FILTER_OPTIONS,
     DEFAULT_LAT,
     DEFAULT_LON,
@@ -11,8 +12,11 @@ from .data import (
     SORT_FIELD_OPTIONS,
     filter_products,
     get_catalog_label,
+    get_country_name,
     get_products,
     get_search_suggestions,
+    is_supported_country_code,
+    normalize_country_code,
     normalize_search_text,
     ProduceItem,
 )
@@ -25,6 +29,7 @@ class State(rx.State):
     filters_open: bool = False
     country_search_query: str = ""
     selected_country_codes: list[str] = []
+    local_only: bool = False
     selected_season_statuses: list[str] = []
     selected_categories: list[str] = []
     sort_key: str = ""
@@ -33,6 +38,8 @@ class State(rx.State):
     # cards can show emission values before browser geolocation returns.
     user_lat: float | None = DEFAULT_LAT
     user_lon: float | None = DEFAULT_LON
+    user_country_code: str = COUNTRY
+    user_country_is_fallback: bool = True
     menu_open: bool = False
     modal_open: bool = False
     modal_product: Optional[ProduceItem] = None
@@ -96,6 +103,9 @@ class State(rx.State):
     def clear_country_filters(self):
         self.selected_country_codes = []
 
+    def toggle_local_only(self):
+        self.local_only = not self.local_only
+
     def toggle_season_filter(self, season_status: str):
         if season_status in self.selected_season_statuses:
             self.selected_season_statuses = [
@@ -130,14 +140,27 @@ class State(rx.State):
     def clear_filters(self):
         self.country_search_query = ""
         self.selected_country_codes = []
+        self.local_only = False
         self.selected_season_statuses = []
         self.selected_categories = []
         self.sort_key = ""
         self.sort_direction = ""
 
-    def set_user_location(self, lat: float, lon: float):
+    def set_user_location(
+        self,
+        lat: float,
+        lon: float,
+        country_code: str | None = None,
+        country_is_fallback: bool | None = None,
+    ):
         self.user_lat = lat
         self.user_lon = lon
+        self.user_country_code = normalize_country_code(country_code)
+        self.user_country_is_fallback = (
+            not is_supported_country_code(country_code)
+            if country_is_fallback is None
+            else country_is_fallback
+        )
 
     def open_modal(self, product_id: str):
         for product in self.filtered_products:
@@ -158,6 +181,8 @@ class State(rx.State):
             country_filters=self.selected_country_codes,
             season_filters=self.selected_season_statuses,
             category_filters=self.selected_categories,
+            local_only=self.local_only,
+            local_country_code=self.user_country_code,
             sort_key=self.sort_key,
             sort_direction=self.sort_direction,
             user_lat=self.user_lat,
@@ -177,6 +202,7 @@ class State(rx.State):
         return any(
             [
                 bool(self.selected_country_codes),
+                self.local_only,
                 bool(self.selected_season_statuses),
                 bool(self.selected_categories),
                 bool(self.sort_key),
@@ -215,6 +241,16 @@ class State(rx.State):
             or query in normalize_search_text(option["label"])
             or query in normalize_search_text(option["value"])
         ]
+
+    @rx.var
+    def local_country_name(self) -> str:
+        return get_country_name(self.user_country_code)
+
+    @rx.var
+    def local_country_label(self) -> str:
+        if self.user_country_is_fallback:
+            return f"{self.local_country_name} (fallback)"
+        return self.local_country_name
 
     @rx.var
     def season_options(self) -> list[dict]:

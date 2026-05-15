@@ -42,6 +42,34 @@ def selected_country_chip(state, country) -> rx.Component:
     )
 
 
+def local_only_button(state) -> rx.Component:
+    return rx.button(
+        rx.cond(
+            state.local_only,
+            app_icon("check", styles.ui.local_only_icon_active, 2),
+            app_icon("map_pin", styles.ui.local_only_icon, 2),
+        ),
+        rx.box(
+            rx.text("Show local only", class_name=styles.ui.local_only_title),
+            rx.text(
+                state.local_country_label,
+                class_name=rx.cond(
+                    state.local_only,
+                    styles.ui.local_only_meta_active,
+                    styles.ui.local_only_meta,
+                ),
+            ),
+            class_name=styles.ui.local_only_copy,
+        ),
+        on_click=state.toggle_local_only,
+        class_name=rx.cond(
+            state.local_only,
+            styles.ui.local_only_button_active,
+            styles.ui.local_only_button,
+        ),
+    )
+
+
 def country_option_button(state, country) -> rx.Component:
     return rx.button(
         rx.cond(
@@ -140,6 +168,7 @@ def filter_expansion(state) -> rx.Component:
                             ),
                             class_name=styles.ui.filter_group_header,
                         ),
+                        local_only_button(state),
                         rx.input(
                             value=state.country_search_query,
                             on_change=state.set_country_search_query,

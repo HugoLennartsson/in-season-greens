@@ -25,25 +25,26 @@ def status_label(status) -> rx.Component:
     )
 
 
-def origin_icon_class(country_code):
-    return rx.match(
-        country_code,
-        ("SE", styles.product_card.origin_icon_local),
-        (styles.product_card.origin_icon_far),
+def origin_icon_class(country_code, local_country_code="SE"):
+    return rx.cond(
+        country_code == local_country_code,
+        styles.product_card.origin_icon_local,
+        styles.product_card.origin_icon_far,
     )
 
 
-def origin_box_class(country_code):
-    return rx.match(
-        country_code,
-        ("SE", styles.product_card.origin_box_local),
-        (styles.product_card.origin_box_far),
+def origin_box_class(country_code, local_country_code="SE"):
+    return rx.cond(
+        country_code == local_country_code,
+        styles.product_card.origin_box_local,
+        styles.product_card.origin_box_far,
     )
 
 
 def product_card(product, state=None) -> rx.Component:
     status = product["season_status"]
     nutrient = product["nutrients"][0]
+    local_country_code = state.user_country_code if state else "SE"
 
     return rx.box(
         rx.box(
@@ -67,7 +68,7 @@ def product_card(product, state=None) -> rx.Component:
             rx.hstack(
                 app_icon(
                     "map_pin",
-                    origin_icon_class(product["best_country_code"]),
+                    origin_icon_class(product["best_country_code"], local_country_code),
                     3,
                 ),
                 rx.box(
@@ -86,7 +87,10 @@ def product_card(product, state=None) -> rx.Component:
                     rx.text("/ kg"),
                     class_name=styles.product_card.carbon_value,
                 ),
-                class_name=origin_box_class(product["best_country_code"]),
+                class_name=origin_box_class(
+                    product["best_country_code"],
+                    local_country_code,
+                ),
             ),
             rx.flex(
                 rx.box(

@@ -64,6 +64,20 @@ class ui:
         "flex shrink-0 items-center justify-center gap-1.5 rounded-lg border border-[#d9e1d6] "
         "bg-[#f7f9f5] px-3 py-1.5 text-[11px] font-black text-[#4f5b50] hover:bg-white"
     )
+    local_only_button = (
+        "mt-2 flex min-h-12 w-full items-center gap-2 rounded-lg border border-[#d9e1d6] "
+        "bg-[#f7f9f5] px-3 py-2 text-left text-[#3f4d40] hover:bg-white"
+    )
+    local_only_button_active = (
+        "mt-2 flex min-h-12 w-full items-center gap-2 rounded-lg border border-[#2db34a] "
+        "bg-[#2db34a] px-3 py-2 text-left text-white hover:bg-[#24943d]"
+    )
+    local_only_icon = "size-4 shrink-0 text-[#1a7a30]"
+    local_only_icon_active = "size-4 shrink-0 text-white"
+    local_only_copy = "min-w-0"
+    local_only_title = "truncate text-[13px] font-black"
+    local_only_meta = "truncate text-[11px] font-bold text-[#7a867a]"
+    local_only_meta_active = "truncate text-[11px] font-bold text-[#d9f5df]"
     country_search_input = (
         "mt-2 h-9 w-full rounded-lg border border-[#d9e1d6] bg-[#f7f9f5] "
         "px-3 text-[13px] font-bold text-[#1b211b] outline-none placeholder:text-[#8a948a]"

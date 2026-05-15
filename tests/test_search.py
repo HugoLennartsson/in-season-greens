@@ -45,6 +45,28 @@ def test_country_filter_uses_country_enum_names():
     assert all("SE" in product["countries"] for product in products)
 
 
+def test_local_only_filter_uses_location_country():
+    products = filter_products(
+        get_products(),
+        local_only=True,
+        local_country_code=Country.ES.name,
+    )
+
+    assert products
+    assert all("ES" in product["countries"] for product in products)
+
+
+def test_local_only_filter_falls_back_to_sweden_for_unknown_country():
+    products = filter_products(
+        get_products(),
+        local_only=True,
+        local_country_code="XX",
+    )
+
+    assert products
+    assert all("SE" in product["countries"] for product in products)
+
+
 def test_nutrient_sort_orders_products_per_100g():
     products = filter_products(get_products(), sort_key="calories", sort_direction="asc")
     calories = [product["nutrients"][0]["calories"] for product in products]
@@ -128,6 +150,34 @@ def test_search_submit_closes_search_suggestions():
     assert state.search_query == "apple"
     assert not state.search_suggestions_open
     assert not state.has_search_suggestions
+
+
+def test_state_local_only_uses_detected_country():
+    state = State(_reflex_internal_init=True)
+
+    state.toggle_local_only()
+    state.set_user_location(40.4168, -3.7038, "es")
+
+    assert state.user_country_code == "ES"
+    assert not state.user_country_is_fallback
+    assert state.local_country_label == "Spain"
+    assert state.has_active_filters
+    assert state.filtered_products
+    assert all("ES" in product["countries"] for product in state.filtered_products)
+
+
+def test_state_local_country_label_shows_sweden_fallback():
+    state = State(_reflex_internal_init=True)
+
+    assert state.user_country_code == "SE"
+    assert state.user_country_is_fallback
+    assert state.local_country_label == "Sweden (fallback)"
+
+    state.set_user_location(59.3293, 18.0686, "se")
+
+    assert state.user_country_code == "SE"
+    assert not state.user_country_is_fallback
+    assert state.local_country_label == "Sweden"
 
 
 def test_open_modal_selects_product_by_id():

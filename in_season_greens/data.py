@@ -310,6 +310,23 @@ def _country_name(code: str) -> str:
         return code
 
 
+def is_supported_country_code(code: str | None) -> bool:
+    if not code:
+        return False
+    normalized_code = code.strip().upper()
+    return normalized_code in Country.__members__
+
+
+def normalize_country_code(code: str | None, fallback: str = COUNTRY) -> str:
+    if is_supported_country_code(code):
+        return code.strip().upper()
+    return fallback
+
+
+def get_country_name(code: str | None) -> str:
+    return _country_name(normalize_country_code(code))
+
+
 def _next_months(month: int, count: int = 2) -> set[int]:
     return {((month - 1 + offset) % 12) + 1 for offset in range(1, count + 1)}
 
@@ -565,6 +582,8 @@ def filter_products(
     country_filters: list[str] | None = None,
     season_filters: list[str] | None = None,
     category_filters: list[str] | None = None,
+    local_only: bool = False,
+    local_country_code: str | None = COUNTRY,
     sort_key: str = "",
     sort_direction: str = "",
     user_lat: float | None = None,
@@ -573,11 +592,17 @@ def filter_products(
     selected_countries = set(country_filters or [])
     selected_seasons = set(season_filters or [])
     selected_categories = set(category_filters or [])
+    local_country = normalize_country_code(local_country_code)
     filtered_products = [
         _with_derived_fields(product, user_lat, user_lon)
         for product in products
         if not selected_countries or selected_countries & set(product["countries"])
     ]
+
+    if local_only:
+        filtered_products = [
+            product for product in filtered_products if local_country in product["countries"]
+        ]
 
     if selected_categories:
         filtered_products = [
