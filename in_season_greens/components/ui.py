@@ -105,107 +105,122 @@ def sort_option_button(state, option) -> rx.Component:
 
 
 def filter_expansion(state) -> rx.Component:
-    return rx.cond(
-        state.filters_open,
+    return rx.box(
         rx.box(
-            rx.hstack(
+            rx.box(
                 rx.hstack(
-                    app_icon("sliders-horizontal", styles.ui.filter_panel_icon, 2),
-                    rx.text("Product filters", class_name=styles.ui.filter_panel_title),
-                    class_name=styles.ui.filter_panel_title_row,
-                ),
-                rx.cond(
-                    state.has_active_filters,
-                    rx.button(
-                        app_icon("rotate-ccw", styles.ui.filter_reset_icon, 2),
-                        "Reset",
-                        on_click=state.clear_filters,
-                        class_name=styles.ui.filter_reset_button,
-                    ),
-                    rx.fragment(),
-                ),
-                class_name=styles.ui.filter_panel_header,
-            ),
-            rx.grid(
-                rx.box(
                     rx.hstack(
-                        rx.text("Countries", class_name=styles.ui.filter_group_label),
+                        app_icon("sliders-horizontal", styles.ui.filter_panel_icon, 2),
+                        rx.text(
+                            "Product filters",
+                            class_name=styles.ui.filter_panel_title,
+                        ),
+                        class_name=styles.ui.filter_panel_title_row,
+                    ),
+                    rx.cond(
+                        state.has_active_filters,
                         rx.button(
-                            "Clear selection",
-                            on_click=state.clear_country_filters,
-                            class_name=styles.ui.filter_clear_button,
+                            app_icon("rotate-ccw", styles.ui.filter_reset_icon, 2),
+                            "Reset",
+                            on_click=state.clear_filters,
+                            class_name=styles.ui.filter_reset_button,
                         ),
-                        class_name=styles.ui.filter_group_header,
+                        rx.fragment(),
                     ),
-                    rx.input(
-                        value=state.country_search_query,
-                        on_change=state.set_country_search_query,
-                        placeholder="Search countries...",
-                        class_name=styles.ui.country_search_input,
-                    ),
-                    rx.flex(
-                        rx.foreach(
-                            state.selected_country_options,
-                            lambda country: selected_country_chip(state, country),
+                    class_name=styles.ui.filter_panel_header,
+                ),
+                rx.grid(
+                    rx.box(
+                        rx.hstack(
+                            rx.text("Countries", class_name=styles.ui.filter_group_label),
+                            rx.button(
+                                "Clear selection",
+                                on_click=state.clear_country_filters,
+                                class_name=styles.ui.filter_clear_button,
+                            ),
+                            class_name=styles.ui.filter_group_header,
                         ),
-                        class_name=styles.ui.selected_chips,
+                        rx.input(
+                            value=state.country_search_query,
+                            on_change=state.set_country_search_query,
+                            placeholder="Search countries...",
+                            class_name=styles.ui.country_search_input,
+                        ),
+                        rx.flex(
+                            rx.foreach(
+                                state.selected_country_options,
+                                lambda country: selected_country_chip(state, country),
+                            ),
+                            class_name=styles.ui.selected_chips,
+                        ),
+                        rx.box(
+                            rx.foreach(
+                                state.country_options,
+                                lambda country: country_option_button(state, country),
+                            ),
+                            class_name=styles.ui.country_options,
+                        ),
+                        class_name=styles.ui.filter_country_group,
                     ),
                     rx.box(
-                        rx.foreach(
-                            state.country_options,
-                            lambda country: country_option_button(state, country),
-                        ),
-                        class_name=styles.ui.country_options,
-                    ),
-                    class_name=styles.ui.filter_country_group,
-                ),
-                rx.box(
-                    rx.text("Category", class_name=styles.ui.filter_group_label),
-                    rx.flex(
-                        rx.foreach(
-                            state.category_options,
-                            lambda option: multi_option_button(
-                                state,
-                                option,
-                                state.toggle_category_filter,
+                        rx.text("Category", class_name=styles.ui.filter_group_label),
+                        rx.flex(
+                            rx.foreach(
+                                state.category_options,
+                                lambda option: multi_option_button(
+                                    state,
+                                    option,
+                                    state.toggle_category_filter,
+                                ),
                             ),
+                            class_name=styles.ui.option_group,
                         ),
-                        class_name=styles.ui.option_group,
-                    ),
-                    rx.text("Season", class_name=styles.ui.filter_group_label_spaced),
-                    rx.flex(
-                        rx.foreach(
-                            state.season_options,
-                            lambda option: multi_option_button(
-                                state,
-                                option,
-                                state.toggle_season_filter,
+                        rx.text(
+                            "Season",
+                            class_name=styles.ui.filter_group_label_spaced,
+                        ),
+                        rx.flex(
+                            rx.foreach(
+                                state.season_options,
+                                lambda option: multi_option_button(
+                                    state,
+                                    option,
+                                    state.toggle_season_filter,
+                                ),
                             ),
+                            class_name=styles.ui.option_group,
                         ),
-                        class_name=styles.ui.option_group,
+                        class_name=styles.ui.filter_choice_group,
                     ),
-                    class_name=styles.ui.filter_choice_group,
-                ),
-                rx.box(
-                    rx.hstack(
-                        rx.text("Sort by", class_name=styles.ui.filter_group_label),
-                        rx.text(state.active_sort_label, class_name=styles.ui.sort_summary),
-                        class_name=styles.ui.filter_group_header,
-                    ),
-                    rx.grid(
-                        rx.foreach(
-                            state.sort_options,
-                            lambda option: sort_option_button(state, option),
+                    rx.box(
+                        rx.hstack(
+                            rx.text("Sort by", class_name=styles.ui.filter_group_label),
+                            rx.text(
+                                state.active_sort_label,
+                                class_name=styles.ui.sort_summary,
+                            ),
+                            class_name=styles.ui.filter_group_header,
                         ),
-                        class_name=styles.ui.sort_grid,
+                        rx.grid(
+                            rx.foreach(
+                                state.sort_options,
+                                lambda option: sort_option_button(state, option),
+                            ),
+                            class_name=styles.ui.sort_grid,
+                        ),
+                        class_name=styles.ui.filter_sort_group,
                     ),
-                    class_name=styles.ui.filter_sort_group,
+                    class_name=styles.ui.filter_panel_grid,
                 ),
-                class_name=styles.ui.filter_panel_grid,
+                class_name=styles.ui.filter_panel,
             ),
-            class_name=styles.ui.filter_panel,
+            class_name=styles.ui.filter_accordion_inner,
         ),
-        rx.fragment(),
+        class_name=rx.cond(
+            state.filters_open,
+            styles.ui.filter_accordion_open,
+            styles.ui.filter_accordion_closed,
+        ),
     )
 
 

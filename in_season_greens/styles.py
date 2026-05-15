@@ -34,6 +34,13 @@ class ui:
     )
     filter_button_icon = "size-4 text-[#1a7a30]"
     filter_active_dot = "absolute right-2 top-2 size-2 rounded-full bg-[#2db34a]"
+    filter_accordion_open = (
+        "grid grid-rows-[1fr] opacity-100 transition-all duration-300 ease-out"
+    )
+    filter_accordion_closed = (
+        "grid grid-rows-[0fr] opacity-0 transition-all duration-300 ease-out"
+    )
+    filter_accordion_inner = "min-h-0 overflow-hidden"
     filter_panel = "border-t border-[#e2e8df] bg-white px-3 pb-3 pt-3 md:px-4 md:pb-4"
     filter_panel_header = "mb-3 items-center justify-between gap-3"
     filter_panel_title_row = "items-center gap-2"
