@@ -9,7 +9,7 @@ from .components.navigation import (
 )
 from .components.overview import overview_section
 from .components.product_card import product_card
-from .components.ui import product_modal
+from .components.ui import order_select, product_modal
 
 from .state import State
 from .location_state import LocationState
@@ -28,6 +28,7 @@ def catalog() -> rx.Component:
                     class_name=styles.catalog.title,
                 ),
             ),
+            order_select(State),
             class_name=styles.catalog.header,
         ),
         rx.grid(

@@ -7,7 +7,7 @@ class app:
 
 class catalog:
     shell = "mx-auto w-full max-w-[1240px] bg-[#f7f7f5] px-3 py-3.5 pb-14 md:bg-transparent md:px-7 md:py-6"
-    header = "mb-4 items-center justify-between gap-4"
+    header = "mb-4 items-center justify-between gap-3"
     count = "text-[11px] font-black tracking-wider text-[#839084] md:text-[13px]"
     title = "mt-1 hidden text-[28px] font-black leading-tight text-[#151915] md:block"
     grid = "grid grid-cols-2 gap-3 md:grid-cols-[repeat(auto-fill,minmax(230px,1fr))] md:gap-[18px]"
@@ -56,6 +56,15 @@ class ui:
     search_suggestion_copy = "min-w-0 flex-1"
     search_suggestion_name = "truncate text-[13px] font-black text-[#1b211b] md:text-[14px]"
     search_suggestion_category = "text-[10px] font-extrabold uppercase tracking-wide text-[#7a867a]"
+    order_shell = (
+        "shrink-0 items-center gap-2 rounded-lg border border-[#d9e1d6] bg-white "
+        "px-2 py-1.5 shadow-[0_4px_14px_rgba(35,45,35,.08)]"
+    )
+    order_icon = "size-4 shrink-0 text-[#2db34a]"
+    order_select = (
+        "h-8 min-w-[120px] border-0 bg-transparent text-xs font-black text-[#273027] "
+        "outline-none md:min-w-[136px] md:text-[13px]"
+    )
 
 
 class navigation:

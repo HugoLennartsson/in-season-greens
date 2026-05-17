@@ -1,9 +1,13 @@
 import reflex as rx
 from typing import Optional
 from .data import (
+    DEFAULT_PRODUCT_ORDER_KEY,
     get_catalog_label,
+    get_product_order_key,
+    get_product_order_label,
     get_products,
     get_search_suggestions,
+    order_products,
     search_products,
     ProduceItem,
 )
@@ -16,6 +20,7 @@ class State(rx.State):
     menu_open: bool = False
     modal_open: bool = False
     modal_product: Optional[ProduceItem] = None
+    product_order_key: str = DEFAULT_PRODUCT_ORDER_KEY
 
     def open_menu(self):
         self.menu_open = True
@@ -48,6 +53,9 @@ class State(rx.State):
         self.search_query = ""
         self.search_suggestions_open = False
 
+    def set_product_order(self, order_label: str):
+        self.product_order_key = get_product_order_key(order_label)
+
     def open_modal(self, product_id: str):
         for product in self.products:
             if product["id"] == product_id:
@@ -61,7 +69,10 @@ class State(rx.State):
 
     @rx.var
     def filtered_products(self) -> list[ProduceItem]:
-        return search_products(self.search_query, self.products)
+        return order_products(
+            search_products(self.search_query, self.products),
+            self.product_order_key,
+        )
 
     @rx.var
     def search_suggestions(self) -> list[ProduceItem]:
@@ -78,3 +89,7 @@ class State(rx.State):
     @rx.var
     def catalog_label(self) -> str:
         return get_catalog_label(len(self.filtered_products))
+
+    @rx.var
+    def product_order_label(self) -> str:
+        return get_product_order_label(self.product_order_key)

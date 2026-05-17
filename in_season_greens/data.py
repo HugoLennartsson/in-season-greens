@@ -1,7 +1,7 @@
 import json
 import re
 from pathlib import Path
-from typing import TypedDict
+from typing import Any, Callable, TypedDict
 
 
 class NutritionFacts(TypedDict):
@@ -42,6 +42,25 @@ class NavItem(TypedDict):
     subtitle: str
 
 
+class ProductOrderChoice(TypedDict):
+    key: str
+    label: str
+
+
+class ProductOrder:
+    def __init__(
+        self,
+        key: str,
+        label: str,
+        sort_key: Callable[[ProduceItem], Any],
+        reverse: bool = False,
+    ):
+        self.key = key
+        self.label = label
+        self.sort_key = sort_key
+        self.reverse = reverse
+
+
 APP_NAME = "InSeasonGreens"
 MONTHS = [
     "January",
@@ -77,6 +96,27 @@ NAV_ITEMS: list[NavItem] = [
     {"icon": "bookmark", "label": "Saved", "subtitle": "Your saved products"},
     {"icon": "info", "label": "About", "subtitle": "Sources and methodology"},
 ]
+
+
+PRODUCT_ORDER_OPTIONS: tuple[ProductOrder, ...] = (
+    ProductOrder(
+        key="name_asc",
+        label="Name A-Z",
+        sort_key=lambda product: normalize_search_text(product["name_en"]),
+    ),
+    ProductOrder(
+        key="name_desc",
+        label="Name Z-A",
+        sort_key=lambda product: normalize_search_text(product["name_en"]),
+        reverse=True,
+    ),
+)
+DEFAULT_PRODUCT_ORDER_KEY = PRODUCT_ORDER_OPTIONS[0].key
+PRODUCT_ORDER_CHOICES: list[ProductOrderChoice] = [
+    {"key": option.key, "label": option.label} for option in PRODUCT_ORDER_OPTIONS
+]
+PRODUCT_ORDER_LABELS = [option.label for option in PRODUCT_ORDER_OPTIONS]
+
 
 def _load_all_produce() -> list[ProduceItem]:
     with _ALL_PRODUCE_PATH.open(encoding="utf-8") as produce_file:
@@ -154,6 +194,44 @@ def search_products(query: str, products: list[ProduceItem] | None = None) -> li
     ]
     scored_products.sort(key=lambda match: (match[0], match[1]))
     return [product for _, __, product in scored_products]
+
+
+def get_product_order(order_key: str) -> ProductOrder:
+    return next(
+        (
+            option
+            for option in PRODUCT_ORDER_OPTIONS
+            if option.key == order_key or option.label == order_key
+        ),
+        PRODUCT_ORDER_OPTIONS[0],
+    )
+
+
+def get_product_order_label(order_key: str) -> str:
+    return get_product_order(order_key).label
+
+
+def get_product_order_key(order_label: str) -> str:
+    return next(
+        (
+            option.key
+            for option in PRODUCT_ORDER_OPTIONS
+            if option.label == order_label or option.key == order_label
+        ),
+        DEFAULT_PRODUCT_ORDER_KEY,
+    )
+
+
+def order_products(
+    products: list[ProduceItem],
+    order_key: str = DEFAULT_PRODUCT_ORDER_KEY,
+) -> list[ProduceItem]:
+    order = get_product_order(order_key)
+    return sorted(
+        products,
+        key=lambda product: (order.sort_key(product), product["id"]),
+        reverse=order.reverse,
+    )
 
 
 def get_products() -> list[ProduceItem]:

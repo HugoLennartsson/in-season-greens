@@ -1,6 +1,7 @@
 import reflex as rx
 
 from .. import styles
+from ..data import PRODUCT_ORDER_LABELS
 
 
 FILTERS = [
@@ -89,6 +90,20 @@ def search_input(state) -> rx.Component:
             rx.fragment(),
         ),
         class_name=styles.ui.search_shell,
+    )
+
+
+def order_select(state) -> rx.Component:
+    return rx.hstack(
+        app_icon("arrow_up_down", styles.ui.order_icon, 2),
+        rx.select(
+            PRODUCT_ORDER_LABELS,
+            value=state.product_order_label,
+            on_change=state.set_product_order,
+            aria_label="Order products",
+            class_name=styles.ui.order_select,
+        ),
+        class_name=styles.ui.order_shell,
     )
 
 
