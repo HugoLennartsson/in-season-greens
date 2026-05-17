@@ -1,8 +1,8 @@
 import reflex as rx
 
 from .. import styles
-from ..data import APP_NAME, get_nav_items
-from .ui import FILTERS, app_icon, filter_button, hamburger_button, search_input
+from ..data import APP_NAME, PRODUCT_FILTER_CHOICES, get_nav_items
+from .ui import app_icon, filter_button, hamburger_button, search_input
 from ..location_state import LocationState
 
 
@@ -15,7 +15,10 @@ def desktop_header(state) -> rx.Component:
             ),
             search_input(state),
             rx.hstack(
-                *[filter_button(label, key) for key, label in FILTERS],
+                *[
+                    filter_button(choice["label"], choice["key"], state)
+                    for choice in PRODUCT_FILTER_CHOICES
+                ],
                 class_name=styles.navigation.desktop_filters,
             ),
             hamburger_button(state.open_menu),
@@ -44,7 +47,10 @@ def mobile_sticky_filters(state) -> rx.Component:
     return rx.box(
         search_input(state),
         rx.hstack(
-            *[filter_button(label, key) for key, label in FILTERS],
+            *[
+                filter_button(choice["label"], choice["key"], state)
+                for choice in PRODUCT_FILTER_CHOICES
+            ],
             class_name=styles.navigation.mobile_filter_row,
         ),
         class_name=styles.navigation.mobile_filters,

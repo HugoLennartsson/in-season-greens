@@ -47,6 +47,11 @@ class ProductOrderChoice(TypedDict):
     label: str
 
 
+class ProductFilterChoice(TypedDict):
+    key: str
+    label: str
+
+
 class ProductOrder:
     def __init__(
         self,
@@ -59,6 +64,13 @@ class ProductOrder:
         self.label = label
         self.sort_key = sort_key
         self.reverse = reverse
+
+
+class ProductFilter:
+    def __init__(self, key: str, label: str, categories: tuple[str, ...] = ()):
+        self.key = key
+        self.label = label
+        self.categories = categories
 
 
 APP_NAME = "InSeasonGreens"
@@ -116,6 +128,16 @@ PRODUCT_ORDER_CHOICES: list[ProductOrderChoice] = [
     {"key": option.key, "label": option.label} for option in PRODUCT_ORDER_OPTIONS
 ]
 PRODUCT_ORDER_LABELS = [option.label for option in PRODUCT_ORDER_OPTIONS]
+
+PRODUCT_FILTER_OPTIONS: tuple[ProductFilter, ...] = (
+    ProductFilter(key="all", label="All"),
+    ProductFilter(key="fruit", label="Fruits", categories=("fruit",)),
+    ProductFilter(key="vegetable", label="Vegetables", categories=("vegetable",)),
+)
+DEFAULT_PRODUCT_FILTER_KEY = PRODUCT_FILTER_OPTIONS[0].key
+PRODUCT_FILTER_CHOICES: list[ProductFilterChoice] = [
+    {"key": option.key, "label": option.label} for option in PRODUCT_FILTER_OPTIONS
+]
 
 
 def _load_all_produce() -> list[ProduceItem]:
@@ -194,6 +216,28 @@ def search_products(query: str, products: list[ProduceItem] | None = None) -> li
     ]
     scored_products.sort(key=lambda match: (match[0], match[1]))
     return [product for _, __, product in scored_products]
+
+
+def get_product_filter(filter_key: str) -> ProductFilter:
+    return next(
+        (option for option in PRODUCT_FILTER_OPTIONS if option.key == filter_key),
+        PRODUCT_FILTER_OPTIONS[0],
+    )
+
+
+def filter_products(
+    products: list[ProduceItem],
+    filter_key: str = DEFAULT_PRODUCT_FILTER_KEY,
+) -> list[ProduceItem]:
+    product_filter = get_product_filter(filter_key)
+    if not product_filter.categories:
+        return products
+
+    return [
+        product
+        for product in products
+        if product["category"].lower() in product_filter.categories
+    ]
 
 
 def get_product_order(order_key: str) -> ProductOrder:

@@ -1,4 +1,5 @@
 from in_season_greens.data import (
+    filter_products,
     fuzzy_search_score,
     get_search_suggestions,
     order_products,
@@ -43,6 +44,23 @@ def test_product_order_can_sort_by_name_ascending_and_descending():
         "Banana",
         "Apple",
     ]
+
+
+def test_product_filter_can_select_fruits_and_vegetables():
+    products = [
+        {"id": "apple", "name_en": "Apple", "category": "fruit", "nutrients": []},
+        {"id": "carrot", "name_en": "Carrot", "category": "vegetable", "nutrients": []},
+        {"id": "banana", "name_en": "Banana", "category": "fruit", "nutrients": []},
+    ]
+
+    assert [product["name_en"] for product in filter_products(products, "fruit")] == [
+        "Apple",
+        "Banana",
+    ]
+    assert [product["name_en"] for product in filter_products(products, "vegetable")] == [
+        "Carrot",
+    ]
+    assert filter_products(products, "all") == products
 
 
 def test_fuzzy_search_ignores_spaces_and_punctuation():
@@ -96,6 +114,16 @@ def test_state_orders_filtered_products_by_selected_order():
     assert state.product_order_key == "name_desc"
     assert state.product_order_label == "Name Z-A"
     assert state.filtered_products[0]["name_en"] == "Zucchini"
+
+
+def test_state_filters_products_by_selected_category():
+    state = State(_reflex_internal_init=True)
+
+    state.set_product_filter("vegetable")
+
+    assert state.product_filter_key == "vegetable"
+    assert state.filtered_products
+    assert {product["category"] for product in state.filtered_products} == {"vegetable"}
 
 
 def test_open_modal_selects_product_by_id():

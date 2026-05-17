@@ -4,14 +4,6 @@ from .. import styles
 from ..data import PRODUCT_ORDER_LABELS
 
 
-FILTERS = [
-    ("all", "All"),
-    ("peak", "Peak"),
-    ("season", "In Season"),
-    ("out", "Out of Season"),
-]
-
-
 def app_icon(tag: str, class_name: str = "size-4", stroke_width: int = 2) -> rx.Component:
     return rx.icon(tag=tag, stroke_width=stroke_width, class_name=class_name)
 
@@ -27,10 +19,15 @@ def hamburger_button(on_click) -> rx.Component:
     )
 
 
-def filter_button(label: str, key: str) -> rx.Component:
+def filter_button(label: str, key: str, state) -> rx.Component:
     return rx.button(
         label,
-        class_name=styles.ui.filter_active if key == "all" else styles.ui.filter_inactive,
+        on_click=state.set_product_filter(key),
+        class_name=rx.cond(
+            state.product_filter_key == key,
+            styles.ui.filter_active,
+            styles.ui.filter_inactive,
+        ),
     )
 
 
