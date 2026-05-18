@@ -87,6 +87,7 @@ class Country(str, Enum):
     EE = "Estonia"
     EG = "Egypt"
     ES = "Spain"
+    ET = "Ethiopia"
     FI = "Finland"
     FJ = "Fiji"
     FR = "France"
