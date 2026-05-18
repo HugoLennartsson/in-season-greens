@@ -17,7 +17,6 @@ def product_image_src(product_id) -> str | rx.Var:
 def status_label(status) -> rx.Component:
     return rx.match(
         status,
-        ("peak", "PEAK SEASON"),
         ("season", "IN SEASON"),
         ("soon", "COMING SOON"),
         ("unknown", "UNKNOWN"),

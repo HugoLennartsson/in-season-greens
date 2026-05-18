@@ -46,7 +46,6 @@ class ProduceItem(TypedDict):
     season_months: list[int]
     season_status: str
     season_label: str
-    peak_label: str
     nutrients: list[NutritionFacts]
 
 
@@ -154,7 +153,6 @@ CATEGORY_FILTER_OPTIONS: list[FilterOption] = [
     {"value": "vegetable", "label": "Vegetable"},
 ]
 SEASON_FILTER_OPTIONS: list[FilterOption] = [
-    {"value": "peak", "label": "Peak season"},
     {"value": "season", "label": "In season"},
     {"value": "soon", "label": "Coming soon"},
     {"value": "out", "label": "Out of season"},

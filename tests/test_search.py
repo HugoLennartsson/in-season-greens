@@ -86,13 +86,13 @@ def test_multi_filters_combine_categories_countries_and_seasons():
         get_products(),
         country_filters=["SE"],
         category_filters=["vegetable"],
-        season_filters=["season", "peak"],
+        season_filters=["season"],
     )
 
     assert products
     assert all("SE" in product["countries"] for product in products)
     assert all(product["category"] == "vegetable" for product in products)
-    assert all(product["season_status"] in {"season", "peak"} for product in products)
+    assert all(product["season_status"] == "season" for product in products)
 
 
 def test_season_status_coming_soon_checks_next_two_months():

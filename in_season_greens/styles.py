@@ -265,7 +265,6 @@ class product_card:
     def image(status) -> rx.Component:
         return rx.match(
             status,
-            ("peak", "relative m-2 aspect-square overflow-hidden rounded-lg bg-[#3dcc56]"),
             ("season", "relative m-2 aspect-square overflow-hidden rounded-lg bg-[#7dd89a]"),
             ("soon", "relative m-2 aspect-square overflow-hidden rounded-lg bg-[#f0bc50]"),
             ("relative m-2 aspect-square overflow-hidden rounded-lg bg-[#d0cdc8]"),
@@ -275,7 +274,6 @@ class product_card:
     def badge(status) -> rx.Component:
         return rx.match(
             status,
-            ("peak", "absolute left-2 top-2 rounded-lg bg-[#2db34a] px-2 py-1 text-[9px] font-black tracking-wide text-white"),
             ("season", "absolute left-2 top-2 rounded-lg bg-[#5bc27a] px-2 py-1 text-[9px] font-black tracking-wide text-white"),
             ("soon", "absolute left-2 top-2 rounded-lg bg-[#e8a020] px-2 py-1 text-[9px] font-black tracking-wide text-white"),
             ("absolute left-2 top-2 rounded-lg bg-[#e03535] px-2 py-1 text-[9px] font-black tracking-wide text-white"),

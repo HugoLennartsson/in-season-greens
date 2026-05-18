@@ -428,7 +428,6 @@ def product_modal(state) -> rx.Component:
                         rx.heading("Season and sourcing", class_name="mb-3 text-lg font-black text-[#151915]"),
                         rx.grid(
                             product_fact("Season", product["season_label"]),
-                            product_fact("Peak", product["peak_label"]),
                             product_fact("Lowest emissions", product["best_country_name"]),
                             product_fact("Countries", product["countries_label"]),
                             class_name="grid grid-cols-1 gap-2 md:grid-cols-2",
