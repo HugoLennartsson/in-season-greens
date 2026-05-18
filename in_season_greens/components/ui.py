@@ -3,14 +3,6 @@ import reflex as rx
 from .. import styles
 
 
-FILTERS = [
-    ("all", "All"),
-    ("peak", "Peak"),
-    ("season", "In Season"),
-    ("out", "Out of Season"),
-]
-
-
 def app_icon(tag: str, class_name: str = "size-4", stroke_width: int = 2) -> rx.Component:
     return rx.icon(tag=tag, stroke_width=stroke_width, class_name=class_name)
 
@@ -26,10 +18,238 @@ def hamburger_button(on_click) -> rx.Component:
     )
 
 
-def filter_button(label: str, key: str) -> rx.Component:
+def filter_toggle_button(state) -> rx.Component:
     return rx.button(
-        label,
-        class_name=styles.ui.filter_active if key == "all" else styles.ui.filter_inactive,
+        app_icon("sliders-horizontal", styles.ui.filter_button_icon, 2),
+        rx.cond(state.filters_open, "Hide filters", "Filter"),
+        rx.cond(
+            state.has_active_filters,
+            rx.box(class_name=styles.ui.filter_active_dot),
+            rx.fragment(),
+        ),
+        on_click=state.toggle_filters,
+        aria_label="Open filters",
+        class_name=styles.ui.filter_button,
+    )
+
+
+def selected_country_chip(state, country) -> rx.Component:
+    return rx.button(
+        rx.text(country["label"], class_name=styles.ui.selected_chip_text),
+        app_icon("x", styles.ui.selected_chip_icon, 2),
+        on_click=state.remove_country_filter(country["value"]),
+        class_name=styles.ui.selected_chip,
+    )
+
+
+def local_only_button(state) -> rx.Component:
+    return rx.button(
+        rx.cond(
+            state.local_only,
+            app_icon("check", styles.ui.local_only_icon_active, 2),
+            app_icon("map_pin", styles.ui.local_only_icon, 2),
+        ),
+        rx.box(
+            rx.text("Show local only", class_name=styles.ui.local_only_title),
+            rx.text(
+                state.local_country_label,
+                class_name=rx.cond(
+                    state.local_only,
+                    styles.ui.local_only_meta_active,
+                    styles.ui.local_only_meta,
+                ),
+            ),
+            class_name=styles.ui.local_only_copy,
+        ),
+        on_click=state.toggle_local_only,
+        class_name=rx.cond(
+            state.local_only,
+            styles.ui.local_only_button_active,
+            styles.ui.local_only_button,
+        ),
+    )
+
+
+def country_option_button(state, country) -> rx.Component:
+    return rx.button(
+        rx.cond(
+            country["selected"],
+            app_icon("check", styles.ui.country_option_icon_active, 2),
+            app_icon("plus", styles.ui.country_option_icon, 2),
+        ),
+        rx.text(country["label"], class_name=styles.ui.country_option_text),
+        on_click=state.toggle_country_filter(country["value"]),
+        class_name=rx.cond(
+            country["selected"],
+            styles.ui.country_option_active,
+            styles.ui.country_option,
+        ),
+    )
+
+
+def multi_option_button(state, option, on_click) -> rx.Component:
+    return rx.button(
+        rx.cond(
+            option["selected"],
+            app_icon("check", styles.ui.option_icon_active, 2),
+            rx.fragment(),
+        ),
+        option["label"],
+        on_click=on_click(option["value"]),
+        class_name=rx.cond(
+            option["selected"],
+            styles.ui.option_button_active,
+            styles.ui.option_button,
+        ),
+    )
+
+
+def sort_option_button(state, option) -> rx.Component:
+    return rx.button(
+        rx.box(
+            rx.text(option["label"], class_name=styles.ui.sort_option_label),
+            rx.text(
+                rx.match(
+                    option["direction"],
+                    ("asc", "ASC"),
+                    ("desc", "DESC"),
+                    ("SORT"),
+                ),
+                class_name=rx.cond(
+                    option["direction"] != "",
+                    styles.ui.sort_option_state_active,
+                    styles.ui.sort_option_state,
+                ),
+            ),
+            class_name=styles.ui.sort_option_copy,
+        ),
+        on_click=state.toggle_sort(option["value"]),
+        class_name=rx.cond(
+            option["direction"] != "",
+            styles.ui.sort_option_active,
+            styles.ui.sort_option,
+        ),
+    )
+
+
+def filter_expansion(state) -> rx.Component:
+    return rx.box(
+        rx.box(
+            rx.box(
+                rx.hstack(
+                    rx.hstack(
+                        app_icon("sliders-horizontal", styles.ui.filter_panel_icon, 2),
+                        rx.text(
+                            "Product filters",
+                            class_name=styles.ui.filter_panel_title,
+                        ),
+                        class_name=styles.ui.filter_panel_title_row,
+                    ),
+                    rx.cond(
+                        state.has_active_filters,
+                        rx.button(
+                            app_icon("rotate-ccw", styles.ui.filter_reset_icon, 2),
+                            "Reset",
+                            on_click=state.clear_filters,
+                            class_name=styles.ui.filter_reset_button,
+                        ),
+                        rx.fragment(),
+                    ),
+                    class_name=styles.ui.filter_panel_header,
+                ),
+                rx.grid(
+                    rx.box(
+                        rx.hstack(
+                            rx.text("Countries", class_name=styles.ui.filter_group_label),
+                            rx.button(
+                                "Clear selection",
+                                on_click=state.clear_country_filters,
+                                class_name=styles.ui.filter_clear_button,
+                            ),
+                            class_name=styles.ui.filter_group_header,
+                        ),
+                        local_only_button(state),
+                        rx.input(
+                            value=state.country_search_query,
+                            on_change=state.set_country_search_query,
+                            placeholder="Search countries...",
+                            class_name=styles.ui.country_search_input,
+                        ),
+                        rx.flex(
+                            rx.foreach(
+                                state.selected_country_options,
+                                lambda country: selected_country_chip(state, country),
+                            ),
+                            class_name=styles.ui.selected_chips,
+                        ),
+                        rx.box(
+                            rx.foreach(
+                                state.country_options,
+                                lambda country: country_option_button(state, country),
+                            ),
+                            class_name=styles.ui.country_options,
+                        ),
+                        class_name=styles.ui.filter_country_group,
+                    ),
+                    rx.box(
+                        rx.text("Category", class_name=styles.ui.filter_group_label),
+                        rx.flex(
+                            rx.foreach(
+                                state.category_options,
+                                lambda option: multi_option_button(
+                                    state,
+                                    option,
+                                    state.toggle_category_filter,
+                                ),
+                            ),
+                            class_name=styles.ui.option_group,
+                        ),
+                        rx.text(
+                            "Season",
+                            class_name=styles.ui.filter_group_label_spaced,
+                        ),
+                        rx.flex(
+                            rx.foreach(
+                                state.season_options,
+                                lambda option: multi_option_button(
+                                    state,
+                                    option,
+                                    state.toggle_season_filter,
+                                ),
+                            ),
+                            class_name=styles.ui.option_group,
+                        ),
+                        class_name=styles.ui.filter_choice_group,
+                    ),
+                    rx.box(
+                        rx.hstack(
+                            rx.text("Sort by", class_name=styles.ui.filter_group_label),
+                            rx.text(
+                                state.active_sort_label,
+                                class_name=styles.ui.sort_summary,
+                            ),
+                            class_name=styles.ui.filter_group_header,
+                        ),
+                        rx.grid(
+                            rx.foreach(
+                                state.sort_options,
+                                lambda option: sort_option_button(state, option),
+                            ),
+                            class_name=styles.ui.sort_grid,
+                        ),
+                        class_name=styles.ui.filter_sort_group,
+                    ),
+                    class_name=styles.ui.filter_panel_grid,
+                ),
+                class_name=styles.ui.filter_panel,
+            ),
+            class_name=styles.ui.filter_accordion_inner,
+        ),
+        class_name=rx.cond(
+            state.filters_open,
+            styles.ui.filter_accordion_open,
+            styles.ui.filter_accordion_closed,
+        ),
     )
 
 
@@ -134,6 +354,16 @@ def product_modal(state) -> rx.Component:
             class_name="rounded-lg border border-[#e0e5dc] bg-[#f7f9f5] px-3 py-2",
         )
 
+    def product_fact(label: str, value) -> rx.Component:
+        return rx.box(
+            rx.text(label, class_name="text-[10px] font-black uppercase tracking-wide text-[#728072]"),
+            rx.text(
+                value,
+                class_name="break-words text-sm font-black leading-snug text-[#151915]",
+            ),
+            class_name="rounded-lg border border-[#e0e5dc] bg-white px-3 py-2",
+        )
+
     def nutrient_panel(nutrient) -> rx.Component:
         return rx.grid(
             nutrition_fact("Calories", nutrient["calories"], "kcal"),
@@ -193,6 +423,16 @@ def product_modal(state) -> rx.Component:
                             class_name="h-full w-full object-cover",
                         ),
                         class_name="mt-6 aspect-[16/9] overflow-hidden rounded-lg bg-[#dfe8dc]",
+                    ),
+                    rx.box(
+                        rx.heading("Season and sourcing", class_name="mb-3 text-lg font-black text-[#151915]"),
+                        rx.grid(
+                            product_fact("Season", product["season_label"]),
+                            product_fact("Lowest emissions", product["best_country_name"]),
+                            product_fact("Countries", product["countries_label"]),
+                            class_name="grid grid-cols-1 gap-2 md:grid-cols-2",
+                        ),
+                        class_name="mt-6",
                     ),
                     rx.box(
                         rx.heading("Nutrition per 100g", class_name="mb-3 text-lg font-black text-[#151915]"),

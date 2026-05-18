@@ -27,6 +27,104 @@ class ui:
         "shrink-0 rounded-lg border border-[#dce3d9] bg-white px-3 py-2 "
         "text-xs font-black text-[#4f5b50] hover:bg-[#f7f9f5] md:px-3.5 md:text-[13px]"
     )
+    filter_button = (
+        "relative flex h-10 shrink-0 items-center justify-center gap-1.5 rounded-lg "
+        "border border-[#d9e1d6] bg-[#f7f9f5] px-3 text-xs font-black text-[#233024] "
+        "hover:bg-white md:h-[46px] md:px-4 md:text-[13px]"
+    )
+    filter_button_icon = "size-4 text-[#1a7a30]"
+    filter_active_dot = "absolute right-2 top-2 size-2 rounded-full bg-[#2db34a]"
+    filter_accordion_open = (
+        "grid grid-rows-[1fr] opacity-100 transition-all duration-300 ease-out"
+    )
+    filter_accordion_closed = (
+        "grid grid-rows-[0fr] opacity-0 transition-all duration-300 ease-out"
+    )
+    filter_accordion_inner = "min-h-0 overflow-hidden"
+    filter_panel = "border-t border-[#e2e8df] bg-white px-3 pb-3 pt-3 md:px-4 md:pb-4"
+    filter_panel_header = "mb-3 items-center justify-between gap-3"
+    filter_panel_title_row = "items-center gap-2"
+    filter_panel_icon = "size-4 text-[#1a7a30]"
+    filter_panel_title = "text-[13px] font-black uppercase tracking-wide text-[#3f4d40]"
+    filter_panel_grid = (
+        "grid grid-cols-1 gap-4 lg:grid-cols-[minmax(280px,1.1fr)_minmax(220px,.8fr)_minmax(320px,1fr)]"
+    )
+    filter_group_header = "items-center justify-between gap-3"
+    filter_group_label = "text-[11px] font-black uppercase tracking-wide text-[#728072]"
+    filter_group_label_spaced = "mt-4 text-[11px] font-black uppercase tracking-wide text-[#728072]"
+    filter_country_group = "min-w-0"
+    filter_choice_group = "min-w-0"
+    filter_sort_group = "min-w-0"
+    filter_clear_button = (
+        "rounded-lg border border-[#d9e1d6] bg-[#f7f9f5] px-2.5 py-1.5 "
+        "text-[11px] font-black text-[#4f5b50] hover:bg-white"
+    )
+    filter_reset_icon = "size-4 text-[#4f5b50]"
+    filter_reset_button = (
+        "flex shrink-0 items-center justify-center gap-1.5 rounded-lg border border-[#d9e1d6] "
+        "bg-[#f7f9f5] px-3 py-1.5 text-[11px] font-black text-[#4f5b50] hover:bg-white"
+    )
+    local_only_button = (
+        "mt-2 flex min-h-12 w-full items-center gap-2 rounded-lg border border-[#d9e1d6] "
+        "bg-[#f7f9f5] px-3 py-2 text-left text-[#3f4d40] hover:bg-white"
+    )
+    local_only_button_active = (
+        "mt-2 flex min-h-12 w-full items-center gap-2 rounded-lg border border-[#2db34a] "
+        "bg-[#2db34a] px-3 py-2 text-left text-white hover:bg-[#24943d]"
+    )
+    local_only_icon = "size-4 shrink-0 text-[#1a7a30]"
+    local_only_icon_active = "size-4 shrink-0 text-white"
+    local_only_copy = "min-w-0"
+    local_only_title = "truncate text-[13px] font-black"
+    local_only_meta = "truncate text-[11px] font-bold text-[#7a867a]"
+    local_only_meta_active = "truncate text-[11px] font-bold text-[#d9f5df]"
+    country_search_input = (
+        "mt-2 h-9 w-full rounded-lg border border-[#d9e1d6] bg-[#f7f9f5] "
+        "px-3 text-[13px] font-bold text-[#1b211b] outline-none placeholder:text-[#8a948a]"
+    )
+    selected_chips = "mt-2 min-h-8 flex-wrap gap-1.5"
+    selected_chip = (
+        "flex max-w-full items-center gap-1 rounded-lg border border-[#b7dfbd] bg-[#e6f7ea] "
+        "px-2 py-1 text-[11px] font-black text-[#164f26] hover:bg-[#d8f0dd]"
+    )
+    selected_chip_text = "truncate"
+    selected_chip_icon = "size-3 text-[#164f26]"
+    country_options = (
+        "mt-2 grid max-h-44 grid-cols-2 gap-1.5 overflow-y-auto pr-1 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3"
+    )
+    country_option = (
+        "flex min-h-8 items-center justify-start gap-1.5 rounded-lg border border-[#d9e1d6] "
+        "bg-[#f7f9f5] px-2 py-1 text-left text-[#3f4d40] hover:bg-white"
+    )
+    country_option_active = (
+        "flex min-h-8 items-center justify-start gap-1.5 rounded-lg border border-[#2db34a] "
+        "bg-[#2db34a] px-2 py-1 text-left text-white hover:bg-[#24943d]"
+    )
+    country_option_icon = "size-3.5 shrink-0 text-[#778477]"
+    country_option_icon_active = "size-3.5 shrink-0 text-white"
+    country_option_text = "truncate text-[11px] font-black"
+    option_group = "mt-2 flex-wrap gap-1.5"
+    option_button = (
+        "flex items-center gap-1 rounded-lg border border-[#d9e1d6] bg-[#f7f9f5] "
+        "px-3 py-2 text-[12px] font-black text-[#3f4d40] hover:bg-white"
+    )
+    option_button_active = (
+        "flex items-center gap-1 rounded-lg border border-[#2db34a] bg-[#2db34a] "
+        "px-3 py-2 text-[12px] font-black text-white hover:bg-[#24943d]"
+    )
+    option_icon_active = "size-3.5 text-white"
+    sort_summary = "truncate text-[11px] font-bold text-[#7a867a]"
+    sort_grid = "mt-2 grid grid-cols-2 gap-1.5 sm:grid-cols-3"
+    sort_option = (
+        "min-h-12 rounded-lg border border-[#d9e1d6] bg-[#f7f9f5] p-2 text-left text-[#3f4d40] hover:bg-white"
+    )
+    sort_option_active = (
+        "min-h-12 rounded-lg border border-[#164f26] bg-[#164f26] p-2 text-left text-white hover:bg-[#123f20]"
+    )
+    sort_option_copy = "w-full"
+    sort_option_label = "truncate text-[12px] font-black"
+    sort_option_state = "mt-0.5 text-[9px] font-black uppercase tracking-wide text-[#7a867a]"
+    sort_option_state_active = "mt-0.5 text-[9px] font-black uppercase tracking-wide text-[#a8e6ba]"
     search_clear_icon = "size-4 text-[#667166]"
     search_clear_button = (
         "absolute right-12 top-1/2 flex size-8 -translate-y-1/2 items-center "
@@ -64,8 +162,8 @@ class navigation:
         "shadow-[0_8px_28px_rgba(28,45,30,.08)] backdrop-blur md:block"
     )
     desktop_inner = (
-        "grid w-full grid-cols-[max-content_minmax(0,1fr)_max-content] items-center gap-3 "
-        "px-4 py-2.5 lg:grid-cols-[max-content_minmax(0,1fr)_max-content_max-content]"
+        "grid w-full grid-cols-[max-content_minmax(0,1fr)_max-content_max-content] items-center gap-3 "
+        "px-4 py-2.5"
     )
     desktop_logo = "whitespace-nowrap text-[23px] font-black leading-none text-[#123d1d]"
     desktop_filters = "hidden gap-2 overflow-x-auto lg:flex"
@@ -75,6 +173,7 @@ class navigation:
     mobile_logo_icon = "size-[17px] text-[#1a7a30]"
     mobile_logo = "text-[15px] font-black text-[#123d1d]"
     mobile_filters = "sticky top-12 z-10 border-b border-[#e8e8e8] bg-white px-3 py-2 shadow-[0_2px_12px_rgba(0,0,0,.07)] md:hidden"
+    mobile_search_row = "items-center gap-2"
     mobile_filter_row = "mt-2 gap-1.5 overflow-x-auto"
     drawer_overlay = "fixed inset-0 z-30 bg-black/35"
     drawer_open = (
@@ -144,6 +243,7 @@ class product_card:
     month_current = "bg-[#2db34a] text-white"
     month_default = "bg-[#e0e0e0] text-[#666]"
     month_missing = "mb-1.5 text-[10px] font-bold italic text-[#999]"
+    season_label = "mb-1.5 text-[10px] font-black uppercase tracking-wide text-[#6b766c]"
     origin_icon_local = "shrink-0 size-3.5 text-[#1a7a30]"
     origin_icon_far = "shrink-0 size-3.5 text-[#e03535]"
     origin_box_local = "mb-1.5 items-center gap-1 rounded-lg bg-[#e6f7ea] px-1.5 py-1.5"
@@ -165,7 +265,6 @@ class product_card:
     def image(status) -> rx.Component:
         return rx.match(
             status,
-            ("peak", "relative m-2 aspect-square overflow-hidden rounded-lg bg-[#3dcc56]"),
             ("season", "relative m-2 aspect-square overflow-hidden rounded-lg bg-[#7dd89a]"),
             ("soon", "relative m-2 aspect-square overflow-hidden rounded-lg bg-[#f0bc50]"),
             ("relative m-2 aspect-square overflow-hidden rounded-lg bg-[#d0cdc8]"),
@@ -175,7 +274,6 @@ class product_card:
     def badge(status) -> rx.Component:
         return rx.match(
             status,
-            ("peak", "absolute left-2 top-2 rounded-lg bg-[#2db34a] px-2 py-1 text-[9px] font-black tracking-wide text-white"),
             ("season", "absolute left-2 top-2 rounded-lg bg-[#5bc27a] px-2 py-1 text-[9px] font-black tracking-wide text-white"),
             ("soon", "absolute left-2 top-2 rounded-lg bg-[#e8a020] px-2 py-1 text-[9px] font-black tracking-wide text-white"),
             ("absolute left-2 top-2 rounded-lg bg-[#e03535] px-2 py-1 text-[9px] font-black tracking-wide text-white"),

@@ -17,7 +17,6 @@ def product_image_src(product_id) -> str | rx.Var:
 def status_label(status) -> rx.Component:
     return rx.match(
         status,
-        ("peak", "PEAK SEASON"),
         ("season", "IN SEASON"),
         ("soon", "COMING SOON"),
         ("unknown", "UNKNOWN"),
@@ -25,8 +24,26 @@ def status_label(status) -> rx.Component:
     )
 
 
+def origin_icon_class(country_code, local_country_code="SE"):
+    return rx.cond(
+        country_code == local_country_code,
+        styles.product_card.origin_icon_local,
+        styles.product_card.origin_icon_far,
+    )
+
+
+def origin_box_class(country_code, local_country_code="SE"):
+    return rx.cond(
+        country_code == local_country_code,
+        styles.product_card.origin_box_local,
+        styles.product_card.origin_box_far,
+    )
+
+
 def product_card(product, state=None) -> rx.Component:
-    status = "unknown"
+    status = product["season_status"]
+    nutrient = product["nutrients"][0]
+    local_country_code = state.user_country_code if state else "SE"
 
     return rx.box(
         rx.box(
@@ -44,36 +61,49 @@ def product_card(product, state=None) -> rx.Component:
         rx.box(
             rx.heading(product["name_en"], class_name=styles.product_card.title),
             rx.text(
-                "Season months unknown",
-                class_name=styles.product_card.month_missing,
+                product["season_label"],
+                class_name=styles.product_card.season_label,
             ),
             rx.hstack(
                 app_icon(
                     "map_pin",
-                    styles.product_card.origin_icon_far,
+                    origin_icon_class(product["best_country_code"], local_country_code),
                     3,
                 ),
                 rx.box(
                     rx.text(
-                        "Origin unknown",
+                        product["best_country_name"],
                         class_name=styles.product_card.origin_title,
                     ),
                     rx.text(
-                        "Unknown Carbon Footprint",
+                        "Lowest emissions origin",
                         class_name=styles.product_card.carbon_label,
                     ),
                     class_name=styles.product_card.origin_copy,
                 ),
                 rx.box(
-                    rx.text("??? kg CO2e"),
+                    rx.text(product["carbon_label"]),
                     rx.text("/ kg"),
                     class_name=styles.product_card.carbon_value,
                 ),
-                class_name=styles.product_card.origin_box_far,
+                class_name=origin_box_class(
+                    product["best_country_code"],
+                    local_country_code,
+                ),
             ),
             rx.flex(
                 rx.box(
-                    "???",
+                    "100g",
+                    class_name=styles.product_card.nutrient,
+                ),
+                rx.box(
+                    nutrient["calories"],
+                    " kcal",
+                    class_name=styles.product_card.nutrient,
+                ),
+                rx.box(
+                    nutrient["fiber_g"],
+                    "g fiber",
                     class_name=styles.product_card.nutrient,
                 ),
                 class_name=styles.product_card.nutrients,
