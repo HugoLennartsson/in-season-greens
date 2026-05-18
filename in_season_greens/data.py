@@ -44,7 +44,6 @@ class ProduceItem(TypedDict):
     carbon_kg: float
     carbon_label: str
     season_months: list[int]
-    peak_months: list[int]
     season_status: str
     season_label: str
     peak_label: str
@@ -333,13 +332,10 @@ def _next_months(month: int, count: int = 2) -> set[int]:
 
 def get_season_status(
     season_months: list[int],
-    peak_months: list[int],
     month: int = CURRENT_MONTH,
 ) -> str:
     if not season_months:
         return "unknown"
-    if month in peak_months:
-        return "peak"
     if month in season_months:
         return "season"
     if _next_months(month) & set(season_months):
@@ -433,8 +429,7 @@ def _with_derived_fields(
     user_lon: float | None = None,
 ) -> ProduceItem:
     countries = item.get("countries", [])
-    season_months = item.get("season_months", [])
-    peak_months = item.get("peak_months", [])
+    season_months = item.get("month", [])
     best_code, best_name, carbon_kg = fetch_lowest_emission_origin(
         countries,
         user_lat,
@@ -449,10 +444,8 @@ def _with_derived_fields(
     product["carbon_kg"] = carbon_kg
     product["carbon_label"] = f"{carbon_kg:.2f} kg CO2e" if carbon_kg else "CO2 unavailable"
     product["season_months"] = season_months
-    product["peak_months"] = peak_months
-    product["season_status"] = get_season_status(season_months, peak_months)
+    product["season_status"] = get_season_status(season_months)
     product["season_label"] = format_month_window(season_months)
-    product["peak_label"] = format_month_window(peak_months) if peak_months else "No peak window"
     return product
 
 

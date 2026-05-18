@@ -16,16 +16,7 @@
             "ID",
             "AU"
         ],
-        "season_months": [
-            8,
-            9,
-            10,
-            11
-        ],
-        "peak_months": [
-            9,
-            10
-        ],
+"month": [1, 2, 3, 4],
         "nutrients": [
             {
                 "calories": 94.0,
@@ -69,20 +60,7 @@
             "SE",
             "GB"
         ],
-        "season_months": [
-            8,
-            9,
-            10,
-            11,
-            12,
-            1,
-            2,
-            3
-        ],
-        "peak_months": [
-            9,
-            10
-        ],
+"month": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
         "nutrients": [
             {
                 "calories": 53.0,
@@ -119,14 +97,7 @@
             "MA",
             "ZA"
         ],
-        "season_months": [
-            6,
-            7,
-            8
-        ],
-        "peak_months": [
-            7
-        ],
+"month": [5, 6, 7, 8, 9],
         "nutrients": [
             {
                 "calories": 48.3,
@@ -162,21 +133,7 @@
             "IL",
             "MA"
         ],
-        "season_months": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12
-        ],
-        "peak_months": [],
+"month": [9, 10, 11, 12, 1, 2, 3, 4],
         "nutrients": [
             {
                 "calories": 167.2,
@@ -219,21 +176,7 @@
             "TZ",
             "AU"
         ],
-        "season_months": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12
-        ],
-        "peak_months": [],
+"month": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
         "nutrients": [
             {
                 "calories": 89.4,
@@ -268,14 +211,7 @@
             "RO",
             "SE"
         ],
-        "season_months": [
-            7,
-            8,
-            9
-        ],
-        "peak_months": [
-            8
-        ],
+"month": [7, 8, 9, 10],
         "nutrients": [
             {
                 "calories": 44.0,
@@ -314,15 +250,7 @@
             "AU",
             "MA"
         ],
-        "season_months": [
-            7,
-            8,
-            9
-        ],
-        "peak_months": [
-            7,
-            8
-        ],
+"month": [7, 8, 9],
         "nutrients": [
             {
                 "calories": 56.2,
@@ -353,14 +281,7 @@
             "BR",
             "CO"
         ],
-        "season_months": [
-            8,
-            9,
-            10
-        ],
-        "peak_months": [
-            9
-        ],
+"month": [1, 2, 3, 4, 5],
         "nutrients": [
             {
                 "calories": 44.1,
@@ -399,14 +320,7 @@
             "CN",
             "SE"
         ],
-        "season_months": [
-            6,
-            7,
-            8
-        ],
-        "peak_months": [
-            7
-        ],
+"month": [5, 6, 7, 8],
         "nutrients": [
             {
                 "calories": 63.8,
@@ -437,16 +351,7 @@
             "LV",
             "BY"
         ],
-        "season_months": [
-            9,
-            10,
-            11,
-            12
-        ],
-        "peak_months": [
-            10,
-            11
-        ],
+"month": [9, 10, 11],
         "nutrients": [
             {
                 "calories": 45.4,
@@ -481,19 +386,7 @@
             "IL",
             "AU"
         ],
-        "season_months": [
-            6,
-            7,
-            8,
-            9,
-            10,
-            11
-        ],
-        "peak_months": [
-            7,
-            8,
-            9
-        ],
+"month": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
         "nutrients": [
             {
                 "calories": 31.3,
@@ -526,16 +419,7 @@
             "LK",
             "AU"
         ],
-        "season_months": [
-            6,
-            7,
-            8,
-            9
-        ],
-        "peak_months": [
-            7,
-            8
-        ],
+"month": [5, 6, 7, 8, 9],
         "nutrients": [
             {
                 "calories": 151.1,
@@ -569,17 +453,7 @@
             "ES",
             "PT"
         ],
-        "season_months": [
-            3,
-            4,
-            5,
-            10,
-            11
-        ],
-        "peak_months": [
-            4,
-            11
-        ],
+"month": [10, 11, 12],
         "nutrients": [
             {
                 "calories": 55.0,
@@ -614,14 +488,7 @@
             "BR",
             "IL"
         ],
-        "season_months": [
-            8,
-            9,
-            10
-        ],
-        "peak_months": [
-            9
-        ],
+"month": [4, 5, 6, 7, 8, 9, 10, 11],
         "nutrients": [
             {
                 "calories": 76.1,
@@ -656,13 +523,7 @@
             "UA",
             "RU"
         ],
-        "season_months": [
-            7,
-            8
-        ],
-        "peak_months": [
-            7
-        ],
+"month": [6, 7, 8],
         "nutrients": [
             {
                 "calories": 44.1,
@@ -703,14 +564,7 @@
             "MX",
             "DE"
         ],
-        "season_months": [
-            8,
-            9,
-            10
-        ],
-        "peak_months": [
-            9
-        ],
+"month": [10, 11, 12, 1, 2, 3, 4, 5, 6],
         "nutrients": [
             {
                 "calories": 67.4,
@@ -747,21 +601,7 @@
             "PA",
             "CR"
         ],
-        "season_months": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12
-        ],
-        "peak_months": [],
+"month": [11, 12, 1, 2, 3, 4],
         "nutrients": [
             {
                 "calories": 67.7,
@@ -794,18 +634,7 @@
             "CL",
             "IR"
         ],
-        "season_months": [
-            9,
-            10,
-            11,
-            12,
-            1,
-            2
-        ],
-        "peak_months": [
-            9,
-            10
-        ],
+"month": [9, 10, 11],
         "nutrients": [
             {
                 "calories": 656.2,
@@ -837,14 +666,7 @@
             "PT",
             "ES"
         ],
-        "season_months": [
-            8,
-            9,
-            10
-        ],
-        "peak_months": [
-            9
-        ],
+"month": [10, 11, 12, 1, 2],
         "nutrients": [
             {
                 "calories": 33.6,
@@ -879,20 +701,7 @@
             "UG",
             "TZ"
         ],
-        "season_months": [
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9
-        ],
-        "peak_months": [
-            5,
-            6,
-            7
-        ],
+"month": [3, 4, 5, 6, 7, 8, 9, 10],
         "nutrients": [
             {
                 "calories": 94.9,
@@ -926,15 +735,7 @@
             "AZ",
             "NZ"
         ],
-        "season_months": [
-            10,
-            11,
-            12,
-            1
-        ],
-        "peak_months": [
-            11
-        ],
+"month": [10, 11, 12, 1],
         "nutrients": [
             {
                 "calories": 69.4,
@@ -969,22 +770,7 @@
             "US",
             "JP"
         ],
-        "season_months": [
-            10,
-            11,
-            12,
-            1,
-            2,
-            3,
-            4,
-            5
-        ],
-        "peak_months": [
-            11,
-            12,
-            1,
-            2
-        ],
+"month": [10, 11, 12, 1, 2, 3, 4, 5],
         "nutrients": [
             {
                 "calories": 59.5,
@@ -998,56 +784,6 @@
                 "carbohydrates_total_g": 14.9,
                 "fiber_g": 3.0,
                 "sugar_g": 9.1
-            }
-        ]
-    },
-    {
-        "id": "kiwifruit",
-        "name_en": "Chinese gooseberry",
-        "category": "fruit",
-        "countries": [
-            "CN",
-            "IT",
-            "NZ",
-            "IR",
-            "GR",
-            "CL",
-            "FR",
-            "TR",
-            "PT",
-            "ES",
-            "US",
-            "JP"
-        ],
-        "season_months": [
-            10,
-            11,
-            12,
-            1,
-            2,
-            3,
-            4,
-            5
-        ],
-        "peak_months": [
-            11,
-            12,
-            1,
-            2
-        ],
-        "nutrients": [
-            {
-                "calories": 59.7,
-                "serving_size_g": 100.0,
-                "fat_total_g": 0.5,
-                "fat_saturated_g": 0.0,
-                "protein_g": 1.1,
-                "sodium_mg": 2,
-                "potassium_mg": 34,
-                "cholesterol_mg": 0,
-                "carbohydrates_total_g": 14.5,
-                "fiber_g": 3.0,
-                "sugar_g": 9.0
             }
         ]
     },
@@ -1070,19 +806,7 @@
             "GR",
             "CH"
         ],
-        "season_months": [
-            11,
-            12,
-            1,
-            2,
-            3,
-            4
-        ],
-        "peak_months": [
-            1,
-            2,
-            3
-        ],
+"month": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
         "nutrients": [
             {
                 "calories": 29.0,
@@ -1117,21 +841,7 @@
             "GT",
             "DO"
         ],
-        "season_months": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12
-        ],
-        "peak_months": [],
+"month": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
         "nutrients": [
             {
                 "calories": 29.6,
@@ -1164,14 +874,7 @@
             "LV",
             "LT"
         ],
-        "season_months": [
-            8,
-            9,
-            10
-        ],
-        "peak_months": [
-            9
-        ],
+"month": [8, 9, 10],
         "nutrients": [
             {
                 "calories": 58.5,
@@ -1207,16 +910,7 @@
             "BR",
             "MX"
         ],
-        "season_months": [
-            5,
-            6,
-            7,
-            8
-        ],
-        "peak_months": [
-            6,
-            7
-        ],
+"month": [5, 6, 7, 8],
         "nutrients": [
             {
                 "calories": 64.4,
@@ -1257,19 +951,7 @@
             "KE",
             "AU"
         ],
-        "season_months": [
-            3,
-            4,
-            5,
-            6,
-            7,
-            8
-        ],
-        "peak_months": [
-            5,
-            6,
-            7
-        ],
+"month": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
         "nutrients": [
             {
                 "calories": 61.6,
@@ -1300,18 +982,7 @@
             "LK",
             "AU"
         ],
-        "season_months": [
-            5,
-            6,
-            7,
-            8,
-            9
-        ],
-        "peak_months": [
-            6,
-            7,
-            8
-        ],
+"month": [5, 6, 7, 8, 9],
         "nutrients": [
             {
                 "calories": 71.1,
@@ -1329,49 +1000,104 @@
         ]
     },
     {
-        "id": "melon",
-        "name_en": "Melon",
-        "category": "fruit",
-        "countries": [
-            "CN",
-            "TR",
-            "IR",
-            "IN",
-            "US",
-            "ES",
-            "BR",
-            "MX",
-            "EG",
-            "MA",
-            "IT",
-            "FR",
-            "GR",
-            "HN"
-        ],
-        "season_months": [
-            7,
-            8,
-            9
-        ],
-        "peak_months": [
-            8
-        ],
-        "nutrients": [
-            {
-                "calories": 33.6,
-                "serving_size_g": 100.0,
-                "fat_total_g": 0.2,
-                "fat_saturated_g": 0.1,
-                "protein_g": 0.8,
-                "sodium_mg": 16,
-                "potassium_mg": 15,
-                "cholesterol_mg": 0,
-                "carbohydrates_total_g": 8.3,
-                "fiber_g": 0.9,
-                "sugar_g": 7.8
-            }
-        ]
-    },
+    "id": "watermelon",
+    "name_en": "Watermelon",
+    "category": "fruit",
+    "countries": [
+      "CN",
+      "IN",
+      "TR",
+      "IR",
+      "EG",
+      "US",
+      "MX",
+      "BR",
+      "ES",
+      "IT"
+    ],
+    "nutrients": [
+      {
+        "calories": 30.0,
+        "serving_size_g": 100.0,
+        "fat_total_g": 0.2,
+        "fat_saturated_g": 0.0,
+        "protein_g": 0.6,
+        "sodium_mg": 1,
+        "potassium_mg": 112,
+        "cholesterol_mg": 0,
+        "carbohydrates_total_g": 7.6,
+        "fiber_g": 0.4,
+        "sugar_g": 6.2
+      }
+    ],
+    "month": [6, 7, 8, 9]
+  },
+  {
+    "id": "cantaloupe",
+    "name_en": "Cantaloupe Melon",
+    "category": "fruit",
+     "countries": [
+      "CN",
+      "US",
+      "TR",
+      "ES",
+      "IT",
+      "GR",
+      "MA",
+      "EG",
+      "FR",
+      "JP"
+    ],
+    "nutrients": [
+      {
+        "calories": 34.0,
+        "serving_size_g": 100.0,
+        "fat_total_g": 0.2,
+        "fat_saturated_g": 0.1,
+        "protein_g": 0.8,
+        "sodium_mg": 16,
+        "potassium_mg": 267,
+        "cholesterol_mg": 0,
+        "carbohydrates_total_g": 8.2,
+        "fiber_g": 0.9,
+        "sugar_g": 7.9
+      }
+    ],
+    "month": [6, 7, 8, 9]
+  },
+  {
+    "id": "honeydew",
+    "name_en": "Honeydew Melon",
+    "category": "fruit",
+     "countries": [
+      "CN",
+      "US",
+      "ES",
+      "TR",
+      "FR",
+      "IT",
+      "IR",
+      "MA",
+      "ZA",
+      "AU"
+    ],
+    "nutrients": [
+      {
+        "calories": 36.0,
+        "serving_size_g": 100.0,
+        "fat_total_g": 0.1,
+        "fat_saturated_g": 0.0,
+        "protein_g": 0.5,
+        "sodium_mg": 18,
+        "potassium_mg": 228,
+        "cholesterol_mg": 0,
+        "carbohydrates_total_g": 9.1,
+        "fiber_g": 0.8,
+        "sugar_g": 8.1
+      }
+    ],
+    "month": [6, 7, 8, 9]
+  },
     {
         "id": "morus",
         "name_en": "Morus",
@@ -1389,14 +1115,12 @@
             "UZ",
             "AZ"
         ],
-        "season_months": [
+        "month": [
             6,
             7,
             8
         ],
-        "peak_months": [
-            7
-        ],
+
         "nutrients": [
             {
                 "calories": 42.8,
@@ -1433,20 +1157,7 @@
             "AR",
             "AU"
         ],
-        "season_months": [
-            11,
-            12,
-            1,
-            2,
-            3,
-            4
-        ],
-        "peak_months": [
-            12,
-            1,
-            2,
-            3
-        ],
+ "month": [10, 11, 12, 1, 2, 3, 4, 5, 6],
         "nutrients": [
             {
                 "calories": 50.4,
@@ -1483,21 +1194,7 @@
             "GT",
             "KE"
         ],
-        "season_months": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12
-        ],
-        "peak_months": [],
+"month": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
         "nutrients": [
             {
                 "calories": 43.0,
@@ -1533,21 +1230,7 @@
             "IN",
             "LK"
         ],
-        "season_months": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12
-        ],
-        "peak_months": [],
+"month": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
         "nutrients": [
             {
                 "calories": 98.1,
@@ -1583,14 +1266,7 @@
             "AU",
             "UZ"
         ],
-        "season_months": [
-            7,
-            8,
-            9
-        ],
-        "peak_months": [
-            8
-        ],
+"month": [7, 8, 9, 10, 11],
         "nutrients": [
             {
                 "calories": 39.9,
@@ -1627,18 +1303,7 @@
             "DE",
             "SE"
         ],
-        "season_months": [
-            8,
-            9,
-            10,
-            11,
-            12,
-            1
-        ],
-        "peak_months": [
-            9,
-            10
-        ],
+"month": [8, 9, 10, 11, 12, 1],
         "nutrients": [
             {
                 "calories": 56.7,
@@ -1672,15 +1337,7 @@
             "AZ",
             "NZ"
         ],
-        "season_months": [
-            10,
-            11,
-            12,
-            1
-        ],
-        "peak_months": [
-            11
-        ],
+"month": [10, 11, 12, 1],
         "nutrients": [
             {
                 "calories": 69.4,
@@ -1717,21 +1374,7 @@
             "VN",
             "EC"
         ],
-        "season_months": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12
-        ],
-        "peak_months": [],
+"month": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
         "nutrients": [
             {
                 "calories": 50.8,
@@ -1745,53 +1388,6 @@
                 "carbohydrates_total_g": 13.0,
                 "fiber_g": 1.4,
                 "sugar_g": 9.9
-            }
-        ]
-    },
-    {
-        "id": "pitahaya",
-        "name_en": "Pitahaya",
-        "category": "fruit",
-        "countries": [
-            "VN",
-            "CN",
-            "TH",
-            "MY",
-            "ID",
-            "PH",
-            "MX",
-            "CO",
-            "EC",
-            "PE",
-            "IL",
-            "AU"
-        ],
-        "season_months": [
-            6,
-            7,
-            8,
-            9,
-            10,
-            11
-        ],
-        "peak_months": [
-            7,
-            8,
-            9
-        ],
-        "nutrients": [
-            {
-                "calories": 30.3,
-                "serving_size_g": 100,
-                "fat_total_g": 0.3,
-                "fat_saturated_g": 0,
-                "protein_g": 0.6,
-                "sodium_mg": 3,
-                "potassium_mg": 16,
-                "cholesterol_mg": 0,
-                "carbohydrates_total_g": 7.5,
-                "fiber_g": 1.5,
-                "sugar_g": 4.5
             }
         ]
     },
@@ -1815,13 +1411,7 @@
             "DE",
             "PL"
         ],
-        "season_months": [
-            8,
-            9
-        ],
-        "peak_months": [
-            8
-        ],
+"month": [7, 8, 9, 10],
         "nutrients": [
             {
                 "calories": 46.2,
@@ -1858,19 +1448,7 @@
             "GR",
             "PE"
         ],
-        "season_months": [
-            9,
-            10,
-            11,
-            12,
-            1,
-            2
-        ],
-        "peak_months": [
-            10,
-            11,
-            12
-        ],
+"month": [9, 10, 11, 12, 1, 2],
         "nutrients": [
             {
                 "calories": 84.2,
@@ -1903,18 +1481,7 @@
             "IL",
             "US"
         ],
-        "season_months": [
-            11,
-            12,
-            1,
-            2,
-            3
-        ],
-        "peak_months": [
-            12,
-            1,
-            2
-        ],
+"month": [11, 12, 1, 2, 3, 4],
         "nutrients": [
             {
                 "calories": 38.6,
@@ -1953,16 +1520,7 @@
             "ZA",
             "AU"
         ],
-        "season_months": [
-            9,
-            10,
-            11,
-            12,
-            1
-        ],
-        "peak_months": [
-            10
-        ],
+"month": [7, 8, 9, 10, 11, 12, 1],
         "nutrients": [
             {
                 "calories": 20.5,
@@ -1999,15 +1557,7 @@
             "NO",
             "CL"
         ],
-        "season_months": [
-            7,
-            8,
-            9
-        ],
-        "peak_months": [
-            7,
-            8
-        ],
+"month": [6, 7, 8, 9],
         "nutrients": [
             {
                 "calories": 52.7,
@@ -2046,15 +1596,7 @@
             "GB",
             "SE"
         ],
-        "season_months": [
-            6,
-            7,
-            8
-        ],
-        "peak_months": [
-            6,
-            7
-        ],
+"month": [5, 6, 7, 8],
         "nutrients": [
             {
                 "calories": 31.9,
@@ -2090,16 +1632,7 @@
             "PE",
             "ZA"
         ],
-        "season_months": [
-            11,
-            12,
-            1,
-            2
-        ],
-        "peak_months": [
-            12,
-            1
-        ],
+"month": [11, 12, 1, 2, 3, 4],
         "nutrients": [
             {
                 "calories": 51.5,
@@ -2138,18 +1671,7 @@
             "GR",
             "SE"
         ],
-        "season_months": [
-            6,
-            7,
-            8,
-            9,
-            10
-        ],
-        "peak_months": [
-            7,
-            8,
-            9
-        ],
+"month": [4, 5, 6, 7, 8, 9, 10],
         "nutrients": [
             {
                 "calories": 18.2,
@@ -2163,50 +1685,6 @@
                 "carbohydrates_total_g": 3.9,
                 "fiber_g": 1.2,
                 "sugar_g": 2.6
-            }
-        ]
-    },
-    {
-        "id": "watermelon",
-        "name_en": "Watermelon",
-        "category": "fruit",
-        "countries": [
-            "CN",
-            "TR",
-            "IN",
-            "IR",
-            "BR",
-            "US",
-            "EG",
-            "MX",
-            "RU",
-            "UZ",
-            "ES",
-            "IT",
-            "MA",
-            "GR"
-        ],
-        "season_months": [
-            7,
-            8,
-            9
-        ],
-        "peak_months": [
-            8
-        ],
-        "nutrients": [
-            {
-                "calories": 30.3,
-                "serving_size_g": 100.0,
-                "fat_total_g": 0.1,
-                "fat_saturated_g": 0.0,
-                "protein_g": 0.6,
-                "sodium_mg": 0,
-                "potassium_mg": 10,
-                "cholesterol_mg": 0,
-                "carbohydrates_total_g": 7.4,
-                "fiber_g": 0.4,
-                "sugar_g": 6.2
             }
         ]
     },
@@ -2226,18 +1704,7 @@
             "MA",
             "DZ"
         ],
-        "season_months": [
-            4,
-            5,
-            6,
-            7,
-            8,
-            9
-        ],
-        "peak_months": [
-            5,
-            6
-        ],
+"month": [6, 7, 8, 9, 10],
         "nutrients": [
             {
                 "calories": 53.7,
@@ -2272,13 +1739,7 @@
             "SE",
             "PL"
         ],
-        "season_months": [
-            5,
-            6
-        ],
-        "peak_months": [
-            5
-        ],
+"month": [4, 5, 6, 7],
         "nutrients": [
             {
                 "calories": 21.4,
@@ -2315,16 +1776,7 @@
             "FR",
             "GR"
         ],
-        "season_months": [
-            7,
-            8,
-            9,
-            10
-        ],
-        "peak_months": [
-            8,
-            9
-        ],
+"month": [6, 7, 8, 9],
         "nutrients": [
             {
                 "calories": 34.9,
@@ -2360,18 +1812,7 @@
             "SE",
             "TR"
         ],
-        "season_months": [
-            6,
-            7,
-            8,
-            9,
-            10
-        ],
-        "peak_months": [
-            7,
-            8,
-            9
-        ],
+"month": [5, 6, 7, 8, 9],
         "nutrients": [
             {
                 "calories": 35.0,
@@ -2404,18 +1845,7 @@
             "SE",
             "DK"
         ],
-        "season_months": [
-            9,
-            10,
-            11,
-            12,
-            1,
-            2
-        ],
-        "peak_months": [
-            11,
-            12
-        ],
+"month": [8, 9, 10, 11, 12, 1, 2, 3],
         "nutrients": [
             {
                 "calories": 36.4,
@@ -2432,60 +1862,39 @@
             }
         ]
     },
-    {
-        "id": "cabbage",
-        "name_en": "Cabbage",
-        "category": "vegetable",
-        "countries": [
-            "CN",
-            "IN",
-            "RU",
-            "KR",
-            "JP",
-            "US",
-            "PL",
-            "UA",
-            "DE",
-            "NL",
-            "FR",
-            "GB",
-            "SE",
-            "ES",
-            "TR"
-        ],
-        "season_months": [
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12,
-            1,
-            2,
-            3
-        ],
-        "peak_months": [
-            9,
-            10,
-            11
-        ],
-        "nutrients": [
-            {
-                "calories": 23.4,
-                "serving_size_g": 100.0,
-                "fat_total_g": 0.1,
-                "fat_saturated_g": 0.0,
-                "protein_g": 1.3,
-                "sodium_mg": 7,
-                "potassium_mg": 32,
-                "cholesterol_mg": 0,
-                "carbohydrates_total_g": 5.5,
-                "fiber_g": 1.9,
-                "sugar_g": 2.8
-            }
-        ]
-    },
+   {
+    "id": "iceberg_lettuce",
+    "name_en": "Iceberg Lettuce",
+    "category": "vegetable",
+     "countries": [
+      "CN",
+      "US",
+      "ES",
+      "IT",
+      "FR",
+      "TR",
+      "EG",
+      "MA",
+      "DE",
+      "GB"
+    ],
+    "nutrients": [
+      {
+        "calories": 14.0,
+        "serving_size_g": 100.0,
+        "fat_total_g": 0.1,
+        "fat_saturated_g": 0.0,
+        "protein_g": 0.9,
+        "sodium_mg": 10,
+        "potassium_mg": 141,
+        "cholesterol_mg": 0,
+        "carbohydrates_total_g": 3.0,
+        "fiber_g": 1.2,
+        "sugar_g": 1.9
+      }
+    ],
+    "month": [5, 6, 7, 8, 9]
+  },
     {
         "id": "carrot",
         "name_en": "Carrot",
@@ -2507,23 +1916,7 @@
             "SE",
             "AU"
         ],
-        "season_months": [
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12,
-            1,
-            2,
-            3
-        ],
-        "peak_months": [
-            8,
-            9,
-            10
-        ],
+"month": [7, 8, 9, 10, 11, 12, 1, 2, 3],
         "nutrients": [
             {
                 "calories": 34.0,
@@ -2559,17 +1952,7 @@
             "MX",
             "SE"
         ],
-        "season_months": [
-            6,
-            7,
-            8,
-            9,
-            10
-        ],
-        "peak_months": [
-            8,
-            9
-        ],
+"month": [5, 6, 7, 8, 9, 10],
         "nutrients": [
             {
                 "calories": 22.4,
@@ -2604,16 +1987,7 @@
             "SE",
             "EG"
         ],
-        "season_months": [
-            7,
-            8,
-            9,
-            10
-        ],
-        "peak_months": [
-            8,
-            9
-        ],
+"month": [7, 8, 9, 10],
         "nutrients": [
             {
                 "calories": 17.9,
@@ -2652,13 +2026,7 @@
             "IT",
             "SE"
         ],
-        "season_months": [
-            8,
-            9
-        ],
-        "peak_months": [
-            8
-        ],
+"month": [8, 9],
         "nutrients": [
             {
                 "calories": 93.9,
@@ -2696,16 +2064,7 @@
             "EG",
             "GR"
         ],
-        "season_months": [
-            6,
-            7,
-            8,
-            9
-        ],
-        "peak_months": [
-            7,
-            8
-        ],
+"month": [5, 6, 7, 8, 9, 10],
         "nutrients": [
             {
                 "calories": 15.3,
@@ -2722,57 +2081,113 @@
             }
         ]
     },
-    {
-        "id": "garlic",
-        "name_en": "Garlic",
-        "category": "vegetable",
-        "countries": [
-            "CN",
-            "IN",
-            "BD",
-            "EG",
-            "KR",
-            "RU",
-            "ES",
-            "AR",
-            "UA",
-            "US",
-            "FR",
-            "IT",
-            "TR",
-            "MX"
-        ],
-        "season_months": [
-            7,
-            8,
-            9,
-            10,
-            11,
-            12,
-            1,
-            2,
-            3
-        ],
-        "peak_months": [
-            8,
-            9
-        ],
-        "nutrients": [
-            {
-                "calories": 144.8,
-                "serving_size_g": 100.0,
-                "fat_total_g": 0.7,
-                "fat_saturated_g": 0.0,
-                "protein_g": 6.4,
-                "sodium_mg": 16,
-                "potassium_mg": 153,
-                "cholesterol_mg": 0,
-                "carbohydrates_total_g": 32.5,
-                "fiber_g": 2.0,
-                "sugar_g": 1.0
-            }
-        ]
-    },
+   {
+    "id": "yellow_onion",
+    "name_en": "Yellow Onion",
+    "category": "vegetable",
+     "countries": [
+      "CN",
+      "IN",
+      "US",
+      "RU",
+      "EG",
+      "TR",
+      "ES",
+      "FR",
+      "IT",
+      "DE",
+      "PL",
+      "NL"
+    ],
+     "month": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    "nutrients": [
+      {
+        "calories": 40.0,
+        "serving_size_g": 100.0,
+        "fat_total_g": 0.1,
+        "fat_saturated_g": 0.0,
+        "protein_g": 1.1,
+        "sodium_mg": 4,
+        "potassium_mg": 146,
+        "cholesterol_mg": 0,
+        "carbohydrates_total_g": 9.3,
+        "fiber_g": 1.7,
+        "sugar_g": 4.2
+      }
+    ]
+   
+  },
+  {
+    "id": "red_onion",
+    "name_en": "Red Onion",
+    "category": "vegetable",
+    "countries": [
+      "IN",
+      "CN",
+      "US",
+      "TR",
+      "EG",
+      "ES",
+      "IT",
+      "FR",
+      "BR",
+      "MX",
+      "DE",
+      "PL"
+    ],
+    "month": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    "nutrients": [
+      {
+        "calories": 40.0,
+        "serving_size_g": 100.0,
+        "fat_total_g": 0.1,
+        "fat_saturated_g": 0.0,
+        "protein_g": 1.1,
+        "sodium_mg": 4,
+        "potassium_mg": 140,
+        "cholesterol_mg": 0,
+        "carbohydrates_total_g": 9.6,
+        "fiber_g": 1.4,
+        "sugar_g": 4.7
+      }
+    ]
+  },
+  {
+    "id": "spring_onion",
+    "name_en": "Spring Onion",
+    "category": "vegetable",
+    "countries": [
+      "CN",
+      "JP",
+      "KR",
+      "VN",
+      "TH",
+      "IN",
+      "ID",
+      "US",
+      "ES",
+      "IT",
+      "FR",
+      "GB"
+    ],
+       "month": [4, 5, 6, 7, 8, 9],
+    "nutrients": [
+      {
+        "calories": 32.0,
+        "serving_size_g": 100.0,
+        "fat_total_g": 0.2,
+        "fat_saturated_g": 0.0,
+        "protein_g": 1.8,
+        "sodium_mg": 16,
+        "potassium_mg": 276,
+        "cholesterol_mg": 0,
+        "carbohydrates_total_g": 7.3,
+        "fiber_g": 2.6,
+        "sugar_g": 2.3
+      }
+    ]
+ 
+  },
     {
         "id": "ginger",
         "name_en": "Ginger",
@@ -2792,21 +2207,7 @@
             "FJ",
             "AU"
         ],
-        "season_months": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12
-        ],
-        "peak_months": [],
+"month": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
         "nutrients": [
             {
                 "calories": 78.3,
@@ -2840,20 +2241,7 @@
             "PL",
             "CA"
         ],
-        "season_months": [
-            9,
-            10,
-            11,
-            12,
-            1,
-            2,
-            3
-        ],
-        "peak_months": [
-            10,
-            11,
-            12
-        ],
+"month": [8, 9, 10, 11, 12, 1, 2],
         "nutrients": [
             {
                 "calories": 27.2,
@@ -2888,20 +2276,7 @@
             "SE",
             "DK"
         ],
-        "season_months": [
-            8,
-            9,
-            10,
-            11,
-            12,
-            1,
-            2,
-            3
-        ],
-        "peak_months": [
-            10,
-            11
-        ],
+"month": [5, 6, 7, 8, 9, 10, 11, 12, 1],
         "nutrients": [
             {
                 "calories": 31.9,
@@ -2918,158 +2293,83 @@
             }
         ]
     },
-    {
-        "id": "lettuce",
-        "name_en": "Lettuce",
-        "category": "vegetable",
+{
+    "id": "chanterelle",
+    "name_en": "Chanterelle",
+    "category": "mushroom",
         "countries": [
-            "CN",
-            "US",
-            "IN",
-            "ES",
-            "IT",
-            "MX",
-            "TR",
-            "FR",
-            "DE",
-            "NL",
-            "GB",
             "SE",
+            "FI",
+            "NO",
+            "EE",
+            "LV",
+            "LT",
             "PL",
-            "EG"
-        ],
-        "season_months": [
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-        ],
-        "peak_months": [
-            6,
-            7,
-            8
-        ],
-        "nutrients": [
-            {
-                "calories": 17.0,
-                "serving_size_g": 100.0,
-                "fat_total_g": 0.3,
-                "fat_saturated_g": 0.0,
-                "protein_g": 1.2,
-                "sodium_mg": 7,
-                "potassium_mg": 30,
-                "cholesterol_mg": 0,
-                "carbohydrates_total_g": 3.3,
-                "fiber_g": 2.1,
-                "sugar_g": 1.2
-            }
-        ]
-    },
-    {
-        "id": "mushroom",
-        "name_en": "Mushroom",
-        "category": "vegetable",
-        "countries": [
-            "CN",
-            "US",
-            "NL",
-            "PL",
-            "ES",
+            "DE",
             "FR",
             "IT",
-            "IE",
-            "DE",
+            "ES",
             "GB",
             "CA",
-            "SE",
-            "JP",
-            "KR"
-        ],
-        "season_months": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12
-        ],
-        "peak_months": [],
-        "nutrients": [
-            {
-                "calories": 28.0,
-                "serving_size_g": 100.0,
-                "fat_total_g": 0.5,
-                "fat_saturated_g": 0.1,
-                "protein_g": 2.1,
-                "sodium_mg": 1,
-                "potassium_mg": 87,
-                "cholesterol_mg": 0,
-                "carbohydrates_total_g": 5.3,
-                "fiber_g": 2.1,
-                "sugar_g": 2.3
-            }
-        ]
-    },
-    {
-        "id": "onion",
-        "name_en": "Onion",
-        "category": "vegetable",
-        "countries": [
-            "CN",
-            "IN",
             "US",
-            "EG",
-            "TR",
-            "IR",
-            "PK",
-            "BD",
-            "NL",
-            "ES",
+            "RU"
+            ],
+        "month": [7, 8, 9, 10],
+    "nutrients": [
+      {
+        "calories": 38.0,
+        "serving_size_g": 100.0,
+        "fat_total_g": 0.5,
+        "fat_saturated_g": 0.1,
+        "protein_g": 1.5,
+        "sodium_mg": 6,
+        "potassium_mg": 506,
+        "cholesterol_mg": 0,
+        "carbohydrates_total_g": 6.9,
+        "fiber_g": 3.8,
+        "sugar_g": 1.5
+      }
+    ]
+
+  },
+  {
+    "id": "funnel_chanterelle",
+    "name_en": "Funnel Chanterelle",
+    "category": "mushroom",
+        "countries": [
+            "SE",
+            "FI",
+            "NO",
+            "DK",
+            "EE",
+            "LV",
+            "LT",
             "PL",
             "DE",
-            "FR",
-            "SE",
-            "MX"
-        ],
-        "season_months": [
-            8,
-            9,
-            10,
-            11,
-            12,
-            1,
-            2,
-            3,
-            4
-        ],
-        "peak_months": [
-            9,
-            10
-        ],
-        "nutrients": [
-            {
-                "calories": 44.7,
-                "serving_size_g": 100.0,
-                "fat_total_g": 0.2,
-                "fat_saturated_g": 0.0,
-                "protein_g": 1.4,
-                "sodium_mg": 2,
-                "potassium_mg": 35,
-                "cholesterol_mg": 0,
-                "carbohydrates_total_g": 10.1,
-                "fiber_g": 1.4,
-                "sugar_g": 4.7
-            }
-        ]
-    },
+            "NL",
+            "GB",
+            "IE",
+            "CA",
+            "RU"
+            ],
+        "month": [8, 9, 10, 11],
+    "nutrients": [
+      {
+        "calories": 32.0,
+        "serving_size_g": 100.0,
+        "fat_total_g": 0.4,
+        "fat_saturated_g": 0.1,
+        "protein_g": 1.6,
+        "sodium_mg": 5,
+        "potassium_mg": 450,
+        "cholesterol_mg": 0,
+        "carbohydrates_total_g": 6.5,
+        "fiber_g": 4.2,
+        "sugar_g": 1.2
+      }
+    ]
+
+  },
     {
         "id": "parsnip",
         "name_en": "Parsnip",
@@ -3087,19 +2387,7 @@
             "CA",
             "PL"
         ],
-        "season_months": [
-            9,
-            10,
-            11,
-            12,
-            1,
-            2,
-            3
-        ],
-        "peak_months": [
-            10,
-            11
-        ],
+"month": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
         "nutrients": [
             {
                 "calories": 72.5,
@@ -3117,50 +2405,43 @@
         ]
     },
     {
-        "id": "peas",
-        "name_en": "Peas",
-        "category": "vegetable",
-        "countries": [
-            "CN",
-            "IN",
-            "US",
-            "FR",
-            "RU",
-            "GB",
-            "CA",
-            "ES",
-            "IT",
-            "NL",
-            "DE",
-            "SE",
-            "PL",
-            "KE"
-        ],
-        "season_months": [
-            6,
-            7,
-            8
-        ],
-        "peak_months": [
-            6,
-            7
-        ],
-        "nutrients": [
-            {
-                "calories": 82.4,
-                "serving_size_g": 100.0,
-                "fat_total_g": 0.2,
-                "fat_saturated_g": 0.0,
-                "protein_g": 5.4,
-                "sodium_mg": 3,
-                "potassium_mg": 117,
-                "cholesterol_mg": 0,
-                "carbohydrates_total_g": 15.9,
-                "fiber_g": 5.4,
-                "sugar_g": 5.9
-            }
-        ]
-    },
+    "id": "sugar_snap_peas",
+    "name_en": "Sugar Snap Peas",
+    "category": "vegetable",
+"countries": [
+      "CN",
+      "IN",
+      "US",
+      "FR",
+      "ES",
+      "IT",
+      "NL",
+      "GB",
+      "DE",
+      "KE",
+      "ET",
+      "PE",
+      "MX",
+      "JP"
+    ],
+        "month": [6, 7, 8, 9],
+    "nutrients": [
+      {
+        "calories": 42.0,
+        "serving_size_g": 100.0,
+        "fat_total_g": 0.2,
+        "fat_saturated_g": 0.0,
+        "protein_g": 2.8,
+        "sodium_mg": 4,
+        "potassium_mg": 200,
+        "cholesterol_mg": 0,
+        "carbohydrates_total_g": 7.5,
+        "fiber_g": 2.6,
+        "sugar_g": 4.8
+      }
+    ]
+
+  },
     {
         "id": "potato",
         "name_en": "Potato",
@@ -3183,23 +2464,7 @@
             "EG",
             "TR"
         ],
-        "season_months": [
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12,
-            1,
-            2,
-            3
-        ],
-        "peak_months": [
-            8,
-            9,
-            10
-        ],
+"month": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
         "nutrients": [
             {
                 "calories": 92.7,
@@ -3236,18 +2501,7 @@
             "IT",
             "ES"
         ],
-        "season_months": [
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-        ],
-        "peak_months": [
-            5,
-            6
-        ],
+"month": [4, 5, 6, 7, 8, 9],
         "nutrients": [
             {
                 "calories": 15.5,
@@ -3284,19 +2538,7 @@
             "MX",
             "PL"
         ],
-        "season_months": [
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-        ],
-        "peak_months": [
-            5,
-            6,
-            9
-        ],
+"month": [5, 6, 7, 8, 9],
         "nutrients": [
             {
                 "calories": 23.3,
@@ -3333,16 +2575,7 @@
             "PE",
             "ES"
         ],
-        "season_months": [
-            9,
-            10,
-            11,
-            12
-        ],
-        "peak_months": [
-            10,
-            11
-        ],
+"month": [9, 10],
         "nutrients": [
             {
                 "calories": 77.5,
@@ -3378,14 +2611,7 @@
             "SE",
             "PL"
         ],
-        "season_months": [
-            7,
-            8,
-            9
-        ],
-        "peak_months": [
-            8
-        ],
+"month": [6, 7, 8, 9, 10],
         "nutrients": [
             {
                 "calories": 15.4,
