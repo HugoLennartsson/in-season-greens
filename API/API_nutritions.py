@@ -4,7 +4,7 @@ import requests
 from urllib.request import urlopen
 import json
 from dotenv import load_dotenv
-api_url = 'https://api.calorieninjas.com/v1/nutrition?query='
+api_url = 'https://api.api-ninjas.com/v1/nutrition?query='
 
 load_dotenv("key.env")
 with open('all_produce.json') as f:
