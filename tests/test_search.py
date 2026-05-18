@@ -96,9 +96,9 @@ def test_multi_filters_combine_categories_countries_and_seasons():
 
 
 def test_season_status_coming_soon_checks_next_two_months():
-    assert get_season_status([7, 8], [], month=5) == "soon"
-    assert get_season_status([8, 9], [], month=5) == "out"
-    assert get_season_status([], [], month=5) == "unknown"
+    assert get_season_status([7, 8], month=5) == "soon"
+    assert get_season_status([8, 9], month=5) == "out"
+    assert get_season_status([], month=5) == "unknown"
 
 
 def test_emission_origin_prefers_nearby_country():
