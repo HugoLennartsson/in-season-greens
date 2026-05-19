@@ -1,5 +1,4 @@
 import json
-import math
 import re
 from datetime import date
 from enum import Enum
@@ -36,11 +35,10 @@ class ProduceItem(TypedDict):
     id: str
     name_en: str
     category: str
+    co2: float
     countries: list[str]
     country_names: list[str]
     countries_label: str
-    best_country_code: str
-    best_country_name: str
     carbon_kg: float
     carbon_label: str
     season_months: list[int]
@@ -152,6 +150,7 @@ SORT_DESC = "desc"
 CATEGORY_FILTER_OPTIONS: list[FilterOption] = [
     {"value": "fruit", "label": "Fruit"},
     {"value": "vegetable", "label": "Vegetable"},
+    {"value": "mushroom", "label": "Mushrooms"},
 ]
 SEASON_FILTER_OPTIONS: list[FilterOption] = [
     {"value": "season", "label": "In season"},
@@ -192,10 +191,6 @@ CURRENT_MONTH = date.today().month
 
 LOCATION = "Gothenburg"
 COUNTRY = "SE"
-# MOCK EMISSIONS LOGIC: fallback location used until browser geolocation updates
-# the state. A real emissions API call would receive the user's actual location.
-DEFAULT_LAT = 57.7089
-DEFAULT_LON = 11.9746
 SEARCH_SUGGESTION_LIMIT = 6
 _ROOT = Path(__file__).resolve().parents[1]
 _ALL_PRODUCE_PATH = _ROOT / "all_produce.json"
@@ -212,93 +207,6 @@ NAV_ITEMS: list[NavItem] = [
     {"icon": "bookmark", "label": "Saved", "subtitle": "Your saved products"},
     {"icon": "info", "label": "About", "subtitle": "Sources and methodology"},
 ]
-
-# MOCK EMISSIONS LOGIC: country centroid coordinates stand in for the sourcing
-# and transport data that should eventually come from the emissions API.
-COUNTRY_COORDINATES: dict[str, tuple[float, float]] = {
-    "AF": (33.9, 67.7),
-    "AR": (-34.0, -64.0),
-    "AU": (-25.3, 133.8),
-    "AZ": (40.1, 47.6),
-    "BD": (23.7, 90.4),
-    "BE": (50.5, 4.5),
-    "BG": (42.7, 25.5),
-    "BR": (-14.2, -51.9),
-    "BY": (53.7, 27.9),
-    "CA": (56.1, -106.3),
-    "CH": (46.8, 8.2),
-    "CI": (7.5, -5.5),
-    "CL": (-35.7, -71.5),
-    "CM": (7.4, 12.4),
-    "CN": (35.9, 104.2),
-    "CO": (4.6, -74.1),
-    "CR": (9.7, -84.2),
-    "CZ": (49.8, 15.5),
-    "DE": (51.2, 10.5),
-    "DK": (56.3, 9.5),
-    "DO": (18.7, -70.2),
-    "DZ": (28.0, 1.7),
-    "EC": (-1.8, -78.2),
-    "EE": (58.6, 25.0),
-    "EG": (26.8, 30.8),
-    "ES": (40.5, -3.7),
-    "FI": (61.9, 25.7),
-    "FJ": (-17.7, 178.1),
-    "FR": (46.2, 2.2),
-    "GB": (55.4, -3.4),
-    "GE": (42.3, 43.4),
-    "GH": (7.9, -1.0),
-    "GR": (39.1, 21.8),
-    "GT": (15.8, -90.2),
-    "HN": (15.2, -86.2),
-    "ID": (-0.8, 113.9),
-    "IE": (53.4, -8.2),
-    "IL": (31.0, 35.0),
-    "IN": (20.6, 78.9),
-    "IR": (32.4, 53.7),
-    "IT": (41.9, 12.6),
-    "JP": (36.2, 138.3),
-    "KE": (-0.0, 37.9),
-    "KH": (12.6, 104.9),
-    "KR": (35.9, 127.8),
-    "LA": (19.9, 102.5),
-    "LK": (7.9, 80.8),
-    "LT": (55.2, 23.9),
-    "LV": (56.9, 24.6),
-    "MA": (31.8, -7.1),
-    "MG": (-18.8, 46.9),
-    "MW": (-13.3, 34.3),
-    "MX": (23.6, -102.6),
-    "MY": (4.2, 101.9),
-    "NG": (9.1, 8.7),
-    "NL": (52.1, 5.3),
-    "NO": (60.5, 8.5),
-    "NP": (28.4, 84.1),
-    "NZ": (-40.9, 174.9),
-    "PA": (8.5, -80.8),
-    "PE": (-9.2, -75.0),
-    "PH": (12.9, 121.8),
-    "PK": (30.4, 69.3),
-    "PL": (51.9, 19.1),
-    "PT": (39.4, -8.2),
-    "RO": (45.9, 24.9),
-    "RS": (44.0, 20.9),
-    "RU": (61.5, 105.3),
-    "SA": (23.9, 45.1),
-    "SE": (60.1, 18.6),
-    "TH": (15.9, 100.9),
-    "TR": (38.9, 35.2),
-    "TW": (23.7, 121.0),
-    "TZ": (-6.4, 34.9),
-    "UA": (48.4, 31.2),
-    "UG": (1.4, 32.3),
-    "US": (39.8, -98.6),
-    "UY": (-32.5, -55.8),
-    "UZ": (41.4, 64.6),
-    "VN": (14.1, 108.3),
-    "ZA": (-30.6, 22.9),
-    "ZW": (-19.0, 29.2),
-}
 
 
 def _country_name(code: str) -> str:
@@ -371,77 +279,18 @@ def format_month_window(months: list[int]) -> str:
     return ", ".join(_format_month_range(start, end) for start, end in segments)
 
 
-def _distance_km(
-    start_lat: float,
-    start_lon: float,
-    end_lat: float,
-    end_lon: float,
-) -> float:
-    # MOCK EMISSIONS LOGIC: this helper supports the temporary distance-based
-    # estimate used by fetch_lowest_emission_origin.
-    radius_km = 6371
-    lat_delta = math.radians(end_lat - start_lat)
-    lon_delta = math.radians(end_lon - start_lon)
-    start_lat_rad = math.radians(start_lat)
-    end_lat_rad = math.radians(end_lat)
-    haversine = (
-        math.sin(lat_delta / 2) ** 2
-        + math.cos(start_lat_rad) * math.cos(end_lat_rad) * math.sin(lon_delta / 2) ** 2
-    )
-    return radius_km * 2 * math.atan2(math.sqrt(haversine), math.sqrt(1 - haversine))
-
-
-def fetch_lowest_emission_origin(
-    country_codes: list[str],
-    user_lat: float | None = None,
-    user_lon: float | None = None,
-) -> tuple[str, str, float]:
-    # MOCK EMISSIONS LOGIC: this is the seam for a future API integration.
-    # Replace the distance heuristic below with API-provided kg CO2e values.
-    if not country_codes:
-        return "", "Origin unknown", 0.0
-
-    lat = user_lat if user_lat is not None else DEFAULT_LAT
-    lon = user_lon if user_lon is not None else DEFAULT_LON
-    scored_countries = []
-    for code in country_codes:
-        if code not in COUNTRY_COORDINATES:
-            continue
-        country_lat, country_lon = COUNTRY_COORDINATES[code]
-        distance = _distance_km(lat, lon, country_lat, country_lon)
-        # MOCK EMISSIONS LOGIC: temporary transport estimate per kg. The
-        # constants are placeholders, not lifecycle assessment data.
-        co2_kg = 0.08 + distance * 0.000085
-        scored_countries.append((co2_kg, distance, code))
-
-    if not scored_countries:
-        first_code = country_codes[0]
-        return first_code, _country_name(first_code), 0.0
-
-    co2_kg, _distance, code = min(scored_countries)
-    return code, _country_name(code), round(co2_kg, 2)
-
-
-def _with_derived_fields(
-    item: dict,
-    user_lat: float | None = None,
-    user_lon: float | None = None,
-) -> ProduceItem:
+def _with_derived_fields(item: dict) -> ProduceItem:
     countries = item.get("countries", [])
     season_months = item.get("month", [])
-    best_code, best_name, carbon_kg = fetch_lowest_emission_origin(
-        countries,
-        user_lat,
-        user_lon,
-    )
+    carbon_kg = float(item.get("co2") or 0.0)
     product = dict(item)
     product["countries"] = countries
     product["country_names"] = [_country_name(code) for code in countries]
     product["countries_label"] = ", ".join(product["country_names"]) or "Unknown"
-    product["best_country_code"] = best_code
-    product["best_country_name"] = best_name
     product["carbon_kg"] = carbon_kg
-    product["carbon_label"] = f"{carbon_kg:.2f} kg CO2e" if carbon_kg else "CO2 unavailable"
+    product["carbon_label"] = (
+        f"{carbon_kg:.2f} kg CO2e/kg" if carbon_kg else "CO2 unavailable"
+    )
     product["season_months"] = season_months
     product["season_status"] = get_season_status(season_months)
     product["season_label"] = format_month_window(season_months)
@@ -512,7 +361,6 @@ def _best_search_score(query: str, item: ProduceItem) -> int | None:
         item["name_en"],
         item["category"],
         item["countries_label"],
-        item["best_country_name"],
     ]
     scores = [
         score + index * 15
@@ -578,15 +426,13 @@ def filter_products(
     local_country_code: str | None = COUNTRY,
     sort_key: str = "",
     sort_direction: str = "",
-    user_lat: float | None = None,
-    user_lon: float | None = None,
 ) -> list[ProduceItem]:
     selected_countries = set(country_filters or [])
     selected_seasons = set(season_filters or [])
     selected_categories = set(category_filters or [])
     local_country = normalize_country_code(local_country_code)
     filtered_products = [
-        _with_derived_fields(product, user_lat, user_lon)
+        _with_derived_fields(product)
         for product in products
         if not selected_countries or selected_countries & set(product["countries"])
     ]

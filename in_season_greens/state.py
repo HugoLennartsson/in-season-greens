@@ -4,8 +4,6 @@ from .data import (
     CATEGORY_FILTER_OPTIONS,
     COUNTRY,
     COUNTRY_FILTER_OPTIONS,
-    DEFAULT_LAT,
-    DEFAULT_LON,
     SEASON_FILTER_OPTIONS,
     SORT_ASC,
     SORT_DESC,
@@ -34,10 +32,6 @@ class State(rx.State):
     selected_categories: list[str] = []
     sort_key: str = ""
     sort_direction: str = ""
-    # MOCK EMISSIONS LOGIC: start with the app's default location so product
-    # cards can show emission values before browser geolocation returns.
-    user_lat: float | None = DEFAULT_LAT
-    user_lon: float | None = DEFAULT_LON
     user_country_code: str = COUNTRY
     user_country_is_fallback: bool = True
     menu_open: bool = False
@@ -153,8 +147,6 @@ class State(rx.State):
         country_code: str | None = None,
         country_is_fallback: bool | None = None,
     ):
-        self.user_lat = lat
-        self.user_lon = lon
         self.user_country_code = normalize_country_code(country_code)
         self.user_country_is_fallback = (
             not is_supported_country_code(country_code)
@@ -185,8 +177,6 @@ class State(rx.State):
             local_country_code=self.user_country_code,
             sort_key=self.sort_key,
             sort_direction=self.sort_direction,
-            user_lat=self.user_lat,
-            user_lon=self.user_lon,
         )
 
     @rx.var
