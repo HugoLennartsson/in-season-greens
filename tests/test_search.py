@@ -2,7 +2,6 @@ from in_season_greens.data import (
     ALL_PRODUCE,
     Country,
     filter_products,
-    fetch_lowest_emission_origin,
     fuzzy_search_score,
     get_products,
     get_season_status,
@@ -35,6 +34,7 @@ def test_all_products_have_country_and_season_metadata():
     for product in ALL_PRODUCE:
         assert product["countries"]
         assert product["season_months"]
+        assert product["co2"]
         assert all(code in Country.__members__ for code in product["countries"])
 
 
@@ -95,18 +95,27 @@ def test_multi_filters_combine_categories_countries_and_seasons():
     assert all(product["season_status"] == "season" for product in products)
 
 
+def test_mushroom_category_filter_is_supported():
+    products = filter_products(get_products(), category_filters=["mushroom"])
+
+    assert [product["id"] for product in products] == [
+        "chanterelle",
+        "funnel_chanterelle",
+    ]
+
+
 def test_season_status_coming_soon_checks_next_two_months():
     assert get_season_status([7, 8], month=5) == "soon"
     assert get_season_status([8, 9], month=5) == "out"
     assert get_season_status([], month=5) == "unknown"
 
 
-def test_emission_origin_prefers_nearby_country():
-    code, name, carbon_kg = fetch_lowest_emission_origin(["SE", "ES"], 57.7, 12.0)
+def test_products_use_hardcoded_co2_from_json():
+    products = {product["id"]: product for product in get_products()}
 
-    assert code == "SE"
-    assert name == "Sweden"
-    assert carbon_kg > 0
+    assert products["apple"]["carbon_kg"] == 0.2
+    assert products["apple"]["carbon_label"] == "0.20 kg CO2e/kg"
+    assert products["apricot"]["carbon_kg"] == 0.48
 
 
 def test_fuzzy_search_ignores_spaces_and_punctuation():
