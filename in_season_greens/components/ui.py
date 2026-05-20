@@ -70,6 +70,38 @@ def local_only_button(state) -> rx.Component:
     )
 
 
+def saved_only_button(state) -> rx.Component:
+    return rx.button(
+        rx.cond(
+            state.show_saved_only,
+            app_icon("check", styles.ui.local_only_icon_active, 2),
+            app_icon("bookmark", styles.ui.local_only_icon, 2),
+        ),
+        rx.box(
+            rx.text("Show saved only", class_name=styles.ui.local_only_title),
+            rx.text(
+                rx.cond(
+                    state.show_saved_only,
+                    "Showing saved items",
+                    "View all items",
+                ),
+                class_name=rx.cond(
+                    state.show_saved_only,
+                    styles.ui.local_only_meta_active,
+                    styles.ui.local_only_meta,
+                ),
+            ),
+            class_name=styles.ui.local_only_copy,
+        ),
+        on_click=state.toggle_show_saved_only,
+        class_name=rx.cond(
+            state.show_saved_only,
+            styles.ui.local_only_button_active,
+            styles.ui.local_only_button,
+        ),
+    )
+
+
 def country_option_button(state, country) -> rx.Component:
     return rx.button(
         rx.cond(
@@ -169,6 +201,7 @@ def filter_expansion(state) -> rx.Component:
                             class_name=styles.ui.filter_group_header,
                         ),
                         local_only_button(state),
+                        saved_only_button(state),
                         rx.input(
                             value=state.country_search_query,
                             on_change=state.set_country_search_query,

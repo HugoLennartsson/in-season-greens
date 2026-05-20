@@ -56,6 +56,20 @@ def product_card(product, state=None) -> rx.Component:
                 status_label(status),
                 class_name=styles.product_card.badge(status),
             ),
+            rx.button(
+                rx.cond(
+                    state.saved_product_ids.contains(product["id"]) if state else False,
+                    app_icon("bookmark", "size-4 text-white fill-white", 3),
+                    app_icon("bookmark", "size-4 text-[#555]", 3),
+                ),
+                on_click=state.toggle_saved_product(product["id"]) if state else rx.fragment(),
+                aria_label="Save product",
+                class_name=rx.cond(
+                    state.saved_product_ids.contains(product["id"]) if state else False,
+                    styles.product_card.save_button_overlay_active,
+                    styles.product_card.save_button_overlay,
+                ) if state else styles.product_card.save_button_overlay,
+            ),
             class_name=styles.product_card.image(status),
         ),
         rx.box(
@@ -109,11 +123,6 @@ def product_card(product, state=None) -> rx.Component:
                 class_name=styles.product_card.nutrients,
             ),
             rx.hstack(
-                rx.button(
-                    app_icon("bookmark", "size-3 text-[#555]", 3),
-                    "Save",
-                    class_name=styles.product_card.save_button,
-                ),
                 rx.button(
                     app_icon("info", "size-3 text-white", 3),
                     "Show info",

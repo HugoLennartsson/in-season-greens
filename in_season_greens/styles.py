@@ -259,6 +259,18 @@ class product_card:
         "flex flex-1 items-center justify-center gap-1 rounded-lg border-2 border-[#ccc] "
         "bg-white py-1.5 text-[11px] font-black text-[#222] hover:bg-[#f7f9f5]"
     )
+    save_button_active = (
+        "flex flex-1 items-center justify-center gap-1 rounded-lg border-2 border-[#2db34a] "
+        "bg-[#2db34a] py-1.5 text-[11px] font-black text-white hover:bg-[#1a7a30]"
+    )
+    save_button_overlay = (
+        "absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-lg border-2 border-[#ccc] "
+        "bg-white p-0 text-[#222] hover:bg-[#f7f9f5]"
+    )
+    save_button_overlay_active = (
+        "absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-lg border-2 border-[#2db34a] "
+        "bg-[#2db34a] text-white hover:bg-[#1a7a30]"
+    )
     info_button = "flex-[1.4] rounded-lg bg-[#2db34a] py-1.5 text-[11px] font-black text-white hover:bg-[#1a7a30]"
 
     @staticmethod

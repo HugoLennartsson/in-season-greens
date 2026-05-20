@@ -43,6 +43,8 @@ class State(rx.State):
     menu_open: bool = False
     modal_open: bool = False
     modal_product: Optional[ProduceItem] = None
+    saved_product_ids: list[str] = []
+    show_saved_only: bool = False
 
     def open_menu(self):
         self.menu_open = True
@@ -145,6 +147,7 @@ class State(rx.State):
         self.selected_categories = []
         self.sort_key = ""
         self.sort_direction = ""
+        self.show_saved_only = False
 
     def set_user_location(
         self,
@@ -173,6 +176,15 @@ class State(rx.State):
         self.modal_open = False
         self.modal_product = None
 
+    def toggle_saved_product(self, product_id: str):
+        if product_id in self.saved_product_ids:
+            self.saved_product_ids = [id for id in self.saved_product_ids if id != product_id]
+        else:
+            self.saved_product_ids = [*self.saved_product_ids, product_id]
+
+    def toggle_show_saved_only(self):
+        self.show_saved_only = not self.show_saved_only
+
     @rx.var
     def filtered_products(self) -> list[ProduceItem]:
         return filter_products(
@@ -187,6 +199,8 @@ class State(rx.State):
             sort_direction=self.sort_direction,
             user_lat=self.user_lat,
             user_lon=self.user_lon,
+            saved_product_ids=self.saved_product_ids,
+            show_saved_only=self.show_saved_only,
         )
 
     @rx.var
@@ -206,6 +220,7 @@ class State(rx.State):
                 bool(self.selected_season_statuses),
                 bool(self.selected_categories),
                 bool(self.sort_key),
+                self.show_saved_only,
             ]
         )
 

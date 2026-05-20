@@ -560,11 +560,22 @@ def _sort_products(
     products: list[ProduceItem],
     sort_key: str = "",
     sort_direction: str = "",
+    saved_product_ids: list[str] | None = None,
 ) -> list[ProduceItem]:
     if not sort_key or sort_direction not in {SORT_ASC, SORT_DESC}:
-        return products
-    reverse = sort_direction == SORT_DESC
-    return sorted(products, key=lambda product: _sort_value(product, sort_key), reverse=reverse)
+        sorted_products = products
+    else:
+        reverse = sort_direction == SORT_DESC
+        sorted_products = sorted(products, key=lambda product: _sort_value(product, sort_key), reverse=reverse)
+    
+    # Sort saved products to the top
+    if saved_product_ids:
+        saved_ids_set = set(saved_product_ids)
+        saved_products = [p for p in sorted_products if p["id"] in saved_ids_set]
+        other_products = [p for p in sorted_products if p["id"] not in saved_ids_set]
+        return saved_products + other_products
+    
+    return sorted_products
 
 
 def filter_products(
@@ -579,6 +590,8 @@ def filter_products(
     sort_direction: str = "",
     user_lat: float | None = None,
     user_lon: float | None = None,
+    saved_product_ids: list[str] | None = None,
+    show_saved_only: bool = False,
 ) -> list[ProduceItem]:
     selected_countries = set(country_filters or [])
     selected_seasons = set(season_filters or [])
@@ -605,8 +618,14 @@ def filter_products(
             product for product in filtered_products if product["season_status"] in selected_seasons
         ]
 
+    if show_saved_only and saved_product_ids:
+        saved_ids_set = set(saved_product_ids)
+        filtered_products = [
+            product for product in filtered_products if product["id"] in saved_ids_set
+        ]
+
     filtered_products = search_products(query, filtered_products)
-    return _sort_products(filtered_products, sort_key, sort_direction)
+    return _sort_products(filtered_products, sort_key, sort_direction, saved_product_ids)
 
 
 def get_products() -> list[ProduceItem]:
