@@ -1,5 +1,7 @@
 import reflex as rx
 
+from in_season_greens.data import get_current_month_name
+
 from . import styles
 from .components.navigation import (
     desktop_header,
@@ -20,7 +22,11 @@ def catalog() -> rx.Component:
         rx.hstack(
             rx.box(
                 rx.text(
-                    State.catalog_label,
+                    State.filtered_products.length().to_string()
+                    + " PRODUCTS · "
+                    + LocationState.location_display.upper()
+                    + " · "
+                    + get_current_month_name().upper(),
                     class_name=styles.catalog.count,
                 ),
                 rx.heading(
