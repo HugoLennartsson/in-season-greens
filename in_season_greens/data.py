@@ -198,7 +198,7 @@ def get_overview_signals() -> list[OverviewSignal]:
             "label": "Avg temp normal",
         },
         {"icon": "cloud_rain", "value": get_rain_outlook(), "label": "Rain outlook"},
-        {"icon": "sprout", "value": HARVEST, "label": "Harvest outlook"},
+        {"icon": "sprout", "value": get_harvest_outlook(), "label": "Harvest outlook"},  # ← was HARVEST
     ]
 
 
