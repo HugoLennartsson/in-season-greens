@@ -6,8 +6,6 @@ from enum import Enum
 from pathlib import Path
 from typing import TypedDict
 
-from in_season_greens.location_state import LocationState
-
 
 class NutritionFacts(TypedDict):
     calories: float
@@ -202,18 +200,26 @@ PRECIPITATION = "Normal"
 AVG_TEMP = (16, 18)
 HARVEST = "Favorable"
 
-NAV_ITEMS: list[NavItem] = [
-    {"icon": "home", "label": "Home", "subtitle": "Browse all products"},
-    {
-        "icon": "map_pin",
-        "label": "Local",
-        "subtitle": f"Grown near {LocationState.city}",
-    },
-    {"icon": "wind", "label": "CO2 Tracker", "subtitle": "Compare CO2 per kg"},
-    {"icon": "droplets", "label": "Water Usage", "subtitle": "Water per kg ratings"},
-    {"icon": "bookmark", "label": "Saved", "subtitle": "Your saved products"},
-    {"icon": "info", "label": "About", "subtitle": "Sources and methodology"},
-]
+
+def get_nav_items() -> list[NavItem]:
+    from in_season_greens.location_state import LocationState
+
+    return [
+        {"icon": "home", "label": "Home", "subtitle": "Browse all products"},
+        {
+            "icon": "map_pin",
+            "label": "Local",
+            "subtitle": f"Grown near {LocationState.city}",
+        },
+        {"icon": "wind", "label": "CO2 Tracker", "subtitle": "Compare CO2 per kg"},
+        {
+            "icon": "droplets",
+            "label": "Water Usage",
+            "subtitle": "Water per kg ratings",
+        },
+        {"icon": "bookmark", "label": "Saved", "subtitle": "Your saved products"},
+        {"icon": "info", "label": "About", "subtitle": "Sources and methodology"},
+    ]
 
 
 def _country_name(code: str) -> str:
@@ -260,7 +266,9 @@ def get_season_status(
 def _format_month_range(start_month: int, end_month: int) -> str:
     if start_month == end_month:
         return MONTH_ABBREVIATIONS[start_month - 1]
-    return f"{MONTH_ABBREVIATIONS[start_month - 1]}-{MONTH_ABBREVIATIONS[end_month - 1]}"
+    return (
+        f"{MONTH_ABBREVIATIONS[start_month - 1]}-{MONTH_ABBREVIATIONS[end_month - 1]}"
+    )
 
 
 def format_month_window(months: list[int]) -> str:
@@ -377,7 +385,9 @@ def _best_search_score(query: str, item: ProduceItem) -> int | None:
     return min(scores) if scores else None
 
 
-def get_search_suggestions(query: str, limit: int = SEARCH_SUGGESTION_LIMIT) -> list[ProduceItem]:
+def get_search_suggestions(
+    query: str, limit: int = SEARCH_SUGGESTION_LIMIT
+) -> list[ProduceItem]:
     scored_items = [
         (score, item["name_en"], item)
         for item in ALL_PRODUCE
@@ -387,7 +397,9 @@ def get_search_suggestions(query: str, limit: int = SEARCH_SUGGESTION_LIMIT) -> 
     return [item for _, __, item in scored_items[:limit]]
 
 
-def search_products(query: str, products: list[ProduceItem] | None = None) -> list[ProduceItem]:
+def search_products(
+    query: str, products: list[ProduceItem] | None = None
+) -> list[ProduceItem]:
     products_to_search = products if products is not None else get_products()
     if not normalize_search_text(query):
         return products_to_search
@@ -420,7 +432,9 @@ def _sort_products(
     if not sort_key or sort_direction not in {SORT_ASC, SORT_DESC}:
         return products
     reverse = sort_direction == SORT_DESC
-    return sorted(products, key=lambda product: _sort_value(product, sort_key), reverse=reverse)
+    return sorted(
+        products, key=lambda product: _sort_value(product, sort_key), reverse=reverse
+    )
 
 
 def filter_products(
@@ -446,17 +460,23 @@ def filter_products(
 
     if local_only:
         filtered_products = [
-            product for product in filtered_products if local_country in product["countries"]
+            product
+            for product in filtered_products
+            if local_country in product["countries"]
         ]
 
     if selected_categories:
         filtered_products = [
-            product for product in filtered_products if product["category"] in selected_categories
+            product
+            for product in filtered_products
+            if product["category"] in selected_categories
         ]
 
     if selected_seasons:
         filtered_products = [
-            product for product in filtered_products if product["season_status"] in selected_seasons
+            product
+            for product in filtered_products
+            if product["season_status"] in selected_seasons
         ]
 
     filtered_products = search_products(query, filtered_products)
@@ -475,10 +495,6 @@ def get_seasonal_veggies() -> list[ProduceItem]:
     return get_products()
 
 
-def get_nav_items() -> list[NavItem]:
-    return NAV_ITEMS
-
-
 def get_current_month_name() -> str:
     return MONTHS[CURRENT_MONTH - 1]
 
@@ -492,18 +508,26 @@ def get_full_location() -> str:
 
 
 def get_temperature_range() -> str:
+    from in_season_greens.location_state import LocationState
+
     return LocationState.avg_temp
 
 
 def get_rain_outlook() -> str:
+    from in_season_greens.location_state import LocationState
+
     return LocationState.rain_outlook
 
 
 def get_harvest_outlook() -> str:
+    from in_season_greens.location_state import LocationState
+
     return LocationState.harvest_outlook
 
 
 def get_overview_signals() -> list[OverviewSignal]:
+    from in_season_greens.location_state import LocationState
+
     return [
         {"icon": "info", "value": get_current_month_name(), "label": "Current month"},
         {
@@ -521,6 +545,8 @@ def get_overview_signals() -> list[OverviewSignal]:
 
 
 def get_season_outlook() -> list[OverviewOutlook]:
+    from in_season_greens.location_state import LocationState
+
     return [
         {
             "icon": "thermometer",
@@ -539,3 +565,9 @@ def get_season_outlook() -> list[OverviewOutlook]:
             "text": "Season status is based on product season windows and the current month.",
         },
     ]
+
+
+def get_catalog_label(count: int) -> str:
+    if count == 1:
+        return "1 product"
+    return f"{count} products"

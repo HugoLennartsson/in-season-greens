@@ -20,6 +20,7 @@ class LocationState(rx.State):
     harvest_outlook: str = "Awaiting Location.."
 
     suggestions: list[str] = []
+
     def _set_country_code(self, code: str | None):
         self.country_code = normalize_country_code(code)
         self.country_code_is_fallback = not is_supported_country_code(code)
@@ -99,7 +100,7 @@ class LocationState(rx.State):
         self.typed_city = self.city
         from .state import State
 
-        return State.set_user_location(
+        yield State.set_user_location(
             lat,
             lon,
             self.country_code,
@@ -156,7 +157,7 @@ class LocationState(rx.State):
             self.suggestions = []
             from .state import State
 
-            return State.set_user_location(
+            yield State.set_user_location(
                 self.lat,
                 self.lon,
                 self.country_code,
