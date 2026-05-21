@@ -17,7 +17,6 @@ def product_image_src(product_id) -> str | rx.Var:
 def status_label(status) -> rx.Component:
     return rx.match(
         status,
-        ("peak", "PEAK SEASON"),
         ("season", "IN SEASON"),
         ("soon", "COMING SOON"),
         ("unknown", "UNKNOWN"),
@@ -26,7 +25,8 @@ def status_label(status) -> rx.Component:
 
 
 def product_card(product, state=None) -> rx.Component:
-    status = "unknown"
+    status = product["season_status"]
+    nutrient = product["nutrients"][0]
 
     return rx.box(
         rx.box(
@@ -44,36 +44,41 @@ def product_card(product, state=None) -> rx.Component:
         rx.box(
             rx.heading(product["name_en"], class_name=styles.product_card.title),
             rx.text(
-                "Season months unknown",
-                class_name=styles.product_card.month_missing,
+                product["season_label"],
+                class_name=styles.product_card.season_label,
             ),
             rx.hstack(
                 app_icon(
-                    "map_pin",
-                    styles.product_card.origin_icon_far,
+                    "wind",
+                    styles.product_card.emissions_icon,
                     3,
                 ),
                 rx.box(
                     rx.text(
-                        "Origin unknown",
-                        class_name=styles.product_card.origin_title,
+                        "Lowest emissions",
+                        class_name=styles.product_card.emissions_title,
                     ),
-                    rx.text(
-                        "Unknown Carbon Footprint",
-                        class_name=styles.product_card.carbon_label,
-                    ),
-                    class_name=styles.product_card.origin_copy,
+                    class_name=styles.product_card.emissions_copy,
                 ),
                 rx.box(
-                    rx.text("??? kg CO2e"),
-                    rx.text("/ kg"),
-                    class_name=styles.product_card.carbon_value,
+                    rx.text(product["carbon_label"]),
+                    class_name=styles.product_card.emissions_value,
                 ),
-                class_name=styles.product_card.origin_box_far,
+                class_name=styles.product_card.emissions_box,
             ),
             rx.flex(
                 rx.box(
-                    "???",
+                    "100g",
+                    class_name=styles.product_card.nutrient,
+                ),
+                rx.box(
+                    nutrient["calories"],
+                    " kcal",
+                    class_name=styles.product_card.nutrient,
+                ),
+                rx.box(
+                    nutrient["fiber_g"],
+                    "g fiber",
                     class_name=styles.product_card.nutrient,
                 ),
                 class_name=styles.product_card.nutrients,

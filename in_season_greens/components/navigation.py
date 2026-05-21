@@ -2,7 +2,7 @@ import reflex as rx
 
 from .. import styles
 from ..data import APP_NAME, get_nav_items
-from .ui import FILTERS, app_icon, filter_button, hamburger_button, search_input
+from .ui import app_icon, filter_expansion, filter_toggle_button, hamburger_button, search_input
 from ..location_state import LocationState
 
 
@@ -10,16 +10,16 @@ def desktop_header(state) -> rx.Component:
     return rx.el.header(
         rx.box(
             rx.box(
-                APP_NAME,
-                class_name=styles.navigation.desktop_logo,
+                rx.box(
+                    APP_NAME,
+                    class_name=styles.navigation.desktop_logo,
+                ),
+                search_input(state),
+                filter_toggle_button(state),
+                hamburger_button(state.open_menu),
+                class_name=styles.navigation.desktop_inner,
             ),
-            search_input(state),
-            rx.hstack(
-                *[filter_button(label, key) for key, label in FILTERS],
-                class_name=styles.navigation.desktop_filters,
-            ),
-            hamburger_button(state.open_menu),
-            class_name=styles.navigation.desktop_inner,
+            filter_expansion(state),
         ),
         class_name=styles.navigation.desktop_header,
     )
@@ -42,11 +42,12 @@ def mobile_header(state) -> rx.Component:
 
 def mobile_sticky_filters(state) -> rx.Component:
     return rx.box(
-        search_input(state),
         rx.hstack(
-            *[filter_button(label, key) for key, label in FILTERS],
-            class_name=styles.navigation.mobile_filter_row,
+            search_input(state),
+            filter_toggle_button(state),
+            class_name=styles.navigation.mobile_search_row,
         ),
+        filter_expansion(state),
         class_name=styles.navigation.mobile_filters,
     )
 

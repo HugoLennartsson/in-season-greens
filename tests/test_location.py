@@ -24,6 +24,8 @@ def test_handle_location_success(state):
     assert state.lat == 52.52
     assert state.lon == 13.405
     assert state.city == "Berlin"
+    assert state.country_code == "SE"
+    assert state.country_code_is_fallback
     assert state.location_display == "Berlin"
 
 
@@ -42,10 +44,14 @@ def test_reverse_geocode_api_success(mock_nominatim, state):
     # Setup mock response
     mock_geolocator = MagicMock()
     mock_nominatim.return_value = mock_geolocator
-    mock_geolocator.reverse.return_value.raw = {"address": {"city": "New York"}}
+    mock_geolocator.reverse.return_value.raw = {
+        "address": {"city": "New York", "country_code": "us"}
+    }
 
     result = state._reverse_geocode(40.71, -74.00)
     assert result == "New York"
+    assert state.country_code == "US"
+    assert not state.country_code_is_fallback
 
 
 def test_handle_location_result_none(state):
@@ -70,6 +76,8 @@ def test_reverse_geocode_unknown_cases(mock_nominatim, state, raw_data):
     result = state._reverse_geocode(1.1, 1.1)
 
     assert result == "Unknown Location"
+    assert state.country_code == "SE"
+    assert state.country_code_is_fallback
 
 
 def test_get_location_call(state):
@@ -86,6 +94,7 @@ def test_reverse_geocode_exception(mock_nominatim, state):
     mock_geolocator.reverse.side_effect = Exception("Network Timeout")
     result = state._reverse_geocode(52.5, 13.4)
     assert result == "City Lookup Failed"
+    assert state.country_code_is_fallback
 
 
 def test_set_error(state):
@@ -106,7 +115,10 @@ def test_validate_city_success(mock_nominatim, state):
     mock_location.address = "Stockholm, Sweden"
     mock_location.latitude = 59.3293
     mock_location.longitude = 18.0686
-    mock_location.raw = {"type": "city"}
+    mock_location.raw = {
+        "type": "city",
+        "address": {"country_code": "se"},
+    }
 
     mock_geolocator.geocode.return_value = mock_location
 
@@ -116,6 +128,8 @@ def test_validate_city_success(mock_nominatim, state):
     assert state.typed_city == "Stockholm"
     assert state.lat == 59.3293
     assert state.lon == 18.0686
+    assert state.country_code == "SE"
+    assert not state.country_code_is_fallback
     assert state.error == ""
 
 
