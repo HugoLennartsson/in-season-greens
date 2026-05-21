@@ -214,14 +214,11 @@ class LocationState(rx.State):
 
             url = f"https://photon.komoot.io/api/" f"?q={encoded_query}&limit=5"
 
-            print(f"[DEBUG] Fetching: {url}")
             response = requests.get(
                 url,
                 timeout=5,
                 headers={"User-Agent": "Mozilla/5.0 (compatible; InSeasonGreens/1.0)"},
             )
-            print(f"[DEBUG] Status: {response.status_code}")  # ← add this
-            print(f"[DEBUG] Data: {response.json()}")
 
             if response.status_code != 200:
                 self.suggestions = []
@@ -248,8 +245,6 @@ class LocationState(rx.State):
 
             print("Suggestions:", results)
 
-            print(f"[DEBUG] Suggestions set to: {self.suggestions}")
-
         except Exception as e:
             print("Autocomplete error:", e)
             print(f"[DEBUG] Exception: {e}")
@@ -257,11 +252,6 @@ class LocationState(rx.State):
 
     @rx.event
     def select_suggestion(self, selected_city: str):
-        if "," in selected_city:
-            self.typed_city = selected_city.split(",")[0].strip()
-        else:
-            self.typed_city = selected_city
-
+        self.typed_city = selected_city
         self.suggestions = []
-
         return LocationState.validate_city
