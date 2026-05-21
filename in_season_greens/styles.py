@@ -91,11 +91,11 @@ class navigation:
         "fixed inset-y-0 right-0 z-40 flex w-full translate-x-full flex-col bg-white "
         "shadow-[-4px_0_24px_rgba(0,0,0,.15)] transition-transform duration-300 md:w-[360px]"
     )
-    drawer_header = "bg-[#164f26] p-5 pt-7"
+    drawer_header = "bg-[#164f26] p-5 pt-7 overflow-visible"
     drawer_brand_row = "items-center gap-1.5"
     drawer_brand_icon = "size-[18px] text-white"
     drawer_brand = "text-xl font-black text-white"
-    drawer_location_row = "mt-1 gap-1"
+    drawer_location_row = "mt-1 gap-1 overflow-visible"
     drawer_location_icon = "size-3 text-white/70"
     drawer_location = "text-xs text-white/70"
     drawer_list = "flex-1 gap-0 overflow-y-auto"

@@ -58,44 +58,110 @@ def drawer(state) -> rx.Component:
         rx.cond(
             state.menu_open,
             rx.box(
-                on_click=state.close_menu, class_name=styles.navigation.drawer_overlay
+                on_click=state.close_menu,
+                class_name=styles.navigation.drawer_overlay,
             ),
             rx.fragment(),
         ),
         rx.box(
             rx.box(
                 rx.hstack(
-                    app_icon("leaf", styles.navigation.drawer_brand_icon, 2),
-                    rx.text(APP_NAME, class_name=styles.navigation.drawer_brand),
-                    class_name=styles.navigation.drawer_brand_row,
+                    rx.hstack(
+                        app_icon("leaf", styles.navigation.drawer_brand_icon, 2),
+                        rx.text(APP_NAME, class_name=styles.navigation.drawer_brand),
+                        class_name=styles.navigation.drawer_brand_row,
+                    ),
+                    rx.icon(
+                        tag="x",
+                        on_click=state.close_menu,
+                        cursor="pointer",
+                        size=22,
+                        color="var(--gray-11)",
+                        _hover={"color": "var(--gray-12)"},
+                    ),
+                    justify="between",
+                    align="center",
+                    width="100%",
+                    margin_bottom="15px",
                 ),
                 rx.vstack(
-                    rx.hstack(
-                        app_icon("map_pin", styles.navigation.drawer_location_icon, 2),
-                        rx.input(
-                            value=LocationState.typed_city,
-                            placeholder="Type city...",
-                            on_change=LocationState.set_typed_city,
-                            on_blur=LocationState.validate_city,
-                            on_key_down=LocationState.handle_key_down,
-                            variant="soft",
-                            size="1",
+                    rx.box(
+                        rx.hstack(
+                            app_icon(
+                                "map_pin",
+                                styles.navigation.drawer_location_icon,
+                                2,
+                            ),
+                            rx.input(
+                                value=LocationState.typed_city,
+                                placeholder="Type city...",
+                                on_change=LocationState.set_typed_city,
+                                on_key_down=LocationState.handle_key_down,
+                                variant="soft",
+                                size="1",
+                                width="100%",
+                                color_scheme="gray",
+                                style={
+                                    "color": "#FFFFFF",
+                                    "background_color": "rgba(255,255,255,0.1)",
+                                },
+                            ),
+                            rx.icon(
+                                tag="locate-fixed",
+                                on_click=LocationState.get_location,
+                                cursor="pointer",
+                                size=18,
+                            ),
+                            align="center",
                             width="100%",
                         ),
-                        rx.icon(
-                            tag="locate-fixed",
-                            on_click=LocationState.get_location,
-                            cursor="pointer",
-                            size=18,
+                        # Suggestions Dropdown
+                        rx.cond(
+                            LocationState.suggestions != [],
+                            rx.vstack(
+                                rx.foreach(
+                                    LocationState.suggestions,
+                                    lambda city: rx.box(
+                                        rx.text(
+                                            city,
+                                            color="#1C2024",
+                                            font_weight="500",
+                                            font_size="13px",
+                                        ),
+                                        on_click=LocationState.select_suggestion(city),
+                                        padding="10px 14px",
+                                        cursor="pointer",
+                                        width="100%",
+                                        _hover={"background_color": "#F1F3F5"},
+                                    ),
+                                ),
+                                position="absolute",
+                                top="100%",
+                                left="0",
+                                width="100%",
+                                background_color="#FFFFFF",
+                                border="1px solid #E6E8EA",
+                                border_radius="8px",
+                                box_shadow="0px 4px 20px rgba(0,0,0,0.08)",
+                                z_index=9999,
+                                spacing="0",
+                                align_items="start",
+                                margin_top="6px",
+                            ),
                         ),
-                        align="center",
+                        position="relative",
                         width="100%",
                     ),
                     rx.cond(
                         LocationState.error != "",
-                        rx.text(LocationState.error, color="red", font_size="10px"),
+                        rx.text(
+                            LocationState.error,
+                            color="red",
+                            font_size="10px",
+                        ),
                     ),
                     class_name=styles.navigation.drawer_location_row,
+                    overflow="visible",
                 ),
                 class_name=styles.navigation.drawer_header,
             ),

@@ -6,6 +6,7 @@ from typing import TypedDict
 
 from in_season_greens.location_state import LocationState
 
+
 class NutritionFacts(TypedDict):
     calories: float
     serving_size_g: float
@@ -61,7 +62,11 @@ HARVEST = "Favorable"
 
 NAV_ITEMS: list[NavItem] = [
     {"icon": "home", "label": "Home", "subtitle": "Browse all products"},
-    {"icon": "map_pin", "label": "Local", "subtitle": f"Grown near {LocationState}"},
+    {
+        "icon": "map_pin",
+        "label": "Local",
+        "subtitle": f"Grown near {LocationState.city}",
+    },
     {"icon": "wind", "label": "CO2 Tracker", "subtitle": "Compare CO2 per kg"},
     {"icon": "droplets", "label": "Water Usage", "subtitle": "Water per kg ratings"},
     {"icon": "bookmark", "label": "Saved", "subtitle": "Your saved products"},
@@ -182,8 +187,10 @@ def get_full_location() -> str:
 def get_temperature_range() -> str:
     return LocationState.avg_temp
 
+
 def get_rain_outlook() -> str:
     return LocationState.rain_outlook
+
 
 def get_harvest_outlook() -> str:
     return LocationState.harvest_outlook
@@ -198,7 +205,11 @@ def get_overview_signals() -> list[OverviewSignal]:
             "label": "Avg temp normal",
         },
         {"icon": "cloud_rain", "value": get_rain_outlook(), "label": "Rain outlook"},
-        {"icon": "sprout", "value": get_harvest_outlook(), "label": "Harvest outlook"},  # ← was HARVEST
+        {
+            "icon": "sprout",
+            "value": get_harvest_outlook(),
+            "label": "Harvest outlook",
+        },  # ← was HARVEST
     ]
 
 
